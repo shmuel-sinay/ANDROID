@@ -21,7 +21,13 @@
 - init: 188 שירותים, 5 קריטיים (ueventd, servicemanager, hwservicemanager, lmkd, charger); 26 שירותים מצביעים על קובץ חסר והמערכת עולה – `INIT.md`
 - 175 APK, 12 persistent, privapp enforce ללא הפרות; אין package verifier (אין GMS) – `DELETE_IMPACT.md`
 
+- **ניתוח קוד ברמת מקור:** `tools/boot_guards.py` סורק את services.jar ומוצא כל מקום שזורק שגיאה כשמשהו "חובה" חסר, ובודק אם הוא במסלול האתחול. ברום הזה: 552 בדיקות, 40 במסלול האתחול – `boot_guards.json`
+- תלות ראשונה מפורקת עד הסוף: המתקין – `deps/installer.md` (הקוד, 4 התנאים, כל הקוראים, ומה צריך לשנות כדי לבטל)
+
 ## הצעד הבא
+- לפרק כל אחת מ-40 הבדיקות שבמסלול האתחול לקובץ `deps/` משלה (כמו installer.md)
+- להוסיף framework.jar ו-mediatek-services.jar לסריקה
+- תלויות שאינן "זריקה" (למשל SettingsProvider – קריסה עקיפה)
 - תלויות ברמת ספריות (.so) ו-uses-library, ותלות framework-res בשמות חבילות (config_*)
 - SELinux: אילו דומיינים מגדירים שירותים קריטיים
 - התחלת אתר התיעוד (GitHub Pages)
