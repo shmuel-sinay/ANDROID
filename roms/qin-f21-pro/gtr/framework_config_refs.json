@@ -1,0 +1,352 @@
+[
+ {
+  "source": "framework-res.apk",
+  "config": "config_carrierAppInstallDialogComponent",
+  "value": "com.android.simappdialog/com.android.simappdialog.InstallCarrierAppActivity",
+  "package": "com.android.simappdialog",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_chooserActivity",
+  "value": "com.android.systemui/com.android.systemui.chooser.ChooserActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_controlsPackage",
+  "value": "com.android.systemui",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customAdbPublicKeyConfirmationComponent",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbDebuggingActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customAdbPublicKeyConfirmationSecondaryUserComponent",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbDebuggingSecondaryUserActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customAdbWifiNetworkConfirmationComponent",
+  "value": "com.android.systemui/com.android.systemui.wifi.WifiDebuggingActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customAdbWifiNetworkConfirmationSecondaryUserComponent",
+  "value": "com.android.systemui/com.android.systemui.wifi.WifiDebuggingSecondaryUserActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customVpnAlwaysOnDisconnectedDialogComponent",
+  "value": "com.android.vpndialogs/com.android.vpndialogs.AlwaysOnDisconnectedDialog",
+  "package": "com.android.vpndialogs",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_customVpnConfirmDialogComponent",
+  "value": "com.android.vpndialogs/com.android.vpndialogs.ConfirmDialog",
+  "package": "com.android.vpndialogs",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_dataUsageSummaryComponent",
+  "value": "com.android.settings/com.android.settings.Settings$DataUsageSummaryActivity",
+  "package": "com.android.settings",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_defaultAssistantAccessComponent",
+  "value": "android.ext.services/android.ext.services.notification.Assistant",
+  "package": "android.ext.services",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_defaultDialer",
+  "value": "com.android.dialer",
+  "package": "com.android.dialer",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_defaultDndAccessPackages",
+  "value": "com.android.camera2",
+  "package": "com.android.camera2",
+  "present": false
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_defaultModuleMetadataProvider",
+  "value": "com.android.modulemetadata",
+  "package": "com.android.modulemetadata",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_dreamsDefaultComponent",
+  "value": "com.google.android.deskclock/com.android.deskclock.Screensaver",
+  "package": "com.google.android.deskclock",
+  "present": false
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_emergency_dialer_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_fusedLocationProviderPackageName",
+  "value": "com.android.location.fused",
+  "package": "com.android.location.fused",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_incidentReportApproverPackage",
+  "value": "com.android.permissioncontroller",
+  "package": "com.android.permissioncontroller",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_keyguardComponent",
+  "value": "com.android.systemui/com.android.systemui.keyguard.KeyguardService",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_managed_provisioning_package",
+  "value": "com.android.managedprovisioning",
+  "package": "com.android.managedprovisioning",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_mediaProjectionPermissionDialogComponent",
+  "value": "com.android.systemui/com.android.systemui.media.MediaProjectionPermissionActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_networkOverLimitComponent",
+  "value": "com.android.systemui/com.android.systemui.net.NetworkOverLimitActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_platformVpnConfirmDialogComponent",
+  "value": "com.android.vpndialogs/com.android.vpndialogs.PlatformVpnConfirmDialog",
+  "package": "com.android.vpndialogs",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_recentsComponentName",
+  "value": "com.android.launcher3/com.android.quickstep.RecentsActivity",
+  "package": "com.android.launcher3",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_screenRecorderComponent",
+  "value": "com.android.systemui/com.android.systemui.screenrecord.ScreenRecordDialog",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_screenshotErrorReceiverComponent",
+  "value": "com.android.systemui/com.android.systemui.screenshot.ScreenshotServiceErrorReceiver",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_screenshotServiceComponent",
+  "value": "com.android.systemui/com.android.systemui.screenshot.TakeScreenshotService",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_secondaryHomePackage",
+  "value": "com.android.launcher3",
+  "package": "com.android.launcher3",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_servicesExtensionPackage",
+  "value": "android.ext.services",
+  "package": "android.ext.services",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_slicePermissionComponent",
+  "value": "com.android.systemui/com.android.systemui.SlicePermissionActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_somnambulatorComponent",
+  "value": "com.android.systemui/com.android.systemui.Somnambulator",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_systemGallery",
+  "value": "com.android.gallery3d",
+  "package": "com.android.gallery3d",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_systemUIServiceComponent",
+  "value": "com.android.systemui/com.android.systemui.SystemUIService",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_timeZoneRulesUpdaterPackage",
+  "value": "com.android.timezone.updater",
+  "package": "com.android.timezone.updater",
+  "present": false
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_usbAccessoryUriActivity",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbAccessoryUriActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_usbConfirmActivity",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbConfirmActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_usbContaminantActivity",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbContaminantActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_usbPermissionActivity",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbPermissionActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_usbResolverActivity",
+  "value": "com.android.systemui/com.android.systemui.usb.UsbResolverActivity",
+  "package": "com.android.systemui",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_wallpaperCropperPackage",
+  "value": "com.android.wallpapercropper",
+  "package": "com.android.wallpapercropper",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_wifi_tether_enable",
+  "value": "com.android.settings/.wifi.tether.TetherService",
+  "package": "com.android.settings",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_wwan_data_service_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ },
+ {
+  "source": "framework-res.apk",
+  "config": "config_wwan_network_service_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_ims_package",
+  "value": "com.mediatek.ims",
+  "package": "com.mediatek.ims",
+  "present": true
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_qualified_networks_service_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_wallpaperCropperPackage",
+  "value": "com.android.wallpaperpicker",
+  "package": "com.android.wallpaperpicker",
+  "present": true
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_wlan_data_service_class",
+  "value": "com.mediatek.internal.telephony.dataconnection.IwlanDataService",
+  "package": "com.mediatek.internal.telephony.dataconnection.IwlanDataService",
+  "present": false
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_wlan_data_service_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_wlan_network_service_class",
+  "value": "com.mediatek.internal.telephony.IWlanNetworkService",
+  "package": "com.mediatek.internal.telephony.IWlanNetworkService",
+  "present": false
+ },
+ {
+  "source": "framework-res__auto_generated_rro_product.apk",
+  "config": "config_wlan_network_service_package",
+  "value": "com.android.phone",
+  "package": "com.android.phone",
+  "present": true
+ }
+]

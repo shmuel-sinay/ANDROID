@@ -99,3 +99,16 @@
 - `android.uid.shell` (1): com.android.shell
 - `com.android.emergency.uid` (1): com.android.emergency
 - `android.uid.systemui` (1): com.android.systemui
+
+## 8. שמות חבילות שמקובעים ב-framework-res
+
+הקובץ `framework_config_refs.json` מפרט 50 הגדרות `config_*` שמפנות לחבילה או לרכיב מסוים. מחיקת חבילה שמופיעה כאן לא מגלה זאת ל-framework – הוא ימשיך לנסות להפעיל אותה. דוגמאות חשובות:
+
+- `config_systemUIServiceComponent`, `config_keyguardComponent` → `com.android.systemui` (בלעדיה: אין שורת מצב ואין מסך נעילה)
+- `config_servicesExtensionPackage` → `android.ext.services` (נבדק גם ב-PackageManager – חובה)
+- `config_recentsComponentName`, `config_secondaryHomePackage` → `com.android.launcher3`
+- `config_defaultDialer` → `com.android.dialer`; `config_emergency_dialer_package` → `com.android.phone`
+- `config_customAdbPublicKeyConfirmationComponent` → SystemUI (בלעדיה אי אפשר לאשר מחשב חדש ל-adb, אלא אם `ro.adb.secure=0` כמו ב-GTR)
+
+הפניות לחבילות שכבר **לא קיימות** ברום – והמערכת עולה:
+`com.android.camera2` (DND), `com.google.android.deskclock` (שומר מסך), `com.android.timezone.updater`.
