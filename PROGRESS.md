@@ -18,6 +18,10 @@
 - Ubuntu 24.04 ARM64 (Oracle), 4 ליבות, 23GB RAM, 17GB פנוי, ללא KVM, sudo ללא סיסמה, docker קיים
 - Remote Control רץ ב-~/android-docs (סביבת bridge). שירות קבוע – ממתין לאישור המשתמש בסשן השרת
 
+- init: 188 שירותים, 5 קריטיים (ueventd, servicemanager, hwservicemanager, lmkd, charger); 26 שירותים מצביעים על קובץ חסר והמערכת עולה – `INIT.md`
+- 175 APK, 12 persistent, privapp enforce ללא הפרות; אין package verifier (אין GMS) – `DELETE_IMPACT.md`
+
 ## הצעד הבא
-- גרף init.rc (שירותים, טריגרים, properties) מתוך system/vendor/ramdisk
-- מצאי APK ו-priv-app
+- תלויות ברמת ספריות (.so) ו-uses-library, ותלות framework-res בשמות חבילות (config_*)
+- SELinux: אילו דומיינים מגדירים שירותים קריטיים
+- התחלת אתר התיעוד (GitHub Pages)

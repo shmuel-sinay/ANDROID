@@ -11,21 +11,21 @@
 ## שלב 1 – מצאי
 - [ ] מפת מחיצות פיזיות ולוגיות + תפקיד כל מחיצה
 - [ ] מצאי קבצים לכל מחיצה (JSON)
-- [ ] מצאי APK: חבילה, מיקום, הרשאות, sharedUserId, priv-app
+- [x] מצאי APK: חבילה, מיקום, הרשאות, sharedUserId, priv-app – `tools/apk_inventory.py`
 
 ## שלב 2 – שרשרת אתחול ואימות
 - [x] preloader → lk → tee → vbmeta → boot
 - [x] vbmeta: מה מאומת, באילו מפתחות, איזה דגלים
 - [x] fstab: מחיצות, דגלי avb/verity
 - [ ] ramdisk ו-first stage init
-- [ ] גרף init.rc: שירותים, טריגרים, properties
+- [x] גרף init.rc: שירותים, טריגרים, properties – `tools/init_rc.py`
 
 ## שלב 3 – גרף אפליקציות ותלויות
-- [ ] אפליקציות חובה של PackageManager (installer, permission controller, וכו')
-- [ ] privapp-permissions מול מניפסטים
+- [x] אפליקציות חובה של PackageManager – `tools/boot_roles.py`
+- [x] privapp-permissions מול מניפסטים
 - [ ] ספריות משותפות, uses-library, sharedUserId
 - [ ] הגדרות framework-res שמפנות לחבילות
-- [ ] חיזוי: "מה יקרה אם אמחק X"
+- [~] חיזוי: "מה יקרה אם אמחק X" – גרסה ראשונה: `DELETE_IMPACT.md`
 
 ## שלב 4 – שכבות עמוקות
 - [ ] SELinux, APEX, overlays, HAL של vendor
