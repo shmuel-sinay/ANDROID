@@ -23,9 +23,9 @@ import sys
 import zipfile
 from collections import deque
 
-from loguru import logger
-
-logger.remove()
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ag_compat  # noqa: E402,F401
 from androguard.core.analysis.analysis import Analysis  # noqa: E402
 from androguard.core.dex import DEX  # noqa: E402
 from androguard.decompiler.decompile import DvMethod  # noqa: E402
@@ -78,17 +78,32 @@ def main():
         if ma.is_external():
             continue
         m = ma.get_method()
-        strings, throws = [], 0
+        # A message counts only when it sits between "new-instance X(Exception|Error)"
+        # and the next "throw" - the usual javac shape of `throw new X("..." + y)`.
+        msgs, throws, exc = [], 0, set()
+        pending = None  # exception type currently being built
+        window = []
         for ins in m.get_instructions():
             op = ins.get_name()
-            if op.startswith("const-string"):
-                s = ins.get_output().split(", ", 1)[-1].strip("'\"")
-                strings.append(s)
+            if op == "new-instance":
+                t = ins.get_output().split(", ")[-1]
+                if t.endswith(("Exception;", "Error;")):
+                    pending, window = t[1:-1].split("/")[-1], []
+            elif op.startswith("const-string") and pending:
+                window.append(ins.get_output().split(", ", 1)[-1].strip("'\""))
             elif op == "throw":
                 throws += 1
-        msgs = [s for s in strings if GUARD_TEXT.search(s)]
-        if throws and msgs:
-            guards[name_of(m)] = {"ma": ma, "messages": msgs, "throws": throws}
+                if pending:
+                    hit = [s for s in window if GUARD_TEXT.search(s)]
+                    if hit:
+                        msgs += hit
+                        exc.add(pending)
+                pending, window = None, []
+            elif op.startswith("return"):
+                pending, window = None, []
+        if msgs:
+            guards[name_of(m)] = {"ma": ma, "messages": msgs, "throws": throws,
+                                  "exceptions": sorted(exc)}
 
     # 2. forward BFS from the boot entry points over "calls" edges
     parent = {}
@@ -124,6 +139,9 @@ def main():
     for k, g in sorted(guards.items()):
         on_boot = k in parent
         entry = {"method": k, "messages": g["messages"], "throws": g["throws"],
+                 "exceptions": g["exceptions"],
+                 "callers": sorted({name_of(c.get_method()) for _x, c, _o in g["ma"].get_xref_from()
+                                    if not c.is_external()})[:20],
                  "boot_path": chain(k) if on_boot else None}
         if on_boot:
             try:
