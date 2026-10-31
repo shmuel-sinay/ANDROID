@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>אטלס אנדרואיד – F21 Pro</title>
+<style>
+:root{--bg:#0f1117;--card:#1a1d27;--br:#2a2f3e;--fg:#e6e8ee;--mut:#9aa2b4;
+--ac:#6ea8fe;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171;--chip:#242838}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f6f7f9;
+--card:#fff;--br:#e3e6ec;--fg:#1a1d27;--mut:#5b6472;--ac:#2563eb;--chip:#eef1f6}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font-family:system-ui,"Segoe UI",Arial,sans-serif;line-height:1.6}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:16px}
+header.top{border-bottom:1px solid var(--br);background:var(--card)}
+header.top .wrap{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+header.top h1{font-size:18px;margin:12px 0}
+nav.crumbs{font-size:13px;color:var(--mut);margin:12px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--br);border-radius:12px;padding:16px}
+.card h3{margin:0 0 8px}
+.muted{color:var(--mut)}
+.chip{display:inline-block;background:var(--chip);border:1px solid var(--br);
+border-radius:999px;padding:1px 10px;font-size:12px;margin:2px 2px}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{border:1px solid var(--br);padding:7px 9px;text-align:right;vertical-align:top}
+th{background:var(--chip)}
+code,pre{font-family:ui-monospace,Menlo,Consolas,monospace;direction:ltr;unicode-bidi:plaintext}
+code{background:var(--chip);padding:1px 5px;border-radius:5px;font-size:13px}
+pre{background:var(--chip);border:1px solid var(--br);border-radius:10px;padding:12px;overflow:auto;text-align:left}
+h2{border-bottom:1px solid var(--br);padding-bottom:6px;margin-top:28px}
+input#q{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--br);
+background:var(--card);color:var(--fg);font-size:15px;margin:10px 0}
+.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--br);padding:8px 0}
+.row:last-child{border-bottom:none}
+.pill{font-size:11px;padding:1px 8px;border-radius:999px}
+.pill.b{background:rgba(248,113,113,.15);color:var(--bad)}
+.pill.d{background:rgba(251,191,36,.15);color:var(--warn)}
+.pill.o{background:rgba(74,222,128,.15);color:var(--ok)}
+footer{color:var(--mut);font-size:12px;border-top:1px solid var(--br);margin-top:40px}
+footer .wrap{padding:16px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<h1><a href="index.html">אטלס אנדרואיד</a></h1>
+<span class="muted">F21 Pro · אנדרואיד 11</span>
+</div></header>
+<div class="wrap">
+<nav class="crumbs">דף הבית</nav>
+
+<div class="grid">
+<div class="card"><h3>המכשיר</h3>
+<div class="row"><span class="muted">דגם</span><b>F21 Pro</b></div>
+<div class="row"><span class="muted">אנדרואיד</span><b>11 (SDK 30)</b></div>
+<div class="row"><span class="muted">עדכון אבטחה</span><b dir=ltr>2020-12-05</b></div>
+<div class="row"><span class="muted">מעבד</span><b>MediaTek MT6761</b></div>
+</div>
+<div class="card"><h3>רכיבים</h3>
+<div class="row"><span class="muted">אפליקציות (APK)</span><b>175</b></div>
+<div class="row"><span class="muted">שירותי init</span><b>188</b></div>
+<div class="row"><span class="muted">בדיקות "חובה" במסלול אתחול</span><b>67</b></div>
+<div class="row"><span class="muted">מחיקות שמפילות אתחול</span><b class="bad">7</b></div>
+</div>
+</div>
+<h2>מה הכי חשוב לדעת</h2>
+<div class="grid">
+<a class="card" href="delete/index.html"><h3>מה יקרה אם אמחק?</h3>
+<p class="muted">לכל רכיב: האם מחיקה שלו תפיל את המערכת, ולמה.</p></a>
+<a class="card" href="boot/index.html"><h3>שרשרת האתחול והאימות</h3>
+<p class="muted">preloader → lk → boot → init, ואיך הרום עוקף את ה-AVB.</p></a>
+<a class="card" href="apps/index.html"><h3>כל האפליקציות</h3>
+<p class="muted">175 אפליקציות: הרשאות, priv-app, sharedUserId.</p></a>
+<a class="card" href="init/index.html"><h3>שירותי init</h3>
+<p class="muted">מי מפעיל את מי, ומה קריטי.</p></a>
+<a class="card" href="guards/index.html"><h3>בדיקות "חובה" בקוד</h3>
+<p class="muted">67 מקומות בקוד שזורקים שגיאה כשרכיב חסר.</p></a>
+<a class="card" href="deps/index.html"><h3>תלויות מפורקות</h3>
+<p class="muted">ניתוח קוד מלא לרכיבים נבחרים.</p></a>
+</div>
+</div>
+<footer><div class="wrap">נוצר אוטומטית מניתוח הרום · תיעוד תיאורטי, לא נבדק על מכשיר · GTR · Qin F21 Pro</div></footer>
+</body></html>
