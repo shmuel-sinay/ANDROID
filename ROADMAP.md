@@ -4,8 +4,8 @@
 - [x] מבנה ריפו ומדיניות
 - [x] פענוח scatter של MediaTek
 - [x] כלי פירוק super (liblp) – `tools/lp_unpack.py`
-- [ ] כלי פענוח vbmeta (AVB) עצמאי
-- [ ] כלי פירוק boot.img (kernel / ramdisk / cmdline)
+- [x] כלי פענוח vbmeta (AVB) עצמאי – `tools/avb_info.py`
+- [x] כלי פירוק boot.img – `tools/bootimg.py`
 - [ ] סקריפט פירוק אוטומטי מקצה לקצה לכל רום
 
 ## שלב 1 – מצאי
@@ -14,9 +14,9 @@
 - [ ] מצאי APK: חבילה, מיקום, הרשאות, sharedUserId, priv-app
 
 ## שלב 2 – שרשרת אתחול ואימות
-- [ ] preloader → lk → tee → vbmeta → boot
-- [ ] vbmeta: מה מאומת, באילו מפתחות, איזה דגלים
-- [ ] fstab: מחיצות, דגלי avb/verity
+- [x] preloader → lk → tee → vbmeta → boot
+- [x] vbmeta: מה מאומת, באילו מפתחות, איזה דגלים
+- [x] fstab: מחיצות, דגלי avb/verity
 - [ ] ramdisk ו-first stage init
 - [ ] גרף init.rc: שירותים, טריגרים, properties
 

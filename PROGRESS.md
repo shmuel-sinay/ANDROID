@@ -11,5 +11,13 @@
 - super: system_a 2.1GB, vendor_a 355MB, product_a 163MB, system_b 37MB – כולן ext4
 - system-as-root
 
+- שרשרת אתחול ו-AVB מתועדות: `roms/qin-f21-pro/gtr/BOOT_CHAIN.md`
+- GTR עוקף אימות בארבע שכבות: דגלי vbmeta, הסרת avb מ-fstab, system/vendor לא חתומים, boot ללא footer + ramdisk לא מאובטח
+
+## שרת המשתמש
+- Ubuntu 24.04 ARM64 (Oracle), 4 ליבות, 23GB RAM, 17GB פנוי, ללא KVM, sudo ללא סיסמה, docker קיים
+- Remote Control רץ ב-~/android-docs (סביבת bridge). שירות קבוע – ממתין לאישור המשתמש בסשן השרת
+
 ## הצעד הבא
-- פענוח vbmeta (שלושת החלקים), פירוק boot.img, מיפוי init
+- גרף init.rc (שירותים, טריגרים, properties) מתוך system/vendor/ramdisk
+- מצאי APK ו-priv-app
