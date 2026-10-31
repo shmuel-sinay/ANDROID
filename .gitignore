@@ -1,0 +1,10 @@
+# Firmware images and extracted system files are never committed
+*.img
+*.raw
+*.bin
+*.zip
+*.rar
+*.7z
+*.apk
+*.so
+work/

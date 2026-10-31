@@ -1,0 +1,108 @@
+{
+  "metadata_version": "10.2",
+  "metadata_max_size": 65536,
+  "metadata_slot_count": 3,
+  "logical_block_size": 4096,
+  "block_devices": [
+    {
+      "name": "super",
+      "first_logical_sector": 2048,
+      "size": 4294967296
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "flags": 0,
+      "maximum_size": 0
+    },
+    {
+      "name": "main_a",
+      "flags": 0,
+      "maximum_size": 4292870144
+    },
+    {
+      "name": "main_b",
+      "flags": 0,
+      "maximum_size": 4292870144
+    }
+  ],
+  "partitions": [
+    {
+      "name": "product_a",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_a",
+      "size": 163217408,
+      "extents": [
+        {
+          "sectors": 318784,
+          "type": "linear",
+          "target_sector": 2048,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "product_b",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "vendor_a",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_a",
+      "size": 355098624,
+      "extents": [
+        {
+          "sectors": 693552,
+          "type": "linear",
+          "target_sector": 321536,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "vendor_b",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "system_a",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_a",
+      "size": 2153730048,
+      "extents": [
+        {
+          "sectors": 4206504,
+          "type": "linear",
+          "target_sector": 1015808,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "system_b",
+      "attributes": 0,
+      "readonly": false,
+      "group": "main_b",
+      "size": 37736448,
+      "extents": [
+        {
+          "sectors": 73704,
+          "type": "linear",
+          "target_sector": 5222400,
+          "source": 0
+        }
+      ]
+    }
+  ]
+}
