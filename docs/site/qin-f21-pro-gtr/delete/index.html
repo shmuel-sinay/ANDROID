@@ -4,50 +4,95 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>מה יקרה אם אמחק</title>
+<meta name="author" content="שמואל סיני">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f1117;--card:#1a1d27;--br:#2a2f3e;--fg:#e6e8ee;--mut:#9aa2b4;
---ac:#6ea8fe;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171;--chip:#242838}
-@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f6f7f9;
---card:#fff;--br:#e3e6ec;--fg:#1a1d27;--mut:#5b6472;--ac:#2563eb;--chip:#eef1f6}}
+:root{--bg:#0b0d13;--bg2:#10131c;--card:#161a26;--card2:#1b2030;--br:#272d3e;
+--fg:#edeff5;--mut:#9aa3b8;--ac:#7ca8ff;--ac2:#a98bff;--ok:#4ade80;--warn:#fbbf24;
+--bad:#fb7185;--chip:#20273a;--shadow:0 10px 30px rgba(0,0,0,.35);
+--grad:linear-gradient(135deg,#7c3aed22,#2563eb22)}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f4f6fb;--bg2:#fff;
+--card:#fff;--card2:#f7f9fc;--br:#e5e9f0;--fg:#161a26;--mut:#5c6578;--ac:#2563eb;
+--ac2:#7c3aed;--chip:#eef2f9;--shadow:0 8px 24px rgba(30,41,80,.08);
+--grad:linear-gradient(135deg,#7c3aed14,#2563eb14)}}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);
-font-family:system-ui,"Segoe UI",Arial,sans-serif;line-height:1.6}
-a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1040px;margin:0 auto;padding:16px}
-header.top{border-bottom:1px solid var(--br);background:var(--card)}
-header.top .wrap{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
-header.top h1{font-size:18px;margin:12px 0}
-nav.crumbs{font-size:13px;color:var(--mut);margin:12px 0}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
-.card{background:var(--card);border:1px solid var(--br);border-radius:12px;padding:16px}
-.card h3{margin:0 0 8px}
+font-family:"Heebo",system-ui,"Segoe UI",Arial,sans-serif;line-height:1.65;
+-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none;transition:color .15s}
+a:hover{color:var(--ac2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--br)}
+header.top .bar{display:flex;gap:16px;align-items:center;justify-content:space-between;
+max-width:1080px;margin:0 auto;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px}
+.brand .logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--ac),var(--ac2));
+display:grid;place-items:center;color:#fff;font-size:17px;box-shadow:var(--shadow)}
+.brand .sub{font-weight:500;color:var(--mut);font-size:13px}
+.top-links{display:flex;gap:18px;font-size:14px;font-weight:500}
+nav.crumbs{font-size:13px;color:var(--mut);margin:22px 0 4px}
+nav.crumbs a{color:var(--mut)}
+h2{font-size:22px;font-weight:800;margin:34px 0 4px;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;
+background:linear-gradient(90deg,var(--ac),var(--ac2));margin-top:8px}
+h3{margin:0 0 8px;font-weight:700}h4{margin:18px 0 6px;font-weight:700}
+p{margin:10px 0}
+.lead{color:var(--mut);font-size:15.5px;max-width:70ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:18px 0}
+.card{background:var(--card);border:1px solid var(--br);border-radius:16px;padding:20px;
+transition:transform .18s,border-color .18s,box-shadow .18s}
+a.card:hover{transform:translateY(-3px);border-color:var(--ac);box-shadow:var(--shadow)}
+.card h3{display:flex;align-items:center;gap:9px}
+.ic{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;
+place-items:center;font-size:16px;flex:none}
 .muted{color:var(--mut)}
 .chip{display:inline-block;background:var(--chip);border:1px solid var(--br);
-border-radius:999px;padding:1px 10px;font-size:12px;margin:2px 2px}
+border-radius:999px;padding:2px 11px;font-size:12px;margin:2px 2px;font-weight:500}
 .ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-th,td{border:1px solid var(--br);padding:7px 9px;text-align:right;vertical-align:top}
-th{background:var(--chip)}
-code,pre{font-family:ui-monospace,Menlo,Consolas,monospace;direction:ltr;unicode-bidi:plaintext}
-code{background:var(--chip);padding:1px 5px;border-radius:5px;font-size:13px}
-pre{background:var(--chip);border:1px solid var(--br);border-radius:10px;padding:12px;overflow:auto;text-align:left}
-h2{border-bottom:1px solid var(--br);padding-bottom:6px;margin-top:28px}
-input#q{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--br);
-background:var(--card);color:var(--fg);font-size:15px;margin:10px 0}
-.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--br);padding:8px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;font-size:14px;
+background:var(--card);border:1px solid var(--br);border-radius:14px;overflow:hidden}
+th,td{padding:10px 13px;text-align:right;vertical-align:top;border-bottom:1px solid var(--br)}
+th{background:var(--card2);font-weight:700;position:sticky;top:61px}
+tr:last-child td{border-bottom:none}
+tbody tr:hover,table tr:hover{background:color-mix(in srgb,var(--ac) 6%,transparent)}
+code,pre{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+direction:ltr;unicode-bidi:plaintext}
+code{background:var(--chip);padding:2px 6px;border-radius:6px;font-size:12.5px}
+pre{background:#0d1017;border:1px solid var(--br);border-radius:12px;padding:16px;
+overflow:auto;text-align:left;font-size:13px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{border-right:3px solid var(--ac);margin:14px 0;padding:4px 14px;
+background:var(--card2);border-radius:0 10px 10px 0}
+input#q{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--br);
+background:var(--card);color:var(--fg);font-size:15px;margin:12px 0;font-family:inherit}
+input#q:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 20%,transparent)}
+.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--br);padding:9px 0}
 .row:last-child{border-bottom:none}
-.pill{font-size:11px;padding:1px 8px;border-radius:999px}
-.pill.b{background:rgba(248,113,113,.15);color:var(--bad)}
-.pill.d{background:rgba(251,191,36,.15);color:var(--warn)}
-.pill.o{background:rgba(74,222,128,.15);color:var(--ok)}
-footer{color:var(--mut);font-size:12px;border-top:1px solid var(--br);margin-top:40px}
-footer .wrap{padding:16px}
+.pill{font-size:11.5px;padding:2px 10px;border-radius:999px;font-weight:600;white-space:nowrap}
+.pill.b{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.pill.d{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.pill.o{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+footer{border-top:1px solid var(--br);margin-top:56px;background:var(--bg2)}
+footer .wrap{padding:28px 20px;display:flex;justify-content:space-between;
+align-items:center;gap:16px;flex-wrap:wrap}
+footer .by{font-size:14px}footer .by b{color:var(--fg)}
+footer .meta{font-size:12.5px;color:var(--mut)}
+.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--ac2),var(--ac));
+display:inline-grid;place-items:center;color:#fff;font-weight:800;margin-left:8px;vertical-align:middle}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-<h1><a href="../index.html">אטלס אנדרואיד</a></h1>
-<span class="muted">F21 Pro</span>
+<header class="top"><div class="bar">
+<a class="brand" href="../index.html">
+<span class="logo">◆</span><span>אטלס אנדרואיד<br><span class="sub">F21 Pro</span></span></a>
+<nav class="top-links">
+<a href="../index.html">בית</a>
+<a href="https://github.com/shmuel-sinay/ANDROID">קוד המקור</a>
+</nav>
 </div></header>
 <div class="wrap">
 <nav class="crumbs"><a href="../index.html">בית</a> / מחיקה</nav>
@@ -55,5 +100,8 @@ footer .wrap{padding:16px}
 <p class="muted">מבוסס על קוד האתחול של אנדרואיד 11. תחזית תיאורטית – ראו גם <a href="../guards/index.html">בדיקות החובה</a> ו<a href="../deps/index.html">התלויות המפורקות</a>.</p>
 <table><tr><th>תפקיד</th><th>אם חסר</th><th>חבילה ברום</th><th>ביטחון</th><th>מקור בקוד</th></tr><tr><td>installer</td><td><span class="pill b">לולאת אתחול</span></td><td><code>com.android.packageinstaller</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">PackageManagerService.getRequiredInstallerLPr(): &#x27;There must be exactly one installer&#x27;</td></tr><tr><td>uninstaller</td><td><span class="pill b">לולאת אתחול</span></td><td><code>com.android.packageinstaller</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">PackageManagerService.getRequiredUninstallerLPr(): &#x27;There must be exactly one uninstaller&#x27;</td></tr><tr><td>permission_controller</td><td><span class="pill b">לולאת אתחול</span></td><td><code>com.android.permissioncontroller</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">PackageManagerService.getRequiredPermissionControllerLPr(): &#x27;There must be exactly one permission controller&#x27;</td></tr><tr><td>shared_library android.ext.shared</td><td><span class="pill b">לולאת אתחול</span></td><td><code>android.ext.shared</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">PackageManagerService.getRequiredSharedLibraryLPr(): &#x27;Missing required shared library&#x27;</td></tr><tr><td>services_extension (ExtServices)</td><td><span class="pill b">לולאת אתחול</span></td><td><code>android.ext.services</code> </td><td class="muted">medium</td><td class="muted" dir=ltr style="font-size:12px">PackageManagerService.getRequiredServicesExtensionPackageLPr()</td></tr><tr><td>settings_provider</td><td><span class="pill b">לולאת אתחול</span></td><td><code>com.android.providers.settings</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">ActivityManagerService.installSystemProviders(): Settings.* reads fail in system_server</td></tr><tr><td>framework (android)</td><td><span class="pill b">לולאת אתחול</span></td><td><code>android</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">framework-res.apk is package &#x27;android&#x27; - resources of system_server</td></tr><tr><td>package_verifier</td><td><span class="pill d">עולה חלקית</span></td><td><span class=bad>חסר</span></td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">getRequiredButNotReallyRequiredVerifierLPr() returns null</td></tr><tr><td>home / launcher</td><td><span class="pill d">עולה חלקית</span></td><td><code>android</code> <code>com.android.launcher3</code> <code>com.android.managedprovisioning</code> <code>com.android.provision</code> <code>com.android.settings</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">ActivityTaskManager.startHomeActivity(): no HOME -&gt; black screen after boot animation</td></tr><tr><td>system_ui</td><td><span class="pill d">עולה חלקית</span></td><td><code>com.android.systemui</code> </td><td class="muted">medium</td><td class="muted" dir=ltr style="font-size:12px">SystemServer.startSystemUi(): no status bar / navigation / lock screen</td></tr><tr><td>setup_wizard</td><td><span class="pill d">עולה חלקית</span></td><td><code>com.android.provision</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">getSetupWizardPackageNameImpl() returns null; device may stay &#x27;not provisioned&#x27;</td></tr><tr><td>telephony (com.android.phone)</td><td><span class="pill d">עולה חלקית</span></td><td><code>com.android.phone</code> </td><td class="muted">high</td><td class="muted" dir=ltr style="font-size:12px">persistent app; without it there is no calling/SMS</td></tr></table>
 </div>
-<footer><div class="wrap">נוצר אוטומטית מניתוח הרום · תיעוד תיאורטי, לא נבדק על מכשיר · GTR · Qin F21 Pro</div></footer>
+<footer><div class="wrap">
+<div class="by"><span class="avatar">ש</span>תיעוד ומחקר · <b>שמואל סיני</b></div>
+<div class="meta">נוצר אוטומטית מניתוח הרום · תיעוד תיאורטי, לא נבדק על מכשיר · GTR · Qin F21 Pro</div>
+</div></footer>
 </body></html>
