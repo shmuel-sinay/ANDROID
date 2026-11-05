@@ -213,6 +213,10 @@ border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;margin-botto
 <p class="muted">{len(apks)} אפליקציות: הרשאות, priv-app, sharedUserId.</p></a>
 <a class="card" href="init/index.html"><h3><span class="ic">⚙️</span>שירותי init</h3>
 <p class="muted">מי מפעיל את מי, ומה קריטי לאתחול.</p></a>
+<a class="card" href="native/index.html"><h3><span class="ic">🧩</span>ספריות native</h3>
+<p class="muted">גרף התלויות של קוד C/C++ המהודר (‎.so).</p></a>
+<a class="card" href="coverage/index.html"><h3><span class="ic">✓</span>כיסוי הניתוח</h3>
+<p class="muted">כל קובץ ברום, עם טביעת אצבע — מה נותח ומה לא.</p></a>
 </div>"""
     page(os.path.join(out, "index.html"), f"אטלס אנדרואיד – {model}",
          f"{model} · אנדרואיד {ver}", "דף הבית", cards, 0)
@@ -287,6 +291,58 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
 <table><tr><th>מתודה</th><th>מרחק מהאתחול</th><th>שגיאה</th><th>הודעה</th></tr>{grows}</table>"""
     page(os.path.join(out, "guards", "index.html"), "בדיקות חובה בקוד",
          f"{model}", '<a href="../index.html">בית</a> / בדיקות', body, 1)
+
+    # ---- coverage ----
+    cov = load_json(rom, "coverage.summary.json") or load_json(rom, "coverage.json")
+    if cov:
+        os.makedirs(os.path.join(out, "coverage"), exist_ok=True)
+        depth_he = {"parsed": ("נותח לעומק", "ok"), "partial": ("נותח חלקית", "warn"),
+                    "listed": ("נרשם ומסווג", "muted"), "pending": ("ממתין לכלי ניתוח", "bad")}
+        bd = cov["by_depth"]
+        tot = cov["totals"]["files"]
+        bars = ""
+        for d in ("parsed", "partial", "listed", "pending"):
+            if d in bd:
+                lab, cls = depth_he[d]
+                pct = 100 * bd[d]["count"] / tot
+                bars += (f'<div style="margin:10px 0"><div class="row" style="border:none;padding:2px 0">'
+                         f'<span>{lab}</span><span class="{cls}"><b>{bd[d]["count"]}</b> קבצים ({pct:.0f}%)</span></div>'
+                         f'<div style="height:9px;background:var(--chip);border-radius:6px;overflow:hidden">'
+                         f'<div style="height:100%;width:{pct:.1f}%;background:var(--ac)"></div></div></div>')
+        crows = "".join(
+            f'<tr><td><code>{e(c)}</code></td><td>{v["count"]}</td>'
+            f'<td>{v["bytes"]/1e6:.1f} MB</td>'
+            f'<td><span class="{depth_he[v["depth"]][1]}">{depth_he[v["depth"]][0]}</span></td>'
+            f'<td class="muted" style="font-size:13px">{e(v["how"])}</td></tr>'
+            for c, v in cov["categories"].items())
+        body = f"""<h2>כיסוי הניתוח</h2>
+<p class="lead">כדי שלא יהיו הפתעות: כל קובץ ברום רשום כאן עם טביעת אצבע (sha256), מסווג, ומסומן באיזו עומק נותח. ככה "לא דילגתי על כלום" הוא מספר שאפשר לבדוק.</p>
+<div class="card" style="margin:18px 0">
+<div class="row" style="border:none"><b>סה"כ {tot} קבצים</b><span class="muted">{cov['totals']['bytes']/1e9:.2f} GB · {cov['totals']['symlinks']} קישורים</span></div>
+{bars}</div>
+<table><tr><th>קטגוריה</th><th>קבצים</th><th>נפח</th><th>עומק</th><th>איך נותח</th></tr>{crows}</table>"""
+        page(os.path.join(out, "coverage", "index.html"), "כיסוי הניתוח", model,
+             '<a href="../index.html">בית</a> / כיסוי', body, 1)
+
+    # ---- native libraries ----
+    nat = load_json(rom, "native_deps.summary.json") or load_json(rom, "native_deps.json")
+    if nat:
+        os.makedirs(os.path.join(out, "native"), exist_ok=True)
+        top = "".join(f'<tr><td><code dir=ltr>{e(t["lib"])}</code></td><td>{t["needed_by_count"]}</td></tr>'
+                      for t in nat["top_depended_on"][:25])
+        miss = nat.get("missing_dependencies", {})
+        miss_html = ("<p class='ok'>✓ כל התלויות קיימות ברום — אין ספרייה שמפנה ל-.so חסר.</p>"
+                     if not miss else "<table><tr><th>חסר</th><th>כמה צריכים</th></tr>" +
+                     "".join(f"<tr><td><code dir=ltr>{e(k)}</code></td><td>{v}</td></tr>" for k, v in list(miss.items())[:30]) + "</table>")
+        arch = nat["machines"]
+        body = f"""<h2>ספריות native ({nat['total_libs']})</h2>
+<p class="lead">קוד C/C++ מהודר. מופה גרף התלויות: מה כל ספרייה צריכה (DT_NEEDED) וממה. ארכיטקטורות: {arch.get('EM_AARCH64',0)} ‏64-bit, {arch.get('EM_ARM',0)} ‏32-bit.</p>
+<h3>שלמות</h3>{miss_html}
+<h3>הספריות ש"הכל בנוי עליהן"</h3>
+<p class="muted">מספר הספריות שתלויות בכל אחת. מחיקה של ספרייה כזו שוברת את כל התלויות בה.</p>
+<table><tr><th>ספרייה</th><th>כמה תלויים בה</th></tr>{top}</table>"""
+        page(os.path.join(out, "native", "index.html"), "ספריות native", model,
+             '<a href="../index.html">בית</a> / native', body, 1)
 
     # ---- deps (render the hand-written markdown files) ----
     os.makedirs(os.path.join(out, "deps"), exist_ok=True)

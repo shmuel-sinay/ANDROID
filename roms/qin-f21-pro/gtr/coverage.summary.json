@@ -1,0 +1,155 @@
+{
+ "root": "fs",
+ "hashed": true,
+ "totals": {
+  "files": 5130,
+  "bytes": 1698175159,
+  "symlinks": 516
+ },
+ "by_depth": {
+  "parsed": {
+   "count": 3051,
+   "bytes": 1333058607
+  },
+  "pending": {
+   "count": 1069,
+   "bytes": 114732168
+  },
+  "listed": {
+   "count": 1451,
+   "bytes": 170395765
+  },
+  "partial": {
+   "count": 75,
+   "bytes": 79988619
+  }
+ },
+ "categories": {
+  "native_lib": {
+   "how": "native_deps.py: SONAME, DT_NEEDED deps, export/import counts",
+   "depth": "parsed",
+   "count": 2631,
+   "bytes": 817119356
+  },
+  "other": {
+   "how": "unclassified — needs a rule",
+   "depth": "pending",
+   "count": 776,
+   "bytes": 106191130
+  },
+  "symlink": {
+   "how": "symbolic link",
+   "depth": "listed",
+   "count": 516,
+   "bytes": 0
+  },
+  "aot": {
+   "how": "pre-compiled AOT image (mirrors its jar/apk dex)",
+   "depth": "listed",
+   "count": 294,
+   "bytes": 81895885
+  },
+  "font": {
+   "how": "font asset",
+   "depth": "listed",
+   "count": 290,
+   "bytes": 33238037
+  },
+  "xml_other": {
+   "how": "config xml — not yet parsed",
+   "depth": "pending",
+   "count": 217,
+   "bytes": 3195217
+  },
+  "apk": {
+   "how": "apk_inventory.py: manifest, perms, priv-app, intents",
+   "depth": "parsed",
+   "count": 175,
+   "bytes": 515425181
+  },
+  "init_rc": {
+   "how": "init_rc.py: services, actions, triggers",
+   "depth": "parsed",
+   "count": 167,
+   "bytes": 353030
+  },
+  "input_map": {
+   "how": "input key-layout — static data",
+   "depth": "listed",
+   "count": 161,
+   "bytes": 315483
+  },
+  "jar": {
+   "how": "boot_guards.py: dex scanned for boot guards (framework/services)",
+   "depth": "partial",
+   "count": 75,
+   "bytes": 79988619
+  },
+  "binary_data": {
+   "how": "binary/config blob",
+   "depth": "listed",
+   "count": 68,
+   "bytes": 43798197
+  },
+  "privapp_xml": {
+   "how": "apk_inventory.py: privapp-permissions allowlists",
+   "depth": "parsed",
+   "count": 64,
+   "bytes": 133760
+  },
+  "text": {
+   "how": "text/config — indexed",
+   "depth": "listed",
+   "count": 64,
+   "bytes": 128245
+  },
+  "audio": {
+   "how": "sound/animation asset",
+   "depth": "listed",
+   "count": 55,
+   "bytes": 3045609
+  },
+  "selinux": {
+   "how": "SELinux policy — not yet parsed",
+   "depth": "pending",
+   "count": 41,
+   "bytes": 5008248
+  },
+  "protobuf": {
+   "how": "protobuf data — not yet parsed",
+   "depth": "pending",
+   "count": 20,
+   "bytes": 1679
+  },
+  "prop": {
+   "how": "build.prop parsed (key props surfaced)",
+   "depth": "parsed",
+   "count": 11,
+   "bytes": 21927
+  },
+  "script": {
+   "how": "shell script — not yet read line by line",
+   "depth": "pending",
+   "count": 9,
+   "bytes": 319316
+  },
+  "sysconfig_xml": {
+   "how": "sysconfig/permissions xml — not yet parsed",
+   "depth": "pending",
+   "count": 6,
+   "bytes": 16578
+  },
+  "fstab": {
+   "how": "BOOT_CHAIN.md: mount + avb flags",
+   "depth": "parsed",
+   "count": 3,
+   "bytes": 5353
+  },
+  "image": {
+   "how": "image asset",
+   "depth": "listed",
+   "count": 3,
+   "bytes": 7974309
+  }
+ }
+}

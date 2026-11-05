@@ -8,3 +8,7 @@
 *.apk
 *.so
 work/
+
+# heavy regenerable analysis dumps (summaries are committed)
+roms/**/coverage.json
+roms/**/native_deps.json
