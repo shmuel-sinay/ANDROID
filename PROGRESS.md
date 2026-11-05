@@ -29,6 +29,12 @@
 - `tools/native_deps.py`: גרף התלויות של 2,630 ספריות native (‎.so). כל DT_NEEDED נפתר – אפס תלויות חסרות. הספריות הכי נשענות: libc, libm, libdl, libc++, liblog – `native_deps.json`.
 - מצב כיסוי נוכחי: 3,126 קבצים נותחו ע"י כלי (parsed/partial), 1,451 נרשמו (assets/data), 1,069 ממתינים לכלי (xml config, selinux, protobuf, scripts).
 
+## כיסוי מלא הושלם — 0 קבצים ממתינים
+כל 5,130 הקבצים ברום מכוסים (`coverage.summary.json`):
+- 3,663 נותחו לעומק · 75 חלקית (jars) · 1,908 נרשמו ומסווגים · **0 ממתינים**
+- כלים חדשים: `native_deps.py` (הורחב לקבצי הרצה: 2,778 ספריות + 268 executables), `xml_config.py` (VINTF: 337 HAL מסופקים, 396 נדרשים, **0 חובה חסרים**), `selinux.py` (contexts, CIL, seccomp), `misc_files.py` (scripts, APEX manifests, modules.dep)
+- כל שכבות התלות שלמות: native (0 .so חסרים), VINTF (0 HAL חובה חסרים), kernel modules (modules.dep)
+
 ## הצעד הבא
 - לפרק כל אחת מ-40 הבדיקות שבמסלול האתחול לקובץ `deps/` משלה (כמו installer.md)
 - להוסיף framework.jar ו-mediatek-services.jar לסריקה

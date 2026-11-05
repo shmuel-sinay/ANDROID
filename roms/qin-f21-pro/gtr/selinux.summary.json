@@ -1,0 +1,12 @@
+{
+ "file_count": 48,
+ "totals": {
+  "file_contexts": 1546,
+  "property_contexts": 1164,
+  "service_contexts": 302,
+  "hwservice_contexts": 151,
+  "seapp_rules": 41,
+  "cil_statements": 54132,
+  "seccomp_syscalls": 350
+ }
+}

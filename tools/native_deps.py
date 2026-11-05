@@ -48,9 +48,17 @@ def analyze(path):
         return info
 
 
+def is_elf(path):
+    try:
+        with open(path, "rb") as f:
+            return f.read(4) == b"\x7fELF"
+    except OSError:
+        return False
+
+
 def main():
     root, out = sys.argv[1], sys.argv[2]
-    libs = {}          # soname/basename -> record
+    libs = {}          # key -> record (both shared objects AND executables)
     provided = set()   # every soname + basename present in the ROM
     for part in sorted(os.listdir(root)):
         pdir = os.path.join(root, part)
@@ -58,10 +66,8 @@ def main():
             continue
         for dp, _dn, fns in os.walk(pdir):
             for fn in fns:
-                if not fn.endswith(".so"):
-                    continue
                 fp = os.path.join(dp, fn)
-                if os.path.islink(fp):
+                if os.path.islink(fp) or not is_elf(fp):
                     continue
                 info = analyze(fp)
                 if info is None:
@@ -71,6 +77,12 @@ def main():
                 info["partition"] = part
                 info["path"] = rel
                 info["name"] = fn
+                # ET_DYN with a .so name is a library; ET_DYN without, or in a
+                # bin/ dir, is a PIE executable; ET_EXEC is an executable.
+                in_bin = "/bin/" in rel or rel.startswith("/bin/")
+                info["kind"] = ("executable" if info["type"] == "ET_EXEC"
+                                or (in_bin and not fn.endswith(".so"))
+                                else "library")
                 libs[key] = info
                 provided.add(fn)
                 if info["soname"]:
@@ -98,6 +110,7 @@ def main():
     report = {
         "root": root,
         "total_libs": len(libs),
+        "by_kind": _count(i["kind"] for i in libs.values()),
         "machines": _count(i["machine"] for i in libs.values()),
         "top_depended_on": [{"lib": d, "needed_by_count": n} for d, n in top],
         "missing_dependencies": dict(sorted(missing_all.items(), key=lambda x: -x[1])),

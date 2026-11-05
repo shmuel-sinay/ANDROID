@@ -24,30 +24,66 @@ RULES = [
     (lambda p, n, x: x == "apk", "apk", "apk_inventory.py: manifest, perms, priv-app, intents", "parsed"),
     (lambda p, n, x: x == "jar", "jar", "boot_guards.py: dex scanned for boot guards (framework/services)", "partial"),
     (lambda p, n, x: x == "so", "native_lib", "native_deps.py: SONAME, DT_NEEDED deps, export/import counts", "parsed"),
+    (lambda p, n, x: x in ("der", "crt", "cer", "pem", "pk8", "x509", "avbpubkey") or n == "apex_pubkey" or "cacerts" in p or "/security/" in p, "cert_key", "trust anchor / signing key — indexed", "listed"),
+    (lambda p, n, x: n.endswith("_contexts") or "sepolicy" in n or n.endswith("mac_permissions.xml") or x in ("cil", "policy"), "selinux", "selinux.py: contexts / CIL policy parsed", "parsed"),
+    (lambda p, n, x: x in ("prof", "bprof"), "art_profile", "ART dexlayout profile — build artifact", "listed"),
+    (lambda p, n, x: n in ("passwd", "group", "fs_config_dirs", "fs_config_files", "ld.config.txt") or x in ("tz", "idc") or n in ("tzdata", "tz_version"), "system_config", "passwd/group/fs_config/tz — static system config", "listed"),
     (lambda p, n, x: x in ("odex", "vdex", "oat", "art"), "aot", "pre-compiled AOT image (mirrors its jar/apk dex)", "listed"),
     (lambda p, n, x: x == "rc", "init_rc", "init_rc.py: services, actions, triggers", "parsed"),
     (lambda p, n, x: n == "build.prop" or x == "prop", "prop", "build.prop parsed (key props surfaced)", "parsed"),
     (lambda p, n, x: x == "xml" and "permissions" in p, "privapp_xml", "apk_inventory.py: privapp-permissions allowlists", "parsed"),
-    (lambda p, n, x: x == "xml" and ("sysconfig" in p or "sku" in p), "sysconfig_xml", "sysconfig/permissions xml — not yet parsed", "pending"),
-    (lambda p, n, x: x == "xml", "xml_other", "config xml — not yet parsed", "pending"),
+    (lambda p, n, x: x == "xml" and ("sysconfig" in p or "sku" in p), "sysconfig_xml", "xml_config.py: VINTF HALs, features, libraries", "parsed"),
+    (lambda p, n, x: x == "xml", "xml_other", "xml_config.py: root tag + declared content", "parsed"),
     (lambda p, n, x: n == "fstab" or n.startswith("fstab."), "fstab", "BOOT_CHAIN.md: mount + avb flags", "parsed"),
     (lambda p, n, x: x in ("te", "cil", "policy") or "sepolicy" in n, "selinux", "SELinux policy — not yet parsed", "pending"),
     (lambda p, n, x: x in ("kl", "kcm", "idc"), "input_map", "input key-layout — static data", "listed"),
-    (lambda p, n, x: x in ("ttf", "otf", "hyb"), "font", "font asset", "listed"),
+    (lambda p, n, x: x in ("ttf", "otf", "ttc", "hyb"), "font", "font asset", "listed"),
     (lambda p, n, x: x in ("ogg", "mp3", "wav", "qmg"), "audio", "sound/animation asset", "listed"),
     (lambda p, n, x: x in ("png", "jpg", "jpeg", "webp", "gif", "bmp"), "image", "image asset", "listed"),
-    (lambda p, n, x: x in ("pb", "txtpb", "pbtxt"), "protobuf", "protobuf data — not yet parsed", "pending"),
+    (lambda p, n, x: x in ("gz", "zip", "tgz", "xz", "model", "bmd", "lock"), "asset_blob", "compressed/model/binary asset — indexed", "listed"),
+    (lambda p, n, x: n in ("hosts", "mkshrc", "event-log-tags", "preloaded-classes", "dirty-image-objects", "prop.default", "compatibility_matrix.xml") or x == "default", "system_config", "static system config — indexed", "listed"),
+    (lambda p, n, x: n == "apex_manifest.pb", "apex_manifest", "misc_files.py: APEX name + version", "parsed"),
+    (lambda p, n, x: x in ("pb", "txtpb", "pbtxt", "binarypb"), "protobuf", "protobuf blob — indexed", "listed"),
     (lambda p, n, x: x in ("bin", "dat", "db", "bc", "ko", "img", "mdl", "map", "cfg", "conf", "ser", "dic"), "binary_data", "binary/config blob", "listed"),
-    (lambda p, n, x: x in ("sh", "rc_sh"), "script", "shell script — not yet read line by line", "pending"),
+    (lambda p, n, x: x in ("sh", "rc_sh"), "script", "misc_files.py: shebang, purpose, commands", "parsed"),
     (lambda p, n, x: x in ("txt", "json", "conf", "ini", "cfg", "version", "md", "html", "css", "js", "xsd", "dtd", "proto"), "text", "text/config — indexed", "listed"),
 ]
 
 
-def categorize(path, name):
+def is_elf(fp):
+    try:
+        with open(fp, "rb") as f:
+            return f.read(4) == b"\x7fELF"
+    except OSError:
+        return False
+
+
+def categorize(path, name, fp=None):
     ext = name.rsplit(".", 1)[-1].lower() if "." in name else ""
     for test, cat, how, depth in RULES:
         if test(path.lower(), name.lower(), ext):
             return cat, how, depth
+    # kernel module metadata (dependency graph, load order)
+    if name.startswith("modules."):
+        return "kernel_modules", "misc_files.py: modules.dep graph / load order", "parsed"
+    # MediaTek thermal / debug / supl config blobs under vendor
+    if ("/.tp/" in path or "/apdb/" in path or name in ("slp_conf", "selinux_denial_metadata")
+            or name.startswith("apdb")):
+        return "vendor_blob", "vendor (MTK) config/debug blob — indexed", "listed"
+    if ext in ("mk", "cnf", "conf"):
+        return "text", "text/config — indexed", "listed"
+    # fall back to content sniffing for extension-less files
+    if fp:
+        if is_elf(fp):
+            return "native_exec", "native_deps.py: ELF executable (HAL service / daemon), DT_NEEDED deps", "parsed"
+        try:
+            with open(fp, "rb") as f:
+                head = f.read(2)
+            # a /bin command is a text wrapper (shebang, or a leading comment)
+            if head[:1] in (b"#", b"\n") or "/bin/" in path:
+                return "script", "misc_files.py: shell command wrapper", "parsed"
+        except OSError:
+            pass
     return "other", "unclassified — needs a rule", "pending"
 
 
@@ -73,7 +109,7 @@ def main():
                     cat, how, depth = "symlink", "symbolic link", "listed"
                     size, digest = 0, None
                 else:
-                    cat, how, depth = categorize(rel, fn)
+                    cat, how, depth = categorize(rel, fn, fp)
                     size = st.st_size
                     digest = None
                     if do_hash and size:

@@ -12,3 +12,4 @@ work/
 # heavy regenerable analysis dumps (summaries are committed)
 roms/**/coverage.json
 roms/**/native_deps.json
+roms/**/xml_config.json
