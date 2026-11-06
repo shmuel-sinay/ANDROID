@@ -48,6 +48,8 @@ RULES = [
     (lambda p, n, x: x in ("bfbs", "fbs"), "flatbuffer", "flatbuffer schema/data — indexed", "listed"),
     (lambda p, n, x: x in ("mp4", "webm", "m4v", "qmg"), "video", "video/animation asset", "listed"),
     (lambda p, n, x: x == "csv", "text", "csv data — indexed", "listed"),
+    (lambda p, n, x: x in ("ta", "fsm", "drbg", "ski") or n.startswith("aee-") or "/thh/" in p, "vendor_blob", "TEE app / firmware / AEE debug blob — indexed", "listed"),
+    (lambda p, n, x: "/srec/" in p or "/tts/" in p or x in ("fst", "mfar", "mmap", "syms", "lstm", "far", "dnn", "klatt", "pumpkin"), "speech_model", "speech/TTS model data — indexed", "listed"),
     (lambda p, n, x: n in ("bug_map", "remoteproc_scp", "out-of-process") or "remoteproc" in n, "binary_data", "firmware/debug blob — indexed", "listed"),
     (lambda p, n, x: x in ("pb", "txtpb", "pbtxt", "binarypb"), "protobuf", "protobuf blob — indexed", "listed"),
     (lambda p, n, x: x in ("bin", "dat", "db", "bc", "ko", "img", "mdl", "map", "cfg", "conf", "ser", "dic"), "binary_data", "binary/config blob", "listed"),
@@ -76,7 +78,7 @@ def categorize(path, name, fp=None):
     if ("/.tp/" in path or "/apdb/" in path or name in ("slp_conf", "selinux_denial_metadata")
             or name.startswith("apdb")):
         return "vendor_blob", "vendor (MTK) config/debug blob — indexed", "listed"
-    if ext in ("mk", "cnf", "conf"):
+    if ext in ("mk", "cnf", "conf", "config"):
         return "text", "text/config — indexed", "listed"
     # fall back to content sniffing for extension-less files
     if fp:

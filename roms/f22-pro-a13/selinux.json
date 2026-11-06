@@ -1,0 +1,829 @@
+{
+ "root_dir": "fs",
+ "totals": {
+  "file_contexts": 1721,
+  "property_contexts": 1541,
+  "service_contexts": 367,
+  "hwservice_contexts": 151,
+  "seapp_rules": 43,
+  "cil_statements": 60461,
+  "seccomp_syscalls": 189
+ },
+ "file_count": 46,
+ "seapp_rules": [
+  {
+   "isSystemServer": "true",
+   "domain": "system_server_startup",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.android.traceur",
+   "domain": "traceur_app",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.android.remoteprovisioner",
+   "domain": "remote_prov_app",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "system",
+   "seinfo": "platform",
+   "domain": "system_app",
+   "type": "system_app_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "bluetooth",
+   "seinfo": "platform",
+   "domain": "bluetooth",
+   "type": "bluetooth_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "network_stack",
+   "seinfo": "network_stack",
+   "domain": "network_stack",
+   "type": "radio_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "nfc",
+   "seinfo": "platform",
+   "domain": "nfc",
+   "type": "nfc_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "secure_element",
+   "seinfo": "platform",
+   "domain": "secure_element",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "radio",
+   "seinfo": "platform",
+   "domain": "radio",
+   "type": "radio_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "shared_relro",
+   "domain": "shared_relro",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "shell",
+   "seinfo": "platform",
+   "domain": "shell",
+   "name": "com.android.shell",
+   "type": "shell_data_file",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "webview_zygote",
+   "seinfo": "webview_zygote",
+   "domain": "webview_zygote",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_isolated",
+   "domain": "isolated_app",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "app_zygote",
+   "domain": "app_zygote",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "media",
+   "domain": "mediaprovider",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "domain": "platform_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isEphemeralApp": "true",
+   "domain": "ephemeral_app",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "domain": "priv_app",
+   "type": "privapp_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.permissioncontroller",
+   "domain": "permissioncontroller_app",
+   "type": "privapp_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "media",
+   "isPrivApp": "true",
+   "name": "com.android.providers.media.module",
+   "domain": "mediaprovider_app",
+   "type": "privapp_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.providers.media.module",
+   "domain": "mediaprovider_app",
+   "type": "privapp_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "isPrivApp": "true",
+   "name": "com.android.permissioncontroller",
+   "domain": "permissioncontroller_app",
+   "type": "privapp_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.android.vzwomatrigger",
+   "domain": "vzwomatrigger_app",
+   "type": "privapp_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.gms",
+   "domain": "gmscore_app",
+   "type": "privapp_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.gms.*",
+   "domain": "gmscore_app",
+   "type": "privapp_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.gms:*",
+   "domain": "gmscore_app",
+   "type": "privapp_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "isPrivApp": "true",
+   "name": "com.google.android.gsf",
+   "domain": "gmscore_app",
+   "type": "privapp_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "minTargetSdkVersion": "30",
+   "domain": "untrusted_app",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "minTargetSdkVersion": "29",
+   "domain": "untrusted_app_29",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "minTargetSdkVersion": "28",
+   "domain": "untrusted_app_27",
+   "type": "app_data_file",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "minTargetSdkVersion": "26",
+   "domain": "untrusted_app_27",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "domain": "untrusted_app_25",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "minTargetSdkVersion": "28",
+   "fromRunAs": "true",
+   "domain": "runas_app",
+   "levelFrom": "all",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "fromRunAs": "true",
+   "domain": "runas_app",
+   "levelFrom": "user",
+   "from": "system:/system/etc/selinux/plat_seapp_contexts"
+  },
+  {
+   "user": "system",
+   "seinfo": "platform",
+   "name": "com.gd.mobicore.pa",
+   "domain": "teeregistryd_app",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "system",
+   "seinfo": "platform",
+   "name": "com.trustonic.teeservice",
+   "domain": "teed_app",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.engineermode",
+   "domain": "em_app",
+   "type": "em_app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.apmonitor",
+   "domain": "apmsrv_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.capabilitytest",
+   "domain": "capability_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.rsuprocess",
+   "domain": "rsu_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "system:/system/system_ext/etc/selinux/system_ext_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.trustonic.tuiservice",
+   "domain": "mobicore_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "vendor:/etc/selinux/vendor_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.emcamera",
+   "domain": "emcamera_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "vendor:/etc/selinux/vendor_seapp_contexts"
+  },
+  {
+   "user": "_app",
+   "seinfo": "platform",
+   "name": "com.mediatek.sensorhub.ui",
+   "domain": "sensorhub_app",
+   "type": "app_data_file",
+   "levelFrom": "user",
+   "from": "vendor:/etc/selinux/vendor_seapp_contexts"
+  }
+ ],
+ "files": [
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_service_contexts",
+   "size": 24091,
+   "kind": "service_contexts",
+   "entries": 309
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_hwservice_contexts",
+   "size": 8648,
+   "kind": "hwservice_contexts",
+   "entries": 85
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_property_contexts",
+   "size": 75674,
+   "kind": "property_contexts",
+   "entries": 917
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_sepolicy.cil",
+   "size": 1810555,
+   "kind": "cil",
+   "statements": {
+    "role": 4,
+    "typeattribute": 1154,
+    "roleattribute": 1,
+    "handleunknown": 1,
+    "mls": 1,
+    "policycap": 4,
+    "sid": 27,
+    "sidcontext": 27,
+    "sidorder": 1,
+    "fsuse": 20,
+    "genfscon": 365,
+    "common": 5,
+    "typealias": 1,
+    "typealiasactual": 1,
+    "class": 102,
+    "mlsconstrain": 89,
+    "classcommon": 74,
+    "classorder": 1,
+    "roletype": 1470,
+    "typeattributeset": 1030,
+    "expandtypeattribute": 214,
+    "type": 1469,
+    "user": 1,
+    "userrole": 2,
+    "userlevel": 1,
+    "userrange": 1,
+    "sensitivity": 1,
+    "sensitivitycategory": 1,
+    "sensitivityorder": 1,
+    "category": 1024,
+    "categoryorder": 1,
+    "neverallow": 3789,
+    "allow": 9444,
+    "allowx": 191,
+    "dontaudit": 340,
+    "neverallowx": 308,
+    "auditallow": 14,
+    "typetransition": 241,
+    "dontauditx": 3
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_file_contexts",
+   "size": 40309,
+   "kind": "file_contexts",
+   "entries": 633
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/plat_seapp_contexts",
+   "size": 2999,
+   "kind": "seapp_contexts",
+   "rules": 34
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/29.0.compat.cil",
+   "size": 846,
+   "kind": "cil",
+   "statements": {
+    "typeattribute": 1,
+    "typeattributeset": 2,
+    "allow": 5
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/29.0.cil",
+   "size": 111009,
+   "kind": "cil",
+   "statements": {
+    "type": 28,
+    "typeattribute": 1,
+    "expandtypeattribute": 974,
+    "typeattributeset": 974
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/28.0.cil",
+   "size": 95919,
+   "kind": "cil",
+   "statements": {
+    "type": 46,
+    "typeattribute": 5,
+    "expandtypeattribute": 837,
+    "typeattributeset": 838
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/28.0.compat.cil",
+   "size": 987,
+   "kind": "cil",
+   "statements": {
+    "typeattribute": 1,
+    "typeattributeset": 2,
+    "allowx": 2,
+    "allow": 5
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/26.0.cil",
+   "size": 44069,
+   "kind": "cil",
+   "statements": {
+    "type": 55,
+    "typeattribute": 8,
+    "typeattributeset": 691
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/30.0.cil",
+   "size": 124693,
+   "kind": "cil",
+   "statements": {
+    "type": 19,
+    "typeattribute": 1,
+    "expandtypeattribute": 1084,
+    "typeattributeset": 1086,
+    "exported2_default_prop": 1,
+    "exported2_system_prop": 1,
+    "exported2_vold_prop": 1,
+    "exported3_default_prop": 1,
+    "exported3_system_prop": 1,
+    "exported_default_prop": 1,
+    "exported_ffs_prop": 1,
+    "exported_system_radio_prop": 1,
+    "gsi_metadata_file": 1,
+    "proc": 1,
+    "user_profile_data_file": 1,
+    "vendor_public_framework_file": 1
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/30.0.compat.cil",
+   "size": 902,
+   "kind": "cil",
+   "statements": {
+    "typeattribute": 1,
+    "typeattributeset": 2,
+    "allow": 4
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/27.0.compat.cil",
+   "size": 987,
+   "kind": "cil",
+   "statements": {
+    "typeattribute": 1,
+    "typeattributeset": 2,
+    "allowx": 2,
+    "allow": 5
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/27.0.cil",
+   "size": 80908,
+   "kind": "cil",
+   "statements": {
+    "type": 50,
+    "typeattribute": 5,
+    "expandtypeattribute": 710,
+    "typeattributeset": 711
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/26.0.compat.cil",
+   "size": 987,
+   "kind": "cil",
+   "statements": {
+    "typeattribute": 1,
+    "typeattributeset": 2,
+    "allowx": 2,
+    "allow": 5
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/selinux/mapping/31.0.cil",
+   "size": 188583,
+   "kind": "cil",
+   "statements": {
+    "typeattributeset": 1235,
+    "expandtypeattribute": 1235,
+    "typeattribute": 1235
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/mediacodec.policy",
+   "size": 1281,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 49
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/code_coverage.arm.policy",
+   "size": 68,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 0
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/crash_dump.arm.policy",
+   "size": 534,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 38
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/mediaextractor.policy",
+   "size": 799,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 38
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/code_coverage.arm64.policy",
+   "size": 70,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 0
+  },
+  {
+   "partition": "system",
+   "path": "/system/etc/seccomp_policy/crash_dump.arm64.policy",
+   "size": 537,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 37
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_sepolicy.cil",
+   "size": 257867,
+   "kind": "cil",
+   "statements": {
+    "genfscon": 113,
+    "typeattributeset": 85,
+    "typeattribute": 171,
+    "type": 240,
+    "roletype": 240,
+    "dontaudit": 46,
+    "neverallow": 123,
+    "allow": 1492,
+    "typetransition": 48,
+    "allowx": 6
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_hwservice_contexts",
+   "size": 0,
+   "kind": "hwservice_contexts",
+   "entries": 0
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_file_contexts",
+   "size": 3550,
+   "kind": "file_contexts",
+   "entries": 56
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_service_contexts",
+   "size": 5177,
+   "kind": "service_contexts",
+   "entries": 54
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_property_contexts",
+   "size": 13293,
+   "kind": "property_contexts",
+   "entries": 164
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/system_ext_seapp_contexts",
+   "size": 583,
+   "kind": "seapp_contexts",
+   "rules": 6
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/29.0.compat.cil",
+   "size": 0,
+   "kind": "cil",
+   "statements": {}
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/28.0.compat.cil",
+   "size": 0,
+   "kind": "cil",
+   "statements": {}
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/30.0.cil",
+   "size": 9444,
+   "kind": "cil",
+   "statements": {
+    "expandtypeattribute": 81,
+    "typeattributeset": 81
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/30.0.compat.cil",
+   "size": 0,
+   "kind": "cil",
+   "statements": {}
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/27.0.compat.cil",
+   "size": 0,
+   "kind": "cil",
+   "statements": {}
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/26.0.compat.cil",
+   "size": 0,
+   "kind": "cil",
+   "statements": {}
+  },
+  {
+   "partition": "system",
+   "path": "/system/system_ext/etc/selinux/mapping/31.0.cil",
+   "size": 6565,
+   "kind": "cil",
+   "statements": {
+    "typeattributeset": 44,
+    "expandtypeattribute": 44,
+    "typeattribute": 44
+   }
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_hwservice_contexts",
+   "size": 5741,
+   "kind": "hwservice_contexts",
+   "entries": 66
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_file_contexts",
+   "size": 83950,
+   "kind": "file_contexts",
+   "entries": 1032
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_seapp_contexts",
+   "size": 329,
+   "kind": "seapp_contexts",
+   "rules": 3
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/plat_pub_versioned.cil",
+   "size": 930748,
+   "kind": "cil",
+   "statements": {
+    "roletype": 1280,
+    "typeattribute": 2242,
+    "typeattributeset": 645,
+    "expandtypeattribute": 210,
+    "type": 1279,
+    "neverallow": 1651,
+    "allow": 4626,
+    "allowx": 142,
+    "dontaudit": 62,
+    "neverallowx": 168,
+    "auditallow": 2
+   }
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_sepolicy.cil",
+   "size": 973050,
+   "kind": "cil",
+   "statements": {
+    "genfscon": 576,
+    "typealias": 1,
+    "typealiasactual": 1,
+    "typeattributeset": 353,
+    "type": 1376,
+    "roletype": 1376,
+    "allow": 7347,
+    "dontaudit": 225,
+    "typetransition": 203,
+    "allowx": 113,
+    "neverallow": 330,
+    "typeattribute": 86
+   }
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_service_contexts",
+   "size": 570,
+   "kind": "service_contexts",
+   "entries": 4
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/selinux/vendor_property_contexts",
+   "size": 37787,
+   "kind": "property_contexts",
+   "entries": 460
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/seccomp_policy/mediaswcodec.policy",
+   "size": 46,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 1
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/seccomp_policy/mediacodec.policy",
+   "size": 308,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 20
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/seccomp_policy/mediaextractor.policy",
+   "size": 148,
+   "kind": "seccomp_policy",
+   "allowed_syscalls": 6
+  }
+ ]
+}

@@ -1,0 +1,205 @@
+{
+ "root": "fs",
+ "hashed": true,
+ "totals": {
+  "files": 6129,
+  "bytes": 4067714127,
+  "symlinks": 494
+ },
+ "by_depth": {
+  "parsed": {
+   "count": 4459,
+   "bytes": 3350692494
+  },
+  "listed": {
+   "count": 2108,
+   "bytes": 639644194
+  },
+  "partial": {
+   "count": 56,
+   "bytes": 77377439
+  }
+ },
+ "categories": {
+  "native_lib": {
+   "how": "native_deps.py: SONAME, DT_NEEDED deps, export/import counts",
+   "depth": "parsed",
+   "count": 3237,
+   "bytes": 985751372
+  },
+  "symlink": {
+   "how": "symbolic link",
+   "depth": "listed",
+   "count": 494,
+   "bytes": 0
+  },
+  "cert_key": {
+   "how": "trust anchor / signing key — indexed",
+   "depth": "listed",
+   "count": 357,
+   "bytes": 1744435
+  },
+  "native_exec": {
+   "how": "native_deps.py: ELF executable (HAL service / daemon), DT_NEEDED deps",
+   "depth": "parsed",
+   "count": 319,
+   "bytes": 78768648
+  },
+  "aot": {
+   "how": "pre-compiled AOT image (mirrors its jar/apk dex)",
+   "depth": "listed",
+   "count": 305,
+   "bytes": 440789344
+  },
+  "xml_other": {
+   "how": "xml_config.py: root tag + declared content",
+   "depth": "parsed",
+   "count": 243,
+   "bytes": 2846953
+  },
+  "font": {
+   "how": "font asset",
+   "depth": "listed",
+   "count": 242,
+   "bytes": 75974669
+  },
+  "audio": {
+   "how": "sound/animation asset",
+   "depth": "listed",
+   "count": 225,
+   "bytes": 11338560
+  },
+  "apk": {
+   "how": "apk_inventory.py: manifest, perms, priv-app, intents",
+   "depth": "parsed",
+   "count": 210,
+   "bytes": 1997373593
+  },
+  "init_rc": {
+   "how": "init_rc.py: services, actions, triggers",
+   "depth": "parsed",
+   "count": 205,
+   "bytes": 430743
+  },
+  "input_map": {
+   "how": "input key-layout — static data",
+   "depth": "listed",
+   "count": 174,
+   "bytes": 340953
+  },
+  "binary_data": {
+   "how": "binary/config blob",
+   "depth": "listed",
+   "count": 92,
+   "bytes": 47043295
+  },
+  "privapp_xml": {
+   "how": "apk_inventory.py: privapp-permissions allowlists",
+   "depth": "parsed",
+   "count": 77,
+   "bytes": 181966
+  },
+  "text": {
+   "how": "text/config — indexed",
+   "depth": "listed",
+   "count": 74,
+   "bytes": 262222
+  },
+  "speech_model": {
+   "how": "speech/TTS model data — indexed",
+   "depth": "listed",
+   "count": 66,
+   "bytes": 47751890
+  },
+  "selinux": {
+   "how": "selinux.py: contexts / CIL policy parsed",
+   "depth": "parsed",
+   "count": 59,
+   "bytes": 5916727
+  },
+  "jar": {
+   "how": "boot_guards.py: dex scanned for boot guards (framework/services)",
+   "depth": "partial",
+   "count": 56,
+   "bytes": 77377439
+  },
+  "script": {
+   "how": "misc_files.py: shell command wrapper",
+   "depth": "parsed",
+   "count": 42,
+   "bytes": 64432
+  },
+  "system_config": {
+   "how": "passwd/group/fs_config/tz — static system config",
+   "depth": "listed",
+   "count": 33,
+   "bytes": 1644491
+  },
+  "apex_archive": {
+   "how": "apex_unpack.py: payload extracted to apex_extracted/ and analysed",
+   "depth": "parsed",
+   "count": 25,
+   "bytes": 279275569
+  },
+  "vendor_blob": {
+   "how": "TEE app / firmware / AEE debug blob — indexed",
+   "depth": "listed",
+   "count": 19,
+   "bytes": 2597382
+  },
+  "sysconfig_xml": {
+   "how": "xml_config.py: VINTF HALs, features, libraries",
+   "depth": "parsed",
+   "count": 14,
+   "bytes": 41200
+  },
+  "prop": {
+   "how": "build.prop parsed (key props surfaced)",
+   "depth": "parsed",
+   "count": 13,
+   "bytes": 35125
+  },
+  "asset_blob": {
+   "how": "compressed/model/binary asset — indexed",
+   "depth": "listed",
+   "count": 12,
+   "bytes": 1608368
+  },
+  "apex_manifest": {
+   "how": "misc_files.py: APEX name + version",
+   "depth": "parsed",
+   "count": 8,
+   "bytes": 462
+  },
+  "protobuf": {
+   "how": "protobuf blob — indexed",
+   "depth": "listed",
+   "count": 7,
+   "bytes": 2495
+  },
+  "art_profile": {
+   "how": "ART dexlayout profile — build artifact",
+   "depth": "listed",
+   "count": 5,
+   "bytes": 571781
+  },
+  "kernel_modules": {
+   "how": "misc_files.py: modules.dep graph / load order",
+   "depth": "parsed",
+   "count": 4,
+   "bytes": 1133
+  },
+  "fstab": {
+   "how": "BOOT_CHAIN.md: mount + avb flags",
+   "depth": "parsed",
+   "count": 3,
+   "bytes": 4571
+  },
+  "image": {
+   "how": "image asset",
+   "depth": "listed",
+   "count": 3,
+   "bytes": 7974309
+  }
+ }
+}

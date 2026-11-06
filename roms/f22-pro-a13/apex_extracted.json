@@ -1,0 +1,45 @@
+{
+ "apex_count": 8,
+ "apexes": [
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v30.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v30",
+   "files": 580
+  },
+  {
+   "apex": "system:/system/apex/com.android.apex.cts.shim.apex",
+   "extracted_to": "fs/apex_extracted/com.android.apex.cts.shim",
+   "files": 4
+  },
+  {
+   "apex": "system:/system/apex/com.android.appsearch.apex",
+   "extracted_to": "fs/apex_extracted/com.android.appsearch",
+   "files": 8
+  },
+  {
+   "apex": "system:/system/apex/com.android.i18n.apex",
+   "extracted_to": "fs/apex_extracted/com.android.i18n",
+   "files": 18
+  },
+  {
+   "apex": "system:/system/apex/com.android.vndk.current.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.current",
+   "files": 274
+  },
+  {
+   "apex": "system:/system/apex/com.android.runtime.apex",
+   "extracted_to": "fs/apex_extracted/com.android.runtime",
+   "files": 33
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.tzdata3.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.tzdata3",
+   "files": 6
+  },
+  {
+   "apex": "system:/system/apex/com.google.mainline.primary.libs.apex",
+   "extracted_to": "fs/apex_extracted/com.google.mainline.primary.libs",
+   "files": 5
+  }
+ ]
+}

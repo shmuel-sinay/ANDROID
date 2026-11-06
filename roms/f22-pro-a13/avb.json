@@ -1,0 +1,313 @@
+[
+  {
+    "file": "boot.img",
+    "kind": "none"
+  },
+  {
+    "file": "dtbo.img",
+    "kind": "none"
+  },
+  {
+    "file": "vbmeta.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "182acf43e156e693479dfdc3ce9d71b97493343b",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "chain_partition",
+        "partition": "vbmeta_system",
+        "rollback_index_location": 2,
+        "public_key_sha1": "be94be43d2641f0ea2abc9a7bc37e08483c94cd9"
+      },
+      {
+        "type": "chain_partition",
+        "partition": "vbmeta_vendor",
+        "rollback_index_location": 4,
+        "public_key_sha1": "c18eafc3d4f3d695bd50e49eba57f3782d363ed3"
+      },
+      {
+        "type": "chain_partition",
+        "partition": "boot",
+        "rollback_index_location": 3,
+        "public_key_sha1": "dc7b139097ba9770267be2d9b1412cc8eb71310e"
+      }
+    ]
+  },
+  {
+    "file": "vbmeta_system.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "be94be43d2641f0ea2abc9a7bc37e08483c94cd9",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2023-06-05"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.security_patch",
+        "value": "2023-06-05"
+      },
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 2172370944,
+        "tree_offset": 2172370944,
+        "tree_size": 17113088,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 2189484032,
+        "fec_size": 17309696,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "a5b0b30175398462d8a52e97c1eec4b37954cccfd12046830dc149e58208ac36",
+        "flags": 0
+      },
+      {
+        "type": "hashtree",
+        "partition": "system",
+        "dm_verity_version": 1,
+        "image_size": 1252954112,
+        "tree_offset": 1252954112,
+        "tree_size": 9871360,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 1262825472,
+        "fec_size": 9986048,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "10f11071ddda92c74d5fca74c97515e34ebfe720a72b874912a724d31621adcd",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "vbmeta_vendor.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "c18eafc3d4f3d695bd50e49eba57f3782d363ed3",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.security_patch",
+        "value": "2023-06-05"
+      },
+      {
+        "type": "hashtree",
+        "partition": "vendor",
+        "dm_verity_version": 1,
+        "image_size": 451006464,
+        "tree_offset": 451006464,
+        "tree_size": 3559424,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 454565888,
+        "fec_size": 3596288,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "4cd782139e2db557111f834d7ab4901e211adff45c51cb729397116df19400c2",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "super/system_a.img",
+    "kind": "footer",
+    "original_image_size": 1252954112,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "system",
+        "dm_verity_version": 1,
+        "image_size": 1252954112,
+        "tree_offset": 1252954112,
+        "tree_size": 9871360,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 1262825472,
+        "fec_size": 9986048,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "10f11071ddda92c74d5fca74c97515e34ebfe720a72b874912a724d31621adcd",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.security_patch",
+        "value": "2023-06-05"
+      }
+    ]
+  },
+  {
+    "file": "super/vendor_a.img",
+    "kind": "footer",
+    "original_image_size": 451006464,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "vendor",
+        "dm_verity_version": 1,
+        "image_size": 451006464,
+        "tree_offset": 451006464,
+        "tree_size": 3559424,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 454565888,
+        "fec_size": 3596288,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "4cd782139e2db557111f834d7ab4901e211adff45c51cb729397116df19400c2",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.security_patch",
+        "value": "2023-06-05"
+      }
+    ]
+  },
+  {
+    "file": "super/product_a.img",
+    "kind": "footer",
+    "original_image_size": 2172370944,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 2172370944,
+        "tree_offset": 2172370944,
+        "tree_size": 17113088,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 2189484032,
+        "fec_size": 17309696,
+        "hash_algorithm": "sha256",
+        "salt": "f04c93505a8da6081f6b751d689366ad6495f798ba846f2271757a64ff7d6fc0",
+        "root_digest": "a5b0b30175398462d8a52e97c1eec4b37954cccfd12046830dc149e58208ac36",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "QIN/F22Pro-GL/F22Pro:12/SP1A.210812.016/1690421655:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2023-06-05"
+      }
+    ]
+  }
+]
