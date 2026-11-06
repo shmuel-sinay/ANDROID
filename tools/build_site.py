@@ -145,12 +145,32 @@ display:inline-grid;place-items:center;color:#fff;font-weight:800;margin-left:8p
 </body></html>"""
 
 
+FRAGMENTS = {}   # route key -> {"title":.., "subtitle":.., "crumbs":.., "body":..}
+OUT_ROOT = None  # set by main(); lets page() compute each route's key
+
+
+def route_key(path):
+    """Map an absolute output path to a stable route key ("", "coverage",
+    "deps/installer", ...) used by the kosher-tek.com re-skin step."""
+    rel = os.path.relpath(path, OUT_ROOT).replace(os.sep, "/")
+    if rel == "index.html":
+        return ""
+    if rel.endswith("/index.html"):
+        return rel[: -len("/index.html")]
+    if rel.endswith(".html"):
+        return rel[:-5]
+    return rel
+
+
 def page(path, title, subtitle, crumbs, body, depth):
     root = "../" * depth
     open(path, "w", encoding="utf-8").write(PAGE.format(
         title=e(title), subtitle=e(subtitle), crumbs=crumbs, body=body,
         root=root, stamp="GTR · Qin F21 Pro", author=e(AUTHOR),
         initial=e(AUTHOR.strip()[0]), repo=REPO))
+    if OUT_ROOT is not None:
+        FRAGMENTS[route_key(path)] = {"title": title, "subtitle": subtitle,
+                                      "crumbs": crumbs, "body": body}
 
 
 def sev_pill(sev):
@@ -161,6 +181,8 @@ def sev_pill(sev):
 def main():
     rom, out = sys.argv[1], sys.argv[2]
     os.makedirs(out, exist_ok=True)
+    global OUT_ROOT
+    OUT_ROOT = out
     sysprop = read_prop(os.path.join(rom, "system.build.prop"))
     roles = load_json(rom, "boot_roles.json", {"roles": []})
     apks = load_json(rom, "apks.json", {"apks": []})["apks"]
@@ -171,6 +193,8 @@ def main():
     model = sysprop.get("ro.product.system.model", "Qin F21 Pro")
     ver = sysprop.get("ro.build.version.release", "11")
     patch = sysprop.get("ro.build.version.security_patch", "")
+    chip_match = next((f for f in os.listdir(rom) if re.match(r"MT\d{4}_", f)), None)
+    chip = "MediaTek " + chip_match.split("_", 1)[0] if chip_match else "MediaTek"
 
     # ---- index ----
     bl = [r for r in roles["roles"] if r["if_missing"] == "bootloop" and r["status"] == "ok"]
@@ -180,7 +204,7 @@ def main():
 <section style="padding:30px 0 6px">
 <div style="display:inline-block;background:var(--grad);border:1px solid var(--br);
 border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;margin-bottom:14px">
-📱 {e(model)} · MediaTek MT6761</div>
+📱 {e(model)} · {e(chip)}</div>
 <h1 style="font-size:40px;font-weight:800;margin:4px 0 10px;letter-spacing:-.02em;line-height:1.15">
 מה בונה מה, ומה יקרה אם אמחק רכיב</h1>
 <p class="lead" style="font-size:17px">תיעוד מלא של הרום, שנוצר אוטומטית מניתוח הקבצים עצמם:
@@ -217,13 +241,21 @@ border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;margin-botto
 <p class="muted">מי מפעיל את מי, ומה קריטי לאתחול.</p></a>
 <a class="card" href="native/index.html"><h3><span class="ic">🧩</span>ספריות native</h3>
 <p class="muted">גרף התלויות של קוד C/C++ המהודר (‎.so).</p></a>
-<a class="card" href="ui/index.html"><h3><span class="ic">📲</span>סריקת עומק: ממשק</h3>
-<p class="muted">כל שורת הגדרות וכל אייקון סטטוס — ואיך להסיר.</p></a>
-<a class="card" href="knobs/index.html"><h3><span class="ic">🎛️</span>מתגי תצורה (עומק)</h3>
-<p class="muted">כל מתג בכל אפליקציה — להוספה והסרה של תכונות.</p></a>
 <a class="card" href="coverage/index.html"><h3><span class="ic">✓</span>כיסוי הניתוח</h3>
-<p class="muted">כל קובץ ברום, עם טביעת אצבע — מה נותח ומה לא.</p></a>
-</div>"""
+<p class="muted">כל קובץ ברום, עם טביעת אצבע — מה נותח ומה לא.</p></a>"""
+    if os.path.exists(os.path.join(rom, "ui_deep.summary.json")):
+        cards += """
+<a class="card" href="ui/index.html"><h3><span class="ic">📲</span>סריקת עומק: ממשק</h3>
+<p class="muted">כל שורת הגדרות וכל אייקון סטטוס — ואיך להסיר.</p></a>"""
+    if os.path.exists(os.path.join(rom, "resources.summary.json")):
+        cards += """
+<a class="card" href="knobs/index.html"><h3><span class="ic">🎛️</span>מתגי תצורה (עומק)</h3>
+<p class="muted">כל מתג בכל אפליקציה — להוספה והסרה של תכונות.</p></a>"""
+    if os.path.exists(os.path.join(rom, "overlays.summary.json")):
+        cards += """
+<a class="card" href="overlays/index.html"><h3><span class="ic">🧷</span>Overlays קיימים</h3>
+<p class="muted">דוגמאות עבודה אמיתיות של דריסת משאבים ברום.</p></a>"""
+    cards += "\n</div>"
     page(os.path.join(out, "index.html"), f"אטלס אנדרואיד – {model}",
          f"{model} · אנדרואיד {ver}", "דף הבית", cards, 0)
 
@@ -359,10 +391,12 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
             f'<td>{a["drawables"]}</td><td>{a["arrays"]}</td>'
             f'<td class=muted dir=ltr style="font-size:12px">{e(a["path"])}</td></tr>'
             for a in res["apps"] if a["package"])
+        guide = (' ראו <a href="../deps/overlays.html">מדריך</a>.'
+                 if os.path.exists(os.path.join(rom, "deps", "overlays.md")) else "")
         body = f"""<h2>סריקת עומק: מתגי תצורה</h2>
 <p class="lead">סריקה ברמת המשאבים לכל {res['apk_count']} האפליקציות — סה"כ {res['total_knobs']} מתגי תצורה
 (config_*, def_*, show*, enable*). אלה המתגים שקובעים אילו תכונות פעילות. להוספה/הסרה של תכונה
-(למשל אייקון בשורת הסטטוס, שורה בהגדרות) — דורסים מתג כזה ב-overlay (RRO). ראו <a href="../deps/overlays.html">מדריך</a>.</p>
+(למשל אייקון בשורת הסטטוס, שורה בהגדרות) — דורסים מתג כזה ב-overlay (RRO).{guide}</p>
 <input id="q" placeholder="חיפוש אפליקציה...">
 <table id="t"><tr><th>חבילה</th><th>מתגים</th><th>drawables</th><th>arrays</th><th>נתיב</th></tr>{rows}</table>
 <script>var q=document.getElementById('q'),rows=[].slice.call(document.querySelectorAll('#t tr')).slice(1);
@@ -466,6 +500,15 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
     body = f'<h2>תלויות מפורקות</h2><p class="muted">ניתוח קוד מלא: מה נבדק, מי משתמש בתוצאה, ואיך אפשר לבטל.</p><div class="grid">{links or "<p class=muted>אין עדיין.</p>"}</div>'
     page(os.path.join(out, "deps", "index.html"), "תלויות", model,
          '<a href="../index.html">בית</a> / תלויות', body, 1)
+
+    manifest = {
+        "device": {"model": model, "android_version": ver, "security_patch": patch,
+                   "apk_count": len(apks), "boot_guard_count": len(onboot),
+                   "bootloop_role_count": len(bl)},
+        "routes": FRAGMENTS,
+    }
+    json.dump(manifest, open(os.path.join(out, "_fragments.json"), "w"),
+              ensure_ascii=False, separators=(",", ":"))
 
     print(f"site built: {out} ({len(apks)} apks, {len(onboot)} guards, {len(items)} deps)")
 
