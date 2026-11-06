@@ -49,6 +49,7 @@ RULES = [
     (lambda p, n, x: x in ("bfbs", "fbs"), "flatbuffer", "flatbuffer schema/data — indexed", "listed"),
     (lambda p, n, x: x in ("mp4", "webm", "m4v", "qmg"), "video", "video/animation asset", "listed"),
     (lambda p, n, x: x == "csv", "text", "csv data — indexed", "listed"),
+    (lambda p, n, x: "/terminfo/" in p or "/vim" in p or "/bash" in p or "/ssh" in p or n in ("vimrc", "vimrc.tiny", "tags", "exrc", "empty") or x in ("vim",), "shell_userland", "shell/editor userland config (LineageOS) — indexed", "listed"),
     (lambda p, n, x: x in ("ta", "fsm", "drbg", "ski") or n.startswith("aee-") or "/thh/" in p, "vendor_blob", "TEE app / firmware / AEE debug blob — indexed", "listed"),
     (lambda p, n, x: "/srec/" in p or "/tts/" in p or x in ("fst", "mfar", "mmap", "syms", "lstm", "far", "dnn", "klatt", "pumpkin"), "speech_model", "speech/TTS model data — indexed", "listed"),
     (lambda p, n, x: n in ("bug_map", "remoteproc_scp", "out-of-process") or "remoteproc" in n, "binary_data", "firmware/debug blob — indexed", "listed"),
