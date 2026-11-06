@@ -1,0 +1,87 @@
+[
+  {
+    "file": "super/system_a.img",
+    "kind": "none"
+  },
+  {
+    "file": "super/vendor_a.img",
+    "kind": "footer",
+    "original_image_size": 352223232,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "vendor",
+        "dm_verity_version": 1,
+        "image_size": 352223232,
+        "tree_offset": 352223232,
+        "tree_size": 2781184,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 0,
+        "fec_offset": 0,
+        "fec_size": 0,
+        "hash_algorithm": "sha1",
+        "salt": "9ea5e752531905c3763ef79e4bb03b6e88797726",
+        "root_digest": "b31697c3b4576b9ae369f8f9668c8207be2dabde",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "super/product_a.img",
+    "kind": "footer",
+    "original_image_size": 160555008,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.1.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 160555008,
+        "tree_offset": 160555008,
+        "tree_size": 1273856,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 161828864,
+        "fec_size": 1286144,
+        "hash_algorithm": "sha256",
+        "salt": "5a24b3c0745ad7a0024c9a0363214733a17841385560f5c6c41ba8843f8a5207",
+        "root_digest": "f533725ea4162643353528238539e4b32dba98a74562bda4b7cd0d02010e6a09",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "Qin/full_k61v1_64_gms/k61v1_64_bsp:11/RP1A.200720.011/79:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "11"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2020-12-05"
+      }
+    ]
+  }
+]

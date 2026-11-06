@@ -1,0 +1,852 @@
+{
+ "root": "fs",
+ "count": 56,
+ "scripts": [
+  {
+   "partition": "system",
+   "path": "/system/addon.d/70-gapps.sh",
+   "kind": "shell_script",
+   "shebang": "/sbin/sh",
+   "purpose": "ADDOND_VERSION=2",
+   "commands": [
+    "EOF",
+    "blockdev",
+    "cat",
+    "chmod",
+    "chown",
+    "find",
+    "install",
+    "ln",
+    "mount",
+    "rm",
+    "sed",
+    "umount"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/wm",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/appops",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/vr",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"vr\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/pm",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/telecom",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"telecom\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/ldd",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Rather than have ldd and ldd64, this script does the right thing depending",
+   "commands": [
+    "error",
+    "function",
+    "linker"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/uiautomator",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2012 The Android Open Source Project",
+   "commands": [
+    "break",
+    "exec",
+    "export",
+    "mkdir",
+    "shift",
+    "trap",
+    "while"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/ime",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/move_widevine_data.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "We need to move any L3 files in the IDM folder to the L3 subfolder.",
+   "commands": [
+    "chgrp",
+    "find",
+    "mkdir",
+    "mv",
+    "restorecon"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/appwidget",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/otapreopt_script",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2016 The Android Open Source Project",
+   "commands": [
+    "break",
+    "cmd",
+    "continue",
+    "print",
+    "sleep",
+    "while"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/cppreopts.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2016 The Android Open Source Project",
+   "commands": [
+    "continue",
+    "fsync",
+    "function",
+    "log",
+    "rm",
+    "umask",
+    "wait"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/am",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd",
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/preloads_copy.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2016 The Android Open Source Project",
+   "commands": [
+    "cp",
+    "log",
+    "umask",
+    "wait"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/bmgr",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/content",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/device_config",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/dpm",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"dpm\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/locksettings",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"locksettings\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/input",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/notify_traceur.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/svc",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "`svc wifi` has been migrated to WifiShellCommand,",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/settings",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "cmd"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/requestsync",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"requestsync\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/hid",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Preload the native portion libhidcommand_jni.so to bypass the dependency",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/incident-helper-cmd",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"incident_helper_cmd\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/bu",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Script to start \"bu\" on the device",
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/sm",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": null,
+   "commands": [
+    "exec",
+    "export"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/migrate_legacy_obb_data.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2019 The Android Open Source Project",
+   "commands": [
+    "cp",
+    "log",
+    "mkdir",
+    "rm",
+    "rmdir",
+    "touch"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/otapreopt_slot",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "Copyright (C) 2016 The Android Open Source Project",
+   "commands": [
+    "log",
+    "mv",
+    "rm",
+    "rmdir"
+   ]
+  },
+  {
+   "partition": "system",
+   "path": "/system/bin/oem-iptables-init.sh",
+   "kind": "shell_script",
+   "shebang": "system/bin/sh",
+   "purpose": "Add iptables rules needed by vendor",
+   "commands": [
+    "iptables"
+   ]
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/partition_permission.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "change partition permission",
+   "commands": []
+  },
+  {
+   "partition": "vendor",
+   "path": "/etc/throttle.sh",
+   "kind": "shell_script",
+   "shebang": "/system/bin/sh",
+   "purpose": "traffic control; arg1:ifname, arg2: rx, arg 3 tx.",
+   "commands": [
+    "export",
+    "ifconfig",
+    "tc"
+   ]
+  },
+  {
+   "partition": "vendor",
+   "path": "/firmware/rgx.sh",
+   "kind": "shell_script",
+   "shebang": null,
+   "purpose": null,
+   "commands": []
+  }
+ ],
+ "apex_manifests": [
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.art.release/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.art",
+   "version": 1,
+   "raw_fields": {
+    "1": [
+     "com.android.art"
+    ],
+    "2": [
+     1
+    ],
+    "7": [
+     "libandroidicu.so",
+     "libandroidio.so",
+     "libdexfile_external.so",
+     "libnativebridge.so",
+     "libnativehelper.so",
+     "libnativeloader.so",
+     "libpac.so"
+    ],
+    "8": [
+     "libadbconnection_client.so",
+     "libc.so",
+     "libdl.so",
+     "libdl_android.so",
+     "liblog.so",
+     "libm.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.os.statsd/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.os.statsd",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.os.statsd"
+    ],
+    "2": [
+     300000000
+    ],
+    "7": [
+     "libstatspull.so",
+     "libstatssocket.so"
+    ],
+    "8": [
+     "libbinder_ndk.so",
+     "libc.so",
+     "libdl.so",
+     "libincident.so",
+     "liblog.so",
+     "libm.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.conscrypt/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.conscrypt",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.conscrypt"
+    ],
+    "2": [
+     300000000
+    ],
+    "8": [
+     "libandroidio.so",
+     "libc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.adbd/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.adbd",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.adbd"
+    ],
+    "2": [
+     300000000
+    ],
+    "7": [
+     "libadb_pairing_auth.so",
+     "libadb_pairing_connection.so",
+     "libadb_pairing_server.so",
+     "libadbconnection_client.so"
+    ],
+    "8": [
+     "libadbd_auth.so",
+     "libadbd_fs.so",
+     "libc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so",
+     "libselinux.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.wifi/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.wifi",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.wifi"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.resolv/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.resolv",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.resolv"
+    ],
+    "2": [
+     300000000
+    ],
+    "7": [
+     "libnetd_resolv.so"
+    ],
+    "8": [
+     "libbinder_ndk.so",
+     "libc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so",
+     "libstatssocket.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.extservices/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.extservices",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.extservices"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.tzdata/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.tzdata",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.tzdata"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.permission/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.permission",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.permission"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.media/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.media",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.media"
+    ],
+    "2": [
+     300000000
+    ],
+    "8": [
+     "libbinder_ndk.so",
+     "libc.so",
+     "libcgrouprc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so",
+     "libmediandk.so",
+     "libvndksupport.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.runtime/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.runtime",
+   "version": 1,
+   "raw_fields": {
+    "1": [
+     "com.android.runtime"
+    ],
+    "2": [
+     1
+    ],
+    "8": [
+     "libdexfile_external.so",
+     "liblog.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.sdkext/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.sdkext",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.sdkext"
+    ],
+    "2": [
+     300000000
+    ],
+    "8": [
+     "libc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.media.swcodec/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.media.swcodec",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.media.swcodec"
+    ],
+    "2": [
+     300000000
+    ],
+    "8": [
+     "libEGL.so",
+     "libbinder_ndk.so",
+     "libc.so",
+     "libcgrouprc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so",
+     "libnativewindow.so",
+     "libsync.so",
+     "libvndksupport.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.vndk.current/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.vndk.v30",
+   "version": 1,
+   "raw_fields": {
+    "1": [
+     "com.android.vndk.v30"
+    ],
+    "2": [
+     1
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.i18n/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.i18n",
+   "version": 1,
+   "raw_fields": {
+    "1": [
+     "com.android.i18n"
+    ],
+    "2": [
+     1
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.cellbroadcast/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.cellbroadcast",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.cellbroadcast"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.tethering/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.tethering",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.tethering"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.ipsec/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.ipsec",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.ipsec"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.neuralnetworks/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.neuralnetworks",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.neuralnetworks"
+    ],
+    "2": [
+     300000000
+    ],
+    "7": [
+     "libneuralnetworks.so"
+    ],
+    "8": [
+     "libc.so",
+     "libcgrouprc.so",
+     "libdl.so",
+     "liblog.so",
+     "libm.so",
+     "libnativewindow.so",
+     "libneuralnetworks_packageinfo.so",
+     "libvndksupport.so"
+    ]
+   }
+  },
+  {
+   "partition": "system",
+   "path": "/system/apex/com.android.mediaprovider/apex_manifest.pb",
+   "kind": "apex_manifest",
+   "apex_name": "com.android.mediaprovider",
+   "version": 300000000,
+   "raw_fields": {
+    "1": [
+     "com.android.mediaprovider"
+    ],
+    "2": [
+     300000000
+    ]
+   }
+  }
+ ],
+ "kernel_modules": [
+  {
+   "partition": "vendor",
+   "path": "/lib/modules/modules.dep",
+   "kind": "kernel_modules_dep",
+   "module_count": 9,
+   "graph": {
+    "bt_drv.ko": [
+     "wmt_drv.ko"
+    ],
+    "fpsgo.ko": [],
+    "met.ko": [],
+    "wlan_drv_gen4m.ko": [
+     "wmt_chrdev_wifi.ko",
+     "wmt_drv.ko"
+    ],
+    "trace_mmstat.ko": [],
+    "gps_drv.ko": [
+     "wmt_drv.ko"
+    ],
+    "wmt_drv.ko": [],
+    "kheaders.ko": [],
+    "wmt_chrdev_wifi.ko": [
+     "wmt_drv.ko"
+    ]
+   }
+  }
+ ]
+}
