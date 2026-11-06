@@ -88,7 +88,11 @@ def main():
                 if any(r["provider"] in (p or "").split(";") for p in a.get("providers", [])):
                     found.append(a)
             elif "package" in r:
-                if a.get("package") == r["package"]:
+                pk = a.get("package") or ""
+                # match the exact AOSP name or a vendor/Google variant with the
+                # same tail (e.g. com.google.android.ext.services)
+                tail = r["package"].split(".", 1)[-1] if r["package"].startswith("android.") else r["package"]
+                if pk == r["package"] or pk.endswith("." + tail) or pk == tail:
                     found.append(a)
         pkgs = sorted({a["package"] for a in found})
         out.append({k: r[k] for k in ("role", "if_missing", "confidence", "basis")} | {

@@ -1,0 +1,108 @@
+{
+  "metadata_version": "10.2",
+  "metadata_max_size": 65536,
+  "metadata_slot_count": 3,
+  "logical_block_size": 4096,
+  "block_devices": [
+    {
+      "name": "super",
+      "first_logical_sector": 2048,
+      "size": 4976541696
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "flags": 0,
+      "maximum_size": 0
+    },
+    {
+      "name": "main_a",
+      "flags": 0,
+      "maximum_size": 4974444544
+    },
+    {
+      "name": "main_b",
+      "flags": 0,
+      "maximum_size": 4974444544
+    }
+  ],
+  "partitions": [
+    {
+      "name": "product_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 690937856,
+      "extents": [
+        {
+          "sectors": 1349488,
+          "type": "linear",
+          "target_sector": 2048,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "product_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "system_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 2865815552,
+      "extents": [
+        {
+          "sectors": 5597296,
+          "type": "linear",
+          "target_sector": 1351680,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "system_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 113123328,
+      "extents": [
+        {
+          "sectors": 220944,
+          "type": "linear",
+          "target_sector": 6950912,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "vendor_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 354324480,
+      "extents": [
+        {
+          "sectors": 692040,
+          "type": "linear",
+          "target_sector": 7172096,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "vendor_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    }
+  ]
+}

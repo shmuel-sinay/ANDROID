@@ -1,0 +1,211 @@
+{
+ "root": "fs",
+ "hashed": true,
+ "totals": {
+  "files": 6615,
+  "bytes": 4310699962,
+  "symlinks": 520
+ },
+ "by_depth": {
+  "parsed": {
+   "count": 4933,
+   "bytes": 3855458999
+  },
+  "listed": {
+   "count": 2115,
+   "bytes": 354533803
+  },
+  "partial": {
+   "count": 87,
+   "bytes": 100707160
+  }
+ },
+ "categories": {
+  "native_lib": {
+   "how": "native_deps.py: SONAME, DT_NEEDED deps, export/import counts",
+   "depth": "parsed",
+   "count": 3723,
+   "bytes": 1121421616
+  },
+  "symlink": {
+   "how": "symbolic link",
+   "depth": "listed",
+   "count": 520,
+   "bytes": 0
+  },
+  "cert_key": {
+   "how": "trust anchor / signing key — indexed",
+   "depth": "listed",
+   "count": 344,
+   "bytes": 1755348
+  },
+  "aot": {
+   "how": "pre-compiled AOT image (mirrors its jar/apk dex)",
+   "depth": "listed",
+   "count": 326,
+   "bytes": 198799180
+  },
+  "native_exec": {
+   "how": "native_deps.py: ELF executable (HAL service / daemon), DT_NEEDED deps",
+   "depth": "parsed",
+   "count": 292,
+   "bytes": 71110020
+  },
+  "font": {
+   "how": "font asset",
+   "depth": "listed",
+   "count": 258,
+   "bytes": 81127964
+  },
+  "xml_other": {
+   "how": "xml_config.py: root tag + declared content",
+   "depth": "parsed",
+   "count": 257,
+   "bytes": 3025403
+  },
+  "audio": {
+   "how": "sound/animation asset",
+   "depth": "listed",
+   "count": 222,
+   "bytes": 11483822
+  },
+  "apk": {
+   "how": "apk_inventory.py: manifest, perms, priv-app, intents",
+   "depth": "parsed",
+   "count": 202,
+   "bytes": 2173547704
+  },
+  "input_map": {
+   "how": "input key-layout — static data",
+   "depth": "listed",
+   "count": 177,
+   "bytes": 345833
+  },
+  "init_rc": {
+   "how": "init_rc.py: services, actions, triggers",
+   "depth": "parsed",
+   "count": 175,
+   "bytes": 460144
+  },
+  "text": {
+   "how": "text/config — indexed",
+   "depth": "listed",
+   "count": 97,
+   "bytes": 542747
+  },
+  "jar": {
+   "how": "boot_guards.py: dex scanned for boot guards (framework/services)",
+   "depth": "partial",
+   "count": 87,
+   "bytes": 100707160
+  },
+  "privapp_xml": {
+   "how": "apk_inventory.py: privapp-permissions allowlists",
+   "depth": "parsed",
+   "count": 75,
+   "bytes": 187250
+  },
+  "selinux": {
+   "how": "selinux.py: contexts / CIL policy parsed",
+   "depth": "parsed",
+   "count": 66,
+   "bytes": 6244995
+  },
+  "binary_data": {
+   "how": "binary/config blob",
+   "depth": "listed",
+   "count": 58,
+   "bytes": 40837018
+  },
+  "protobuf": {
+   "how": "protobuf blob — indexed",
+   "depth": "listed",
+   "count": 48,
+   "bytes": 5678
+  },
+  "script": {
+   "how": "misc_files.py: shell command wrapper",
+   "depth": "parsed",
+   "count": 48,
+   "bytes": 384441
+  },
+  "system_config": {
+   "how": "passwd/group/fs_config/tz — static system config",
+   "depth": "listed",
+   "count": 34,
+   "bytes": 1728845
+  },
+  "apex_manifest": {
+   "how": "misc_files.py: APEX name + version",
+   "depth": "parsed",
+   "count": 30,
+   "bytes": 3256
+  },
+  "apex_archive": {
+   "how": "apex_unpack.py: payload extracted to apex_extracted/ and analysed",
+   "depth": "parsed",
+   "count": 30,
+   "bytes": 478994432
+  },
+  "sysconfig_xml": {
+   "how": "xml_config.py: VINTF HALs, features, libraries",
+   "depth": "parsed",
+   "count": 14,
+   "bytes": 37117
+  },
+  "prop": {
+   "how": "build.prop parsed (key props surfaced)",
+   "depth": "parsed",
+   "count": 13,
+   "bytes": 32753
+  },
+  "asset_blob": {
+   "how": "compressed/model/binary asset — indexed",
+   "depth": "listed",
+   "count": 11,
+   "bytes": 7504939
+  },
+  "vendor_blob": {
+   "how": "vendor (MTK) config/debug blob — indexed",
+   "depth": "listed",
+   "count": 8,
+   "bytes": 232342
+  },
+  "art_profile": {
+   "how": "ART dexlayout profile — build artifact",
+   "depth": "listed",
+   "count": 6,
+   "bytes": 287195
+  },
+  "fstab": {
+   "how": "BOOT_CHAIN.md: mount + avb flags",
+   "depth": "parsed",
+   "count": 4,
+   "bytes": 8627
+  },
+  "kernel_modules": {
+   "how": "misc_files.py: modules.dep graph / load order",
+   "depth": "parsed",
+   "count": 4,
+   "bytes": 1241
+  },
+  "image": {
+   "how": "image asset",
+   "depth": "listed",
+   "count": 3,
+   "bytes": 7974309
+  },
+  "flatbuffer": {
+   "how": "flatbuffer schema/data — indexed",
+   "depth": "listed",
+   "count": 2,
+   "bytes": 3964
+  },
+  "video": {
+   "how": "video/animation asset",
+   "depth": "listed",
+   "count": 1,
+   "bytes": 1904619
+  }
+ }
+}

@@ -217,6 +217,8 @@ border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;margin-botto
 <p class="muted">מי מפעיל את מי, ומה קריטי לאתחול.</p></a>
 <a class="card" href="native/index.html"><h3><span class="ic">🧩</span>ספריות native</h3>
 <p class="muted">גרף התלויות של קוד C/C++ המהודר (‎.so).</p></a>
+<a class="card" href="knobs/index.html"><h3><span class="ic">🎛️</span>מתגי תצורה (עומק)</h3>
+<p class="muted">כל מתג בכל אפליקציה — להוספה והסרה של תכונות.</p></a>
 <a class="card" href="coverage/index.html"><h3><span class="ic">✓</span>כיסוי הניתוח</h3>
 <p class="muted">כל קובץ ברום, עם טביעת אצבע — מה נותח ומה לא.</p></a>
 </div>"""
@@ -345,6 +347,27 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
 <table><tr><th>ספרייה</th><th>כמה תלויים בה</th></tr>{top}</table>"""
         page(os.path.join(out, "native", "index.html"), "ספריות native", model,
              '<a href="../index.html">בית</a> / native', body, 1)
+
+    # ---- deep resource knobs ----
+    res = load_json(rom, "resources.summary.json")
+    if res:
+        os.makedirs(os.path.join(out, "knobs"), exist_ok=True)
+        rows = "".join(
+            f'<tr><td><code>{e(a["package"])}</code></td><td>{a["knobs"]}</td>'
+            f'<td>{a["drawables"]}</td><td>{a["arrays"]}</td>'
+            f'<td class=muted dir=ltr style="font-size:12px">{e(a["path"])}</td></tr>'
+            for a in res["apps"] if a["package"])
+        body = f"""<h2>סריקת עומק: מתגי תצורה</h2>
+<p class="lead">סריקה ברמת המשאבים לכל {res['apk_count']} האפליקציות — סה"כ {res['total_knobs']} מתגי תצורה
+(config_*, def_*, show*, enable*). אלה המתגים שקובעים אילו תכונות פעילות. להוספה/הסרה של תכונה
+(למשל אייקון בשורת הסטטוס, שורה בהגדרות) — דורסים מתג כזה ב-overlay (RRO). ראו <a href="../deps/overlays.html">מדריך</a>.</p>
+<input id="q" placeholder="חיפוש אפליקציה...">
+<table id="t"><tr><th>חבילה</th><th>מתגים</th><th>drawables</th><th>arrays</th><th>נתיב</th></tr>{rows}</table>
+<script>var q=document.getElementById('q'),rows=[].slice.call(document.querySelectorAll('#t tr')).slice(1);
+q.addEventListener('input',function(){{var v=q.value.toLowerCase();rows.forEach(function(r){{
+r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</script>"""
+        page(os.path.join(out, "knobs", "index.html"), "מתגי תצורה", model,
+             '<a href="../index.html">בית</a> / מתגים', body, 1)
 
     # ---- removal recipes ----
     rec = load_json(rom, "removal_recipes.json")
