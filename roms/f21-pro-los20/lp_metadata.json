@@ -1,0 +1,103 @@
+{
+  "metadata_version": "10.0",
+  "metadata_max_size": 65536,
+  "metadata_slot_count": 1,
+  "logical_block_size": 4096,
+  "block_devices": [
+    {
+      "name": "super",
+      "first_logical_sector": 2048,
+      "size": 4294967296
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "flags": 0,
+      "maximum_size": 0
+    },
+    {
+      "name": "main",
+      "flags": 0,
+      "maximum_size": 3358269440
+    }
+  ],
+  "partitions": [
+    {
+      "name": "system_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 2802216960,
+      "extents": [
+        {
+          "sectors": 5473080,
+          "type": "linear",
+          "target_sector": 2048,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "product_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 163217408,
+      "extents": [
+        {
+          "sectors": 318784,
+          "type": "linear",
+          "target_sector": 5476352,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "product_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "vendor_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 355098624,
+      "extents": [
+        {
+          "sectors": 693552,
+          "type": "linear",
+          "target_sector": 5795840,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "vendor_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "system_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main",
+      "size": 37736448,
+      "extents": [
+        {
+          "sectors": 73704,
+          "type": "linear",
+          "target_sector": 6490112,
+          "source": 0
+        }
+      ]
+    }
+  ]
+}

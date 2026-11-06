@@ -56,7 +56,7 @@ RULES = [
     (lambda p, n, x: x in ("pb", "txtpb", "pbtxt", "binarypb"), "protobuf", "protobuf blob — indexed", "listed"),
     (lambda p, n, x: x in ("bin", "dat", "db", "bc", "ko", "img", "mdl", "map", "cfg", "conf", "ser", "dic"), "binary_data", "binary/config blob", "listed"),
     (lambda p, n, x: x in ("sh", "rc_sh"), "script", "misc_files.py: shebang, purpose, commands", "parsed"),
-    (lambda p, n, x: x in ("txt", "json", "conf", "ini", "cfg", "version", "md", "html", "css", "js", "xsd", "dtd", "proto", "yml", "yaml", "toml"), "text", "text/config — indexed", "listed"),
+    (lambda p, n, x: x in ("txt", "json", "conf", "ini", "cfg", "version", "md", "html", "css", "js", "xsd", "dtd", "proto", "yml", "yaml", "toml", "preset", "rc_sh", "nanorc"), "text", "text/config — indexed", "listed"),
 ]
 
 

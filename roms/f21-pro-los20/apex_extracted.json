@@ -1,0 +1,85 @@
+{
+ "apex_count": 16,
+ "apexes": [
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v32.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v32",
+   "files": 274
+  },
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v31.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v31",
+   "files": 274
+  },
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v28.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v28",
+   "files": 445
+  },
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v29.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v29",
+   "files": 510
+  },
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v30.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v30",
+   "files": 580
+  },
+  {
+   "apex": "system:/system/apex/com.android.ondevicepersonalization.apex",
+   "extracted_to": "fs/apex_extracted/com.android.ondevicepersonalization",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.android.apex.cts.shim.apex",
+   "extracted_to": "fs/apex_extracted/com.android.apex.cts.shim",
+   "files": 4
+  },
+  {
+   "apex": "system:/system/apex/com.android.appsearch.apex",
+   "extracted_to": "fs/apex_extracted/com.android.appsearch",
+   "files": 9
+  },
+  {
+   "apex": "system:/system/apex/com.android.i18n.apex",
+   "extracted_to": "fs/apex_extracted/com.android.i18n",
+   "files": 17
+  },
+  {
+   "apex": "system:/system/apex/com.android.vndk.current.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.current",
+   "files": 332
+  },
+  {
+   "apex": "system:/system/apex/com.android.tzdata.apex",
+   "extracted_to": "fs/apex_extracted/com.android.tzdata",
+   "files": 6
+  },
+  {
+   "apex": "system:/system/apex/com.android.os.statsd.apex",
+   "extracted_to": "fs/apex_extracted/com.android.os.statsd",
+   "files": 14
+  },
+  {
+   "apex": "system:/system/apex/com.android.btservices.apex",
+   "extracted_to": "fs/apex_extracted/com.android.btservices",
+   "files": 37
+  },
+  {
+   "apex": "system:/system/apex/com.android.runtime.apex",
+   "extracted_to": "fs/apex_extracted/com.android.runtime",
+   "files": 33
+  },
+  {
+   "apex": "system:/system/apex/com.android.sdkext.apex",
+   "extracted_to": "fs/apex_extracted/com.android.sdkext",
+   "files": 9
+  },
+  {
+   "apex": "system:/system/apex/com.android.scheduling.apex",
+   "extracted_to": "fs/apex_extracted/com.android.scheduling",
+   "files": 6
+  }
+ ]
+}
