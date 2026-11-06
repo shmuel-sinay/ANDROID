@@ -1,0 +1,216 @@
+{
+ "roles": [
+  {
+   "role": "installer",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "PackageManagerService.getRequiredInstallerLPr(): 'There must be exactly one installer'",
+   "filled_by": [
+    "com.android.packageinstaller"
+   ],
+   "paths": [
+    "system:/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "uninstaller",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "PackageManagerService.getRequiredUninstallerLPr(): 'There must be exactly one uninstaller'",
+   "filled_by": [
+    "com.android.packageinstaller"
+   ],
+   "paths": [
+    "system:/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "permission_controller",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "PackageManagerService.getRequiredPermissionControllerLPr(): 'There must be exactly one permission controller'",
+   "filled_by": [
+    "com.android.permissioncontroller"
+   ],
+   "paths": [
+    "system:/system/apex/com.android.permission/priv-app/PermissionController/PermissionController.apk",
+    "system:/system/priv-app/MtkPermissionController/MtkPermissionController.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "shared_library android.ext.shared",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "PackageManagerService.getRequiredSharedLibraryLPr(): 'Missing required shared library'",
+   "filled_by": [
+    "com.google.android.ext.shared"
+   ],
+   "paths": [
+    "system:/system/app/GoogleExtShared/GoogleExtShared.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "services_extension (ExtServices)",
+   "if_missing": "bootloop",
+   "confidence": "medium",
+   "basis": "PackageManagerService.getRequiredServicesExtensionPackageLPr()",
+   "filled_by": [
+    "android.ext.services",
+    "com.google.android.ext.services"
+   ],
+   "paths": [
+    "system:/system/apex/com.android.extservices/priv-app/ExtServices/ExtServices.apk",
+    "system:/system/priv-app/GoogleExtServices/GoogleExtServices.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "settings_provider",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "ActivityManagerService.installSystemProviders(): Settings.* reads fail in system_server",
+   "filled_by": [
+    "com.android.providers.settings"
+   ],
+   "paths": [
+    "system:/system/priv-app/MtkSettingsProvider/MtkSettingsProvider.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "framework (android)",
+   "if_missing": "bootloop",
+   "confidence": "high",
+   "basis": "framework-res.apk is package 'android' - resources of system_server",
+   "filled_by": [
+    "android",
+    "com.android.theme.icon_pack.circular.android",
+    "com.android.theme.icon_pack.filled.android",
+    "com.android.theme.icon_pack.rounded.android"
+   ],
+   "paths": [
+    "product:/overlay/IconPackCircularAndroid/IconPackCircularAndroidOverlay.apk",
+    "product:/overlay/IconPackFilledAndroid/IconPackFilledAndroidOverlay.apk",
+    "product:/overlay/IconPackRoundedAndroid/IconPackRoundedAndroidOverlay.apk",
+    "system:/system/framework/framework-res.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "package_verifier",
+   "if_missing": "degraded",
+   "confidence": "high",
+   "basis": "getRequiredButNotReallyRequiredVerifierLPr() returns null",
+   "filled_by": [
+    "com.android.vending"
+   ],
+   "paths": [
+    "system:/system/priv-app/Phonesky/Phonesky.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "home / launcher",
+   "if_missing": "degraded",
+   "confidence": "high",
+   "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation",
+   "filled_by": [
+    "android",
+    "com.android.launcher3",
+    "com.android.managedprovisioning",
+    "com.android.settings",
+    "com.google.android.apps.restore",
+    "com.google.android.gms",
+    "com.google.android.setupwizard"
+   ],
+   "paths": [
+    "system:/system/framework/framework-res.apk",
+    "system:/system/priv-app/GoogleRestore/GoogleRestore.apk",
+    "system:/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk",
+    "system:/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+    "system:/system/priv-app/SetupWizard/SetupWizard.apk",
+    "system:/system/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
+    "system:/system/system_ext/priv-app/MtkSettings/MtkSettings.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "system_ui",
+   "if_missing": "degraded",
+   "confidence": "medium",
+   "basis": "SystemServer.startSystemUi(): no status bar / navigation / lock screen",
+   "filled_by": [
+    "com.android.systemui"
+   ],
+   "paths": [
+    "system:/system/system_ext/priv-app/MtkSystemUI/MtkSystemUI.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "setup_wizard",
+   "if_missing": "degraded",
+   "confidence": "high",
+   "basis": "getSetupWizardPackageNameImpl() returns null; device may stay 'not provisioned'",
+   "filled_by": [
+    "com.google.android.setupwizard"
+   ],
+   "paths": [
+    "system:/system/priv-app/SetupWizard/SetupWizard.apk"
+   ],
+   "status": "ok",
+   "note": null
+  },
+  {
+   "role": "telephony (com.android.phone)",
+   "if_missing": "degraded",
+   "confidence": "high",
+   "basis": "persistent app; without it there is no calling/SMS",
+   "filled_by": [
+    "com.android.phone"
+   ],
+   "paths": [
+    "system:/system/priv-app/MtkTeleService/MtkTeleService.apk"
+   ],
+   "status": "ok",
+   "note": null
+  }
+ ],
+ "critical_init_services": [
+  "charger",
+  "hwservicemanager",
+  "lmkd",
+  "servicemanager",
+  "ueventd"
+ ],
+ "critical_note": "init reboots into bootloader/recovery if a critical service crashes more than 4 times in 4 minutes",
+ "persistent_apps": [
+  "android",
+  "com.android.cellbroadcastservice",
+  "com.android.networkstack",
+  "com.android.networkstack.tethering",
+  "com.android.nfc",
+  "com.android.ons",
+  "com.android.phone",
+  "com.android.se",
+  "com.android.systemui",
+  "com.mediatek.entitlement.o2",
+  "com.mediatek.security.service",
+  "com.mediatek.smartratswitch.service"
+ ],
+ "persistent_note": "repeated crashes of persistent apps trigger RescueParty, which ends in the 'Can't load Android system' recovery prompt"
+}

@@ -21,6 +21,7 @@ import sys
 #        "pending" = recognised but no analyzer yet.
 RULES = [
     # (test(path, name, ext) -> bool, category, how, depth)
+    (lambda p, n, x: x in ("bak", "old", "orig") or n.endswith(".apk.a") or ".apk." in n, "backup", "leftover backup copy — original analysed separately", "listed"),
     (lambda p, n, x: x == "apk", "apk", "apk_inventory.py: manifest, perms, priv-app, intents", "parsed"),
     (lambda p, n, x: x == "jar", "jar", "boot_guards.py: dex scanned for boot guards (framework/services)", "partial"),
     (lambda p, n, x: x == "so", "native_lib", "native_deps.py: SONAME, DT_NEEDED deps, export/import counts", "parsed"),

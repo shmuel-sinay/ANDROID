@@ -1,0 +1,199 @@
+{
+ "root": "fs",
+ "hashed": true,
+ "totals": {
+  "files": 5198,
+  "bytes": 2077755505,
+  "symlinks": 515
+ },
+ "by_depth": {
+  "parsed": {
+   "count": 3702,
+   "bytes": 1652682244
+  },
+  "listed": {
+   "count": 1933,
+   "bytes": 344724732
+  },
+  "partial": {
+   "count": 78,
+   "bytes": 80348529
+  }
+ },
+ "categories": {
+  "native_lib": {
+   "how": "native_deps.py: SONAME, DT_NEEDED deps, export/import counts",
+   "depth": "parsed",
+   "count": 2633,
+   "bytes": 819344060
+  },
+  "symlink": {
+   "how": "symbolic link",
+   "depth": "listed",
+   "count": 515,
+   "bytes": 0
+  },
+  "cert_key": {
+   "how": "trust anchor / signing key — indexed",
+   "depth": "listed",
+   "count": 418,
+   "bytes": 2010392
+  },
+  "font": {
+   "how": "font asset",
+   "depth": "listed",
+   "count": 292,
+   "bytes": 78346677
+  },
+  "aot": {
+   "how": "pre-compiled AOT image (mirrors its jar/apk dex)",
+   "depth": "listed",
+   "count": 290,
+   "bytes": 81822884
+  },
+  "native_exec": {
+   "how": "native_deps.py: ELF executable (HAL service / daemon), DT_NEEDED deps",
+   "depth": "parsed",
+   "count": 273,
+   "bytes": 55058836
+  },
+  "xml_other": {
+   "how": "xml_config.py: root tag + declared content",
+   "depth": "parsed",
+   "count": 218,
+   "bytes": 3200348
+  },
+  "apk": {
+   "how": "apk_inventory.py: manifest, perms, priv-app, intents",
+   "depth": "parsed",
+   "count": 195,
+   "bytes": 768838870
+  },
+  "init_rc": {
+   "how": "init_rc.py: services, actions, triggers",
+   "depth": "parsed",
+   "count": 167,
+   "bytes": 353030
+  },
+  "input_map": {
+   "how": "input key-layout — static data",
+   "depth": "listed",
+   "count": 158,
+   "bytes": 313110
+  },
+  "jar": {
+   "how": "boot_guards.py: dex scanned for boot guards (framework/services)",
+   "depth": "partial",
+   "count": 78,
+   "bytes": 80348529
+  },
+  "privapp_xml": {
+   "how": "apk_inventory.py: privapp-permissions allowlists",
+   "depth": "parsed",
+   "count": 69,
+   "bytes": 210059
+  },
+  "binary_data": {
+   "how": "binary/config blob",
+   "depth": "listed",
+   "count": 68,
+   "bytes": 43798197
+  },
+  "text": {
+   "how": "text/config — indexed",
+   "depth": "listed",
+   "count": 63,
+   "bytes": 129629
+  },
+  "selinux": {
+   "how": "selinux.py: contexts / CIL policy parsed",
+   "depth": "parsed",
+   "count": 60,
+   "bytes": 5266547
+  },
+  "audio": {
+   "how": "sound/animation asset",
+   "depth": "listed",
+   "count": 55,
+   "bytes": 3045609
+  },
+  "script": {
+   "how": "misc_files.py: shebang, purpose, commands",
+   "depth": "parsed",
+   "count": 37,
+   "bytes": 346386
+  },
+  "system_config": {
+   "how": "passwd/group/fs_config/tz — static system config",
+   "depth": "listed",
+   "count": 33,
+   "bytes": 1620926
+  },
+  "apex_manifest": {
+   "how": "misc_files.py: APEX name + version",
+   "depth": "parsed",
+   "count": 20,
+   "bytes": 1679
+  },
+  "asset_blob": {
+   "how": "compressed/model/binary asset — indexed",
+   "depth": "listed",
+   "count": 14,
+   "bytes": 1896938
+  },
+  "prop": {
+   "how": "build.prop parsed (key props surfaced)",
+   "depth": "parsed",
+   "count": 12,
+   "bytes": 22538
+  },
+  "sysconfig_xml": {
+   "how": "xml_config.py: VINTF HALs, features, libraries",
+   "depth": "parsed",
+   "count": 11,
+   "bytes": 33464
+  },
+  "backup": {
+   "how": "leftover backup copy — original analysed separately",
+   "depth": "listed",
+   "count": 11,
+   "bytes": 123413998
+  },
+  "vendor_blob": {
+   "how": "vendor (MTK) config/debug blob — indexed",
+   "depth": "listed",
+   "count": 7,
+   "bytes": 230826
+  },
+  "art_profile": {
+   "how": "ART dexlayout profile — build artifact",
+   "depth": "listed",
+   "count": 5,
+   "bytes": 121237
+  },
+  "kernel_modules": {
+   "how": "misc_files.py: modules.dep graph / load order",
+   "depth": "parsed",
+   "count": 4,
+   "bytes": 1074
+  },
+  "fstab": {
+   "how": "BOOT_CHAIN.md: mount + avb flags",
+   "depth": "parsed",
+   "count": 3,
+   "bytes": 5353
+  },
+  "image": {
+   "how": "image asset",
+   "depth": "listed",
+   "count": 3,
+   "bytes": 7974309
+  },
+  "protobuf": {
+   "how": "protobuf blob — indexed",
+   "depth": "listed",
+   "count": 1,
+   "bytes": 0
+  }
+ }
+}
