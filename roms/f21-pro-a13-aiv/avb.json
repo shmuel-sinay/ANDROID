@@ -1,0 +1,208 @@
+[
+  {
+    "file": "boot.img",
+    "kind": "none"
+  },
+  {
+    "file": "dtbo.img",
+    "kind": "none"
+  },
+  {
+    "file": "vbmeta.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 2,
+    "flags_decoded": [
+      "VERIFICATION_DISABLED"
+    ],
+    "release_string": "avbtool 1.0.0",
+    "descriptors": []
+  },
+  {
+    "file": "vbmeta_system.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "fa41159a5d696abdef93176a07d0b0d001263f01",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.1.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "Qin/full_k61v1_64_bsp/k61v1_64_bsp:11/RP1A.200720.011/35:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "11"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2020-12-05"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.fingerprint",
+        "value": "Qin/full_k61v1_64_bsp/k61v1_64_bsp:11/RP1A.200720.011/35:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.os_version",
+        "value": "11"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.security_patch",
+        "value": "2020-12-05"
+      },
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 160444416,
+        "tree_offset": 160444416,
+        "tree_size": 1273856,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 161718272,
+        "fec_size": 1286144,
+        "hash_algorithm": "sha256",
+        "salt": "b81e54d12cf7bab18a278dbac4af0d6206dab2fb879222acade45538f1a6c624",
+        "root_digest": "ad5c5c29744bf278a59c304eb376f2c868c99d5c63a2b181a08408fee1237c26",
+        "flags": 0
+      },
+      {
+        "type": "hashtree",
+        "partition": "system",
+        "dm_verity_version": 1,
+        "image_size": 1284915200,
+        "tree_offset": 1284915200,
+        "tree_size": 10125312,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 1295040512,
+        "fec_size": 10240000,
+        "hash_algorithm": "sha256",
+        "salt": "b81e54d12cf7bab18a278dbac4af0d6206dab2fb879222acade45538f1a6c624",
+        "root_digest": "867c9ed62525d4b5af4dadd4fd59726979231ccc129bb1053122bd94d56299a5",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "vbmeta_vendor.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "9577bc6c0772975ecce93c4d8a178662c728dadf",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.1.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.fingerprint",
+        "value": "Qin/full_k61v1_64_bsp/k61v1_64_bsp:11/RP1A.200720.011/35:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.os_version",
+        "value": "11"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.security_patch",
+        "value": "2020-12-05"
+      },
+      {
+        "type": "hashtree",
+        "partition": "vendor",
+        "dm_verity_version": 1,
+        "image_size": 318930944,
+        "tree_offset": 318930944,
+        "tree_size": 2519040,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 321449984,
+        "fec_size": 2547712,
+        "hash_algorithm": "sha256",
+        "salt": "b81e54d12cf7bab18a278dbac4af0d6206dab2fb879222acade45538f1a6c624",
+        "root_digest": "e38b5ca61e1d23ed12dcd85c502cb5fa7272ba927d31a708fe3b1df1b5951650",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "super/system_a.img",
+    "kind": "none"
+  },
+  {
+    "file": "super/vendor_a.img",
+    "kind": "none"
+  },
+  {
+    "file": "super/product_a.img",
+    "kind": "footer",
+    "original_image_size": 160444416,
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.1.0",
+    "descriptors": [
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 160444416,
+        "tree_offset": 160444416,
+        "tree_size": 1273856,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 161718272,
+        "fec_size": 1286144,
+        "hash_algorithm": "sha256",
+        "salt": "b81e54d12cf7bab18a278dbac4af0d6206dab2fb879222acade45538f1a6c624",
+        "root_digest": "ad5c5c29744bf278a59c304eb376f2c868c99d5c63a2b181a08408fee1237c26",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "Qin/full_k61v1_64_bsp/k61v1_64_bsp:11/RP1A.200720.011/35:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "11"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2020-12-05"
+      }
+    ]
+  }
+]

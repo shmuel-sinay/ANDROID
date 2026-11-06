@@ -1,0 +1,3885 @@
+{
+ "generated_for": ".",
+ "how_to_use": "לכל חבילה: roles_filled = מה היא נותנת; boot_guards = מה יקרוס ואיך לנטרל; shares_uid_with = מה עוד עלול להישבר; verdict = שורה תחתונה.",
+ "summary": {
+  "by_risk": {
+   "bootloop": [
+    "android",
+    "com.android.providers.settings",
+    "com.android.theme.icon_pack.circular.android",
+    "com.android.theme.icon_pack.filled.android",
+    "com.android.theme.icon_pack.rounded.android",
+    "com.google.android.ext.services",
+    "com.google.android.ext.shared",
+    "com.google.android.packageinstaller",
+    "com.google.android.permissioncontroller"
+   ],
+   "critical": [
+    "com.android.se"
+   ],
+   "degraded": [
+    "com.android.launcher3",
+    "com.android.managedprovisioning",
+    "com.android.phone",
+    "com.android.settings",
+    "com.android.systemui",
+    "com.android.vending",
+    "com.google.android.gms",
+    "com.google.android.googlequicksearchbox",
+    "com.google.android.setupwizard"
+   ],
+   "safe": [
+    "android.auto_generated_rro_product__",
+    "com.android.backupconfirm",
+    "com.android.bips",
+    "com.android.bluetoothmidiservice",
+    "com.android.bookmarkprovider",
+    "com.android.calendar",
+    "com.android.calllogbackup",
+    "com.android.camera2",
+    "com.android.cameraextensions",
+    "com.android.carrierconfig",
+    "com.android.carrierdefaultapp",
+    "com.android.cellbroadcastreceiver",
+    "com.android.certinstaller",
+    "com.android.chrome",
+    "com.android.companiondevicemanager",
+    "com.android.contacts",
+    "com.android.cts.ctsshim",
+    "com.android.cts.priv.ctsshim",
+    "com.android.deskclock",
+    "com.android.dialer",
+    "com.android.dreams.basic",
+    "com.android.dynsystem",
+    "com.android.egg",
+    "com.android.emergency",
+    "com.android.externalstorage",
+    "com.android.htmlviewer",
+    "com.android.imsserviceentitlement",
+    "com.android.inputdevices",
+    "com.android.inputmethod.latin",
+    "com.android.intentresolver",
+    "com.android.internal.display.cutout.emulation.corner",
+    "com.android.internal.display.cutout.emulation.double",
+    "com.android.internal.display.cutout.emulation.hole",
+    "com.android.internal.display.cutout.emulation.tall",
+    "com.android.internal.display.cutout.emulation.waterfall",
+    "com.android.internal.systemui.navbar.gestural",
+    "com.android.internal.systemui.navbar.gestural_extra_wide_back",
+    "com.android.internal.systemui.navbar.gestural_narrow_back",
+    "com.android.internal.systemui.navbar.gestural_wide_back",
+    "com.android.internal.systemui.navbar.threebutton",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.messaging",
+    "com.android.mms.service",
+    "com.android.modulemetadata",
+    "com.android.mtp",
+    "com.android.musicfx",
+    "com.android.networkstack.inprocess.overlay",
+    "com.android.networkstack.overlay",
+    "com.android.networkstack.tethering.inprocess.overlay",
+    "com.android.networkstack.tethering.overlay",
+    "com.android.nfc",
+    "com.android.onetimeinitializer",
+    "com.android.ons",
+    "com.android.pacprocessor",
+    "com.android.printspooler",
+    "com.android.providers.blockednumber",
+    "com.android.providers.calendar",
+    "com.android.providers.contacts",
+    "com.android.providers.downloads",
+    "com.android.providers.downloads.ui",
+    "com.android.providers.media",
+    "com.android.providers.partnerbookmarks",
+    "com.android.providers.telephony",
+    "com.android.providers.userdictionary",
+    "com.android.proxyhandler",
+    "com.android.quicksearchbox",
+    "com.android.server.telecom",
+    "com.android.settings.intelligence",
+    "com.android.sharedstoragebackup",
+    "com.android.shell",
+    "com.android.simappdialog",
+    "com.android.soundpicker",
+    "com.android.stk",
+    "com.android.storagemanager",
+    "com.android.theme.color.black",
+    "com.android.theme.color.cinnamon",
+    "com.android.theme.color.green",
+    "com.android.theme.color.ocean",
+    "com.android.theme.color.orchid",
+    "com.android.theme.color.purple",
+    "com.android.theme.color.space",
+    "com.android.theme.font.notoserifsource",
+    "com.android.theme.icon.pebble",
+    "com.android.theme.icon.roundedrect",
+    "com.android.theme.icon.squircle",
+    "com.android.theme.icon.taperedrect",
+    "com.android.theme.icon.teardrop",
+    "com.android.theme.icon.vessel",
+    "com.android.theme.icon_pack.circular.launcher",
+    "com.android.theme.icon_pack.circular.settings",
+    "com.android.theme.icon_pack.circular.systemui",
+    "com.android.theme.icon_pack.circular.themepicker",
+    "com.android.theme.icon_pack.filled.launcher",
+    "com.android.theme.icon_pack.filled.settings",
+    "com.android.theme.icon_pack.filled.systemui",
+    "com.android.theme.icon_pack.filled.themepicker",
+    "com.android.theme.icon_pack.rounded.launcher",
+    "com.android.theme.icon_pack.rounded.settings",
+    "com.android.theme.icon_pack.rounded.systemui",
+    "com.android.theme.icon_pack.rounded.themepicker",
+    "com.android.traceur",
+    "com.android.uwb.resources",
+    "com.android.vpndialogs",
+    "com.android.wallpaper.livepicker",
+    "com.android.wallpaperbackup",
+    "com.android.wallpapercropper",
+    "com.android.wallpaperpicker",
+    "com.android.webview",
+    "com.android.wifi.resources.overlay",
+    "com.ghisler.android.TotalCommander",
+    "com.google.android.adservices.api",
+    "com.google.android.apps.wellbeing",
+    "com.google.android.bluetooth.services",
+    "com.google.android.captiveportallogin",
+    "com.google.android.cellbroadcastreceiver",
+    "com.google.android.cellbroadcastservice",
+    "com.google.android.configupdater",
+    "com.google.android.connectivity.resources",
+    "com.google.android.documentsui",
+    "com.google.android.feedback",
+    "com.google.android.gms.location.history",
+    "com.google.android.gms.policy_sidecar_aps",
+    "com.google.android.gsf",
+    "com.google.android.hotspot2.osulogin",
+    "com.google.android.nearby.halfsheet",
+    "com.google.android.networkstack",
+    "com.google.android.networkstack.overlay",
+    "com.google.android.networkstack.permissionconfig",
+    "com.google.android.networkstack.tethering",
+    "com.google.android.networkstack.tethering.overlay",
+    "com.google.android.ondevicepersonalization.services",
+    "com.google.android.onetimeinitializer",
+    "com.google.android.overlay.googleconfig",
+    "com.google.android.overlay.googlewebview",
+    "com.google.android.partnersetup",
+    "com.google.android.printservice.recommendation",
+    "com.google.android.projection.gearhead",
+    "com.google.android.providers.media.module",
+    "com.google.android.safetycenter.resources",
+    "com.google.android.sdksandbox",
+    "com.google.android.syncadapters.calendar",
+    "com.google.android.tag",
+    "com.google.android.trichromelibrary",
+    "com.google.android.tts",
+    "com.google.android.webview",
+    "com.google.android.wifi.dialog",
+    "com.google.android.wifi.resources",
+    "com.mediatek.SettingsProviderResOverlay",
+    "com.mediatek.frameworkresoverlay",
+    "com.mediatek.systemuiresoverlay"
+   ]
+  }
+ },
+ "recipes": {
+  "android": {
+   "package": "android",
+   "paths": [
+    "system:/system/framework/framework-res.apk"
+   ],
+   "priv_app": false,
+   "persistent": true,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "framework (android)",
+     "if_missing": "bootloop",
+     "basis": "framework-res.apk is package 'android' - resources of system_server"
+    },
+    {
+     "role": "package_verifier",
+     "if_missing": "degraded",
+     "basis": "getRequiredButNotReallyRequiredVerifierLPr() returns null"
+    },
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [
+    {
+     "method": "android.graphics.GraphicsStatsService.<init>",
+     "message": "Graphics stats directory does not exist: ",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.SystemServiceManager.startBootPhase",
+     "message": "Next phase must be larger than previous",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.am.ActivityManagerService.setSystemProcess",
+     "message": "Unable to find android system package",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredButNotReallyRequiredVerifierLPr",
+     "message": "There must be exactly one verifier; found ",
+     "distance_from_boot": 2,
+     "neutralize": "ה-verifier אופציונלי (getRequiredButNotReallyRequired). מחיקה בטוחה.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredInstallerLPr",
+     "message": "The installer must be a privileged app",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: לגרום ל-getRequiredInstallerLPr להחזיר null במקום לזרוק. למחוק services.odex/vdex/art. מאבדים התקנת APK מהמכשיר; adb install עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredPermissionControllerLPr",
+     "message": "The permissions manager must be a privileged app",
+     "distance_from_boot": 2,
+     "neutralize": "אין לנטרל בבטחה: PermissionController מנהל את כל ההרשאות. לא למחוק.",
+     "confidence": "do-not-remove"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredSdkSandboxPackageName",
+     "message": "There should exactly one sdk sandbox package; found ",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredServicesExtensionPackageLPr",
+     "message": "Required services extension package is missing, check config_servicesExtensionPackage.",
+     "distance_from_boot": 2,
+     "neutralize": "להשאיר config_servicesExtensionPackage מצביע לחבילה קיימת, או לרוקן אותו ב-overlay. סיכון גבוה.",
+     "confidence": "low"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredSharedLibrary",
+     "message": "Expected a package for shared library ",
+     "distance_from_boot": 2,
+     "neutralize": "ספריית android.ext.shared נדרשת ע\"י PMS. לא למחוק; אפשר רק להחליף במימוש ריק חתום.",
+     "confidence": "do-not-remove"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredUninstallerLPr",
+     "message": "There must be exactly one uninstaller; found ",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: getRequiredUninstallerLPr יחזיר null. מאבדים מסך הסרה; pm uninstall עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "android.content.pm.ResolveInfo.getComponentInfo",
+     "message": "Missing ComponentInfo!",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.view.LayoutInflater.from",
+     "message": "LayoutInflater not found.",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.SystemServiceManager.loadClassFromLoader",
+     "message": ": service class not found, usually indicates that the caller should have called PackageManager.hasSy",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.am.ActivityManagerService.broadcastIntentLocked",
+     "message": "SdkSandboxManagerLocal not found when sending a broadcast from an SDK sandbox uid.",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InitAppsHelper.scanSystemDirs",
+     "message": "Failed to load frameworks package; check log for warnings",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getInstantAppInstallerLPr",
+     "message": "There must be at most one ephemeral installer; found ",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.net.Uri$Builder.build",
+     "message": "An opaque URI must have a scheme.",
+     "distance_from_boot": 4,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.os.Handler.runWithScissors",
+     "message": "timeout must be non-negative",
+     "distance_from_boot": 4,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.TypedXmlPullParser.getAttributeIndexOrThrow",
+     "message": "Missing attribute ",
+     "distance_from_boot": 4,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.AppDataHelper.assertPackageStorageValid",
+     "message": " not installed for user ",
+     "distance_from_boot": 4,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.app.LoadedApk.getResources",
+     "message": "null split not found",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.app.LoadedApk.updateApplicationInfo",
+     "message": "null split not found",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.app.job.JobInfo.enforceValidity",
+     "message": "Minimum chunk size must be positive",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.view.SurfaceControl$Builder.build",
+     "message": "width and height must be positive or unset",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.<init>",
+     "message": "Exactly one of stageDir or stageCid stage must be set",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.validateApkInstallLocked",
+     "message": "Missing existing base package",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.view.DisplayInfo.findMode",
+     "message": "Unable to locate mode ",
+     "distance_from_boot": 6,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.view.LayoutInflater.rInflate",
+     "message": "<merge /> must be the root element",
+     "distance_from_boot": 6,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.app.LoadedApk.initializeJavaContextClassLoader",
+     "message": "; is package not installed?",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.content.res.ResourcesImpl.getResourceEntryName",
+     "message": "Unable to find resource ID #0x",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.content.res.ResourcesImpl.getResourcePackageName",
+     "message": "Unable to find resource ID #0x",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.ColorSpace.getNativeInstance",
+     "message": "colorSpace must be an RGB color space",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.os.MessageQueue.enqueueMessage",
+     "message": "Message must have a target.",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.Pools$SimplePool.<init>",
+     "message": "The max pool size must be > 0",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.internal.content.om.OverlayConfigParser.parseMerge",
+     "message": "Merged configuration file %s does not exist in %s at %s",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.internal.content.om.OverlayConfigParser.parseOverlay",
+     "message": "overlay %s not present in partition %s in %s at %s",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilterFactory.createAmbientFilter",
+     "message": "missing configurations: expected config_displayWhiteBalanceBrightnessFilterIntercept",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.isFsVerityRequiredForApk",
+     "message": "Previously staged apk is missing fs-verity signature",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.maybeStageFsveritySignatureLocked",
+     "message": "Missing corresponding fs-verity signature to ",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.app.LoadedApk$SplitDependencyLoaderImpl.ensureSplitLoaded",
+     "message": " is not installed",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.content.res.ResourcesImpl.getResourceName",
+     "message": "Unable to find resource ID #0x",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.ColorSpace.get",
+     "message": "Invalid ID, must be in the range [0..",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.fonts.FontCustomizationParser.readFamily",
+     "message": "customizationType must be specified",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.internal.modules.utils.build.UnboundedSdkLevel.isAtLeastInternal",
+     "message": " must be recompiled with a finalized integer version.",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.internal.modules.utils.build.UnboundedSdkLevel.isAtMostInternal",
+     "message": " must be recompiled with a finalized integer version.",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.os.SharedMemory.create",
+     "message": "Size must be greater than zero",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.jar.StrictJarFile.<init>",
+     "message": " in manifest does not exist",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.view.View.setTag",
+     "message": "The key must be an application-specific resource id.",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.ApkChecksums.verifySignature",
+     "message": "Signature missing certificates",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InstallPackageHelper.assertPackageIsValid",
+     "message": " not found; ignoring.",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.fonts.FontUpdateRequest$Family.readFromXml",
+     "message": "name attribute is missing in family tag.",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.os.SharedMemory.map",
+     "message": "Length must be > 0",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilter$WeightedMovingAverageAmbientFilter.validateArguments",
+     "message": "intercept must be a non-negative number",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InstallPackageHelper.assertStaticSharedLibraryVersionCodeIsValid",
+     "message": "Static shared lib version codes must be ordered as lib versions",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.fonts.FontUpdateRequest$Font.readFromXml",
+     "message": "name attribute is missing in font tag.",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.jar.StrictJarVerifier.verifyCertificate",
+     "message": " is signed using APK Signature Scheme v3, but no such signature was found. Signature stripped?",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.appop.AppOpsService.verifyIncomingPackage",
+     "message": " not found from ",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilter.validateArguments",
+     "message": "horizon must be positive",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.ActivityRecord.shouldMakeActive",
+     "message": "Activity not found in its task",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.Path.approximate",
+     "message": "AcceptableError must be greater than or equal to 0",
+     "distance_from_boot": 11,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.jar.StrictJarVerifier.verifyBytes",
+     "message": "Failed to find verified SignerInfo certificate chain",
+     "distance_from_boot": 11,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.internal.os.AtomicDirectory.openWrite",
+     "message": "Must be a file in ",
+     "distance_from_boot": 11,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.graphics.Color.luminance",
+     "message": "The specified color must be encoded in an RGB color space. The supplied color space is ",
+     "distance_from_boot": 12,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.util.apk.ApkSignatureSchemeV4Verifier.findSigningInfoForBlockId",
+     "message": "Failed to find V4 signature block corresponding to V3 blockId: ",
+     "distance_from_boot": 12,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.RootDisplayArea.placeImeContainer",
+     "message": "There must be exactly one DisplayArea for the FEATURE_IME_PLACEHOLDER",
+     "distance_from_boot": 12,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.content.res.ResourcesImpl.loadComplexColorForCookie",
+     "message": ": .xml extension required",
+     "distance_from_boot": 13,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "android.media.ImageReader.initializeImageReader",
+     "message": "Maximum outstanding image count must be at least 1",
+     "distance_from_boot": 13,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.ImeInsetsSourceProvider.checkShowImePostLayout",
+     "message": "IME insets must be provided by a window.",
+     "distance_from_boot": 13,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "android.auto_generated_rro_product__": {
+   "package": "android.auto_generated_rro_product__",
+   "paths": [
+    "product:/overlay/framework-res__auto_generated_rro_product.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.backupconfirm": {
+   "package": "com.android.backupconfirm",
+   "paths": [
+    "system:/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.bips": {
+   "package": "com.android.bips",
+   "paths": [
+    "system:/system/priv-app/BuiltInPrintService/BuiltInPrintService.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.bluetoothmidiservice": {
+   "package": "com.android.bluetoothmidiservice",
+   "paths": [
+    "system:/system/app/BluetoothMidiService/BluetoothMidiService.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.bookmarkprovider": {
+   "package": "com.android.bookmarkprovider",
+   "paths": [
+    "system:/system/app/BookmarkProvider/BookmarkProvider.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.calendar": {
+   "package": "com.android.calendar",
+   "paths": [
+    "system:/system/product/app/Calendar/Calendar.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.calllogbackup": {
+   "package": "com.android.calllogbackup",
+   "paths": [
+    "system:/system/priv-app/CallLogBackup/CallLogBackup.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.android.providers.blockednumber",
+    "com.android.providers.contacts",
+    "com.android.providers.userdictionary"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.camera2": {
+   "package": "com.android.camera2",
+   "paths": [
+    "system:/system/product/app/Camera2/Camera2.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.cameraextensions": {
+   "package": "com.android.cameraextensions",
+   "paths": [
+    "system:/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.carrierconfig": {
+   "package": "com.android.carrierconfig",
+   "paths": [
+    "system:/system/system_ext/priv-app/CarrierConfig/CarrierConfig.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.carrierdefaultapp": {
+   "package": "com.android.carrierdefaultapp",
+   "paths": [
+    "system:/system/app/CarrierDefaultApp/CarrierDefaultApp.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.cellbroadcastreceiver": {
+   "package": "com.android.cellbroadcastreceiver",
+   "paths": [
+    "system:/system/priv-app/CellBroadcastLegacyApp/CellBroadcastLegacyApp.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.certinstaller": {
+   "package": "com.android.certinstaller",
+   "paths": [
+    "system:/system/app/CertInstaller/CertInstaller.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.chrome": {
+   "package": "com.android.chrome",
+   "paths": [
+    "system:/system/product/app/Chrome-Stub/Chrome-Stub.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.companiondevicemanager": {
+   "package": "com.android.companiondevicemanager",
+   "paths": [
+    "system:/system/app/CompanionDeviceManager/CompanionDeviceManager.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.contacts": {
+   "package": "com.android.contacts",
+   "paths": [
+    "system:/system/product/priv-app/Contacts/Contacts.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.cts.ctsshim": {
+   "package": "com.android.cts.ctsshim",
+   "paths": [
+    "apex:/com.android.apex.cts.shim/app/CtsShim/CtsShim.apk",
+    "system:/system/system_ext/apex/com.android.apex.cts.shim.v1_with_prebuilts/app/CtsShimPrebuilt@TPBB.220414.016/CtsShimPrebuilt.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.cts.priv.ctsshim": {
+   "package": "com.android.cts.priv.ctsshim",
+   "paths": [
+    "apex:/com.android.apex.cts.shim/priv-app/CtsShimPriv/CtsShimPriv.apk",
+    "system:/system/system_ext/apex/com.android.apex.cts.shim.v1_with_prebuilts/priv-app/CtsShimPrivPrebuilt@TPBB.220414.016/CtsShimPrivPrebuilt.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.deskclock": {
+   "package": "com.android.deskclock",
+   "paths": [
+    "system:/system/product/app/DeskClock/DeskClock.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.dialer": {
+   "package": "com.android.dialer",
+   "paths": [
+    "system:/system/product/priv-app/Dialer/Dialer.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.dreams.basic": {
+   "package": "com.android.dreams.basic",
+   "paths": [
+    "system:/system/app/BasicDreams/BasicDreams.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.dynsystem": {
+   "package": "com.android.dynsystem",
+   "paths": [
+    "system:/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.egg": {
+   "package": "com.android.egg",
+   "paths": [
+    "system:/system/app/EasterEgg/EasterEgg.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.emergency": {
+   "package": "com.android.emergency",
+   "paths": [
+    "system:/system/system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "com.android.emergency.uid"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.externalstorage": {
+   "package": "com.android.externalstorage",
+   "paths": [
+    "system:/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.htmlviewer": {
+   "package": "com.android.htmlviewer",
+   "paths": [
+    "system:/system/app/HTMLViewer/HTMLViewer.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.imsserviceentitlement": {
+   "package": "com.android.imsserviceentitlement",
+   "paths": [
+    "system:/system/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.inputdevices": {
+   "package": "com.android.inputdevices",
+   "paths": [
+    "system:/system/priv-app/InputDevices/InputDevices.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.inputmethod.latin": {
+   "package": "com.android.inputmethod.latin",
+   "paths": [
+    "product:/app/LatinIME/LatinIME.apk",
+    "system:/system/product/app/LatinIME/LatinIME.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.intentresolver": {
+   "package": "com.android.intentresolver",
+   "paths": [
+    "system:/system/priv-app/IntentResolver/IntentResolver.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.display.cutout.emulation.corner": {
+   "package": "com.android.internal.display.cutout.emulation.corner",
+   "paths": [
+    "product:/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+    "system:/system/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.display.cutout.emulation.double": {
+   "package": "com.android.internal.display.cutout.emulation.double",
+   "paths": [
+    "product:/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+    "system:/system/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.display.cutout.emulation.hole": {
+   "package": "com.android.internal.display.cutout.emulation.hole",
+   "paths": [
+    "product:/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+    "system:/system/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.display.cutout.emulation.tall": {
+   "package": "com.android.internal.display.cutout.emulation.tall",
+   "paths": [
+    "product:/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+    "system:/system/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.display.cutout.emulation.waterfall": {
+   "package": "com.android.internal.display.cutout.emulation.waterfall",
+   "paths": [
+    "product:/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+    "system:/system/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.systemui.navbar.gestural": {
+   "package": "com.android.internal.systemui.navbar.gestural",
+   "paths": [
+    "product:/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+    "system:/system/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.systemui.navbar.gestural_extra_wide_back": {
+   "package": "com.android.internal.systemui.navbar.gestural_extra_wide_back",
+   "paths": [
+    "product:/overlay/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk",
+    "system:/system/product/overlay/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.systemui.navbar.gestural_narrow_back": {
+   "package": "com.android.internal.systemui.navbar.gestural_narrow_back",
+   "paths": [
+    "product:/overlay/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk",
+    "system:/system/product/overlay/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.systemui.navbar.gestural_wide_back": {
+   "package": "com.android.internal.systemui.navbar.gestural_wide_back",
+   "paths": [
+    "product:/overlay/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk",
+    "system:/system/product/overlay/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.internal.systemui.navbar.threebutton": {
+   "package": "com.android.internal.systemui.navbar.threebutton",
+   "paths": [
+    "product:/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+    "system:/system/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.keychain": {
+   "package": "com.android.keychain",
+   "paths": [
+    "system:/system/app/KeyChain/KeyChain.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.launcher3": {
+   "package": "com.android.launcher3",
+   "paths": [
+    "system:/system/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.localtransport": {
+   "package": "com.android.localtransport",
+   "paths": [
+    "system:/system/priv-app/LocalTransport/LocalTransport.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.location.fused": {
+   "package": "com.android.location.fused",
+   "paths": [
+    "system:/system/priv-app/FusedLocation/FusedLocation.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.managedprovisioning": {
+   "package": "com.android.managedprovisioning",
+   "paths": [
+    "system:/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.messaging": {
+   "package": "com.android.messaging",
+   "paths": [
+    "system:/system/product/app/messaging/messaging.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.mms.service": {
+   "package": "com.android.mms.service",
+   "paths": [
+    "system:/system/priv-app/MmsService/MmsService.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.phone"
+   ],
+   "shares_uid_with": [
+    "com.android.ons",
+    "com.android.phone",
+    "com.android.providers.telephony",
+    "com.android.stk"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.modulemetadata": {
+   "package": "com.android.modulemetadata",
+   "paths": [
+    "product:/app/ModuleMetadata/ModuleMetadata.apk",
+    "system:/system/product/app/ModuleMetadata/ModuleMetadata.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.mtp": {
+   "package": "com.android.mtp",
+   "paths": [
+    "system:/system/priv-app/MtpService/MtpService.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.media"
+   ],
+   "shares_uid_with": [
+    "com.android.providers.downloads",
+    "com.android.providers.downloads.ui",
+    "com.android.providers.media",
+    "com.android.soundpicker"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.musicfx": {
+   "package": "com.android.musicfx",
+   "paths": [
+    "system:/system/priv-app/MusicFX/MusicFX.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.networkstack.inprocess.overlay": {
+   "package": "com.android.networkstack.inprocess.overlay",
+   "paths": [
+    "vendor:/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.networkstack.overlay": {
+   "package": "com.android.networkstack.overlay",
+   "paths": [
+    "vendor:/app/NetworkStackResOverlay/NetworkStackResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.networkstack.tethering.inprocess.overlay": {
+   "package": "com.android.networkstack.tethering.inprocess.overlay",
+   "paths": [
+    "vendor:/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.networkstack.tethering.overlay": {
+   "package": "com.android.networkstack.tethering.overlay",
+   "paths": [
+    "vendor:/app/TetheringResOverlay/TetheringResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.nfc": {
+   "package": "com.android.nfc",
+   "paths": [
+    "system:/system/app/NfcNci/NfcNci.apk"
+   ],
+   "priv_app": false,
+   "persistent": true,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.nfc"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.onetimeinitializer": {
+   "package": "com.android.onetimeinitializer",
+   "paths": [
+    "product:/priv-app/OneTimeInitializer/OneTimeInitializer.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.ons": {
+   "package": "com.android.ons",
+   "paths": [
+    "system:/system/priv-app/ONS/ONS.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.phone"
+   ],
+   "shares_uid_with": [
+    "com.android.mms.service",
+    "com.android.phone",
+    "com.android.providers.telephony",
+    "com.android.stk"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.pacprocessor": {
+   "package": "com.android.pacprocessor",
+   "paths": [
+    "system:/system/app/PacProcessor/PacProcessor.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.phone": {
+   "package": "com.android.phone",
+   "paths": [
+    "system:/system/priv-app/TeleService/TeleService.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "telephony (com.android.phone)",
+     "if_missing": "degraded",
+     "basis": "persistent app; without it there is no calling/SMS"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.phone"
+   ],
+   "shares_uid_with": [
+    "com.android.mms.service",
+    "com.android.ons",
+    "com.android.providers.telephony",
+    "com.android.stk"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.printspooler": {
+   "package": "com.android.printspooler",
+   "paths": [
+    "system:/system/app/PrintSpooler/PrintSpooler.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.providers.blockednumber": {
+   "package": "com.android.providers.blockednumber",
+   "paths": [
+    "system:/system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.android.calllogbackup",
+    "com.android.providers.contacts",
+    "com.android.providers.userdictionary"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.calendar": {
+   "package": "com.android.providers.calendar",
+   "paths": [
+    "system:/system/priv-app/CalendarProvider/CalendarProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.calendar"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.providers.contacts": {
+   "package": "com.android.providers.contacts",
+   "paths": [
+    "system:/system/priv-app/ContactsProvider/ContactsProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.android.calllogbackup",
+    "com.android.providers.blockednumber",
+    "com.android.providers.userdictionary"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.downloads": {
+   "package": "com.android.providers.downloads",
+   "paths": [
+    "system:/system/priv-app/DownloadProvider/DownloadProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.media"
+   ],
+   "shares_uid_with": [
+    "com.android.mtp",
+    "com.android.providers.downloads.ui",
+    "com.android.providers.media",
+    "com.android.soundpicker"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.downloads.ui": {
+   "package": "com.android.providers.downloads.ui",
+   "paths": [
+    "system:/system/priv-app/DownloadProviderUi/DownloadProviderUi.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.media"
+   ],
+   "shares_uid_with": [
+    "com.android.mtp",
+    "com.android.providers.downloads",
+    "com.android.providers.media",
+    "com.android.soundpicker"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.media": {
+   "package": "com.android.providers.media",
+   "paths": [
+    "system:/system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.media"
+   ],
+   "shares_uid_with": [
+    "com.android.mtp",
+    "com.android.providers.downloads",
+    "com.android.providers.downloads.ui",
+    "com.android.soundpicker"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.partnerbookmarks": {
+   "package": "com.android.providers.partnerbookmarks",
+   "paths": [
+    "system:/system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.providers.settings": {
+   "package": "com.android.providers.settings",
+   "paths": [
+    "system:/system/priv-app/SettingsProvider/SettingsProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "settings_provider",
+     "if_missing": "bootloop",
+     "basis": "ActivityManagerService.installSystemProviders(): Settings.* reads fail in system_server"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.server.telecom",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.telephony": {
+   "package": "com.android.providers.telephony",
+   "paths": [
+    "system:/system/priv-app/TelephonyProvider/TelephonyProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.phone"
+   ],
+   "shares_uid_with": [
+    "com.android.mms.service",
+    "com.android.ons",
+    "com.android.phone",
+    "com.android.stk"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.providers.userdictionary": {
+   "package": "com.android.providers.userdictionary",
+   "paths": [
+    "system:/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.android.calllogbackup",
+    "com.android.providers.blockednumber",
+    "com.android.providers.contacts"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.proxyhandler": {
+   "package": "com.android.proxyhandler",
+   "paths": [
+    "system:/system/priv-app/ProxyHandler/ProxyHandler.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.quicksearchbox": {
+   "package": "com.android.quicksearchbox",
+   "paths": [
+    "product:/priv-app/MtkQuickSearchBox/MtkQuickSearchBox.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.se": {
+   "package": "com.android.se",
+   "paths": [
+    "system:/system/app/SecureElement/SecureElement.apk"
+   ],
+   "priv_app": false,
+   "persistent": true,
+   "risk": "critical",
+   "verdict": "לא למחוק",
+   "roles_filled": [],
+   "boot_guards": [
+    {
+     "method": "com.android.server.SystemServiceManager.startBootPhase",
+     "message": "Next phase must be larger than previous",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.am.ActivityManagerService.setSystemProcess",
+     "message": "Unable to find android system package",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredButNotReallyRequiredVerifierLPr",
+     "message": "There must be exactly one verifier; found ",
+     "distance_from_boot": 2,
+     "neutralize": "ה-verifier אופציונלי (getRequiredButNotReallyRequired). מחיקה בטוחה.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredInstallerLPr",
+     "message": "The installer must be a privileged app",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: לגרום ל-getRequiredInstallerLPr להחזיר null במקום לזרוק. למחוק services.odex/vdex/art. מאבדים התקנת APK מהמכשיר; adb install עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredPermissionControllerLPr",
+     "message": "The permissions manager must be a privileged app",
+     "distance_from_boot": 2,
+     "neutralize": "אין לנטרל בבטחה: PermissionController מנהל את כל ההרשאות. לא למחוק.",
+     "confidence": "do-not-remove"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredSdkSandboxPackageName",
+     "message": "There should exactly one sdk sandbox package; found ",
+     "distance_from_boot": 2,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredServicesExtensionPackageLPr",
+     "message": "Required services extension package is missing, check config_servicesExtensionPackage.",
+     "distance_from_boot": 2,
+     "neutralize": "להשאיר config_servicesExtensionPackage מצביע לחבילה קיימת, או לרוקן אותו ב-overlay. סיכון גבוה.",
+     "confidence": "low"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredSharedLibrary",
+     "message": "Expected a package for shared library ",
+     "distance_from_boot": 2,
+     "neutralize": "ספריית android.ext.shared נדרשת ע\"י PMS. לא למחוק; אפשר רק להחליף במימוש ריק חתום.",
+     "confidence": "do-not-remove"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredUninstallerLPr",
+     "message": "There must be exactly one uninstaller; found ",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: getRequiredUninstallerLPr יחזיר null. מאבדים מסך הסרה; pm uninstall עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.SystemServiceManager.loadClassFromLoader",
+     "message": ": service class not found, usually indicates that the caller should have called PackageManager.hasSy",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.am.ActivityManagerService.broadcastIntentLocked",
+     "message": "SdkSandboxManagerLocal not found when sending a broadcast from an SDK sandbox uid.",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InitAppsHelper.scanSystemDirs",
+     "message": "Failed to load frameworks package; check log for warnings",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getInstantAppInstallerLPr",
+     "message": "There must be at most one ephemeral installer; found ",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.AppDataHelper.assertPackageStorageValid",
+     "message": " not installed for user ",
+     "distance_from_boot": 4,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.<init>",
+     "message": "Exactly one of stageDir or stageCid stage must be set",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.validateApkInstallLocked",
+     "message": "Missing existing base package",
+     "distance_from_boot": 5,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilterFactory.createAmbientFilter",
+     "message": "missing configurations: expected config_displayWhiteBalanceBrightnessFilterIntercept",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.isFsVerityRequiredForApk",
+     "message": "Previously staged apk is missing fs-verity signature",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.PackageInstallerSession.maybeStageFsveritySignatureLocked",
+     "message": "Missing corresponding fs-verity signature to ",
+     "distance_from_boot": 7,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.ApkChecksums.verifySignature",
+     "message": "Signature missing certificates",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InstallPackageHelper.assertPackageIsValid",
+     "message": " not found; ignoring.",
+     "distance_from_boot": 8,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilter$WeightedMovingAverageAmbientFilter.validateArguments",
+     "message": "intercept must be a non-negative number",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.pm.InstallPackageHelper.assertStaticSharedLibraryVersionCodeIsValid",
+     "message": "Static shared lib version codes must be ordered as lib versions",
+     "distance_from_boot": 9,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.appop.AppOpsService.verifyIncomingPackage",
+     "message": " not found from ",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.display.utils.AmbientFilter.validateArguments",
+     "message": "horizon must be positive",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.ActivityRecord.shouldMakeActive",
+     "message": "Activity not found in its task",
+     "distance_from_boot": 10,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.RootDisplayArea.placeImeContainer",
+     "message": "There must be exactly one DisplayArea for the FEATURE_IME_PLACEHOLDER",
+     "distance_from_boot": 12,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    },
+    {
+     "method": "com.android.server.wm.ImeInsetsSourceProvider.checkShowImePostLayout",
+     "message": "IME insets must be provided by a window.",
+     "distance_from_boot": 13,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [
+    "android.uid.se"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.server.telecom": {
+   "package": "com.android.server.telecom",
+   "paths": [
+    "system:/system/priv-app/Telecom/Telecom.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.settings",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.settings": {
+   "package": "com.android.settings",
+   "paths": [
+    "system:/system/system_ext/priv-app/Settings/Settings.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.wallpaperbackup"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.settings.intelligence": {
+   "package": "com.android.settings.intelligence",
+   "paths": [
+    "product:/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+    "system:/system/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.sharedstoragebackup": {
+   "package": "com.android.sharedstoragebackup",
+   "paths": [
+    "system:/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.shell": {
+   "package": "com.android.shell",
+   "paths": [
+    "system:/system/priv-app/Shell/Shell.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.shell"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.simappdialog": {
+   "package": "com.android.simappdialog",
+   "paths": [
+    "system:/system/app/SimAppDialog/SimAppDialog.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.soundpicker": {
+   "package": "com.android.soundpicker",
+   "paths": [
+    "system:/system/priv-app/SoundPicker/SoundPicker.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.media"
+   ],
+   "shares_uid_with": [
+    "com.android.mtp",
+    "com.android.providers.downloads",
+    "com.android.providers.downloads.ui",
+    "com.android.providers.media"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.stk": {
+   "package": "com.android.stk",
+   "paths": [
+    "system:/system/app/Stk/Stk.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.phone"
+   ],
+   "shares_uid_with": [
+    "com.android.mms.service",
+    "com.android.ons",
+    "com.android.phone",
+    "com.android.providers.telephony"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.storagemanager": {
+   "package": "com.android.storagemanager",
+   "paths": [
+    "system:/system/system_ext/priv-app/StorageManager/StorageManager.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.systemui": {
+   "package": "com.android.systemui",
+   "paths": [
+    "system:/system/system_ext/priv-app/SystemUI/SystemUI.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "system_ui",
+     "if_missing": "degraded",
+     "basis": "SystemServer.startSystemUi(): no status bar / navigation / lock screen"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.systemui"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.black": {
+   "package": "com.android.theme.color.black",
+   "paths": [
+    "product:/overlay/AccentColorBlack/AccentColorBlackOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.cinnamon": {
+   "package": "com.android.theme.color.cinnamon",
+   "paths": [
+    "product:/overlay/AccentColorCinnamon/AccentColorCinnamonOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.green": {
+   "package": "com.android.theme.color.green",
+   "paths": [
+    "product:/overlay/AccentColorGreen/AccentColorGreenOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.ocean": {
+   "package": "com.android.theme.color.ocean",
+   "paths": [
+    "product:/overlay/AccentColorOcean/AccentColorOceanOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.orchid": {
+   "package": "com.android.theme.color.orchid",
+   "paths": [
+    "product:/overlay/AccentColorOrchid/AccentColorOrchidOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.purple": {
+   "package": "com.android.theme.color.purple",
+   "paths": [
+    "product:/overlay/AccentColorPurple/AccentColorPurpleOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.color.space": {
+   "package": "com.android.theme.color.space",
+   "paths": [
+    "product:/overlay/AccentColorSpace/AccentColorSpaceOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.font.notoserifsource": {
+   "package": "com.android.theme.font.notoserifsource",
+   "paths": [
+    "product:/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk",
+    "system:/system/product/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.pebble": {
+   "package": "com.android.theme.icon.pebble",
+   "paths": [
+    "product:/overlay/IconShapePebble/IconShapePebbleOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.roundedrect": {
+   "package": "com.android.theme.icon.roundedrect",
+   "paths": [
+    "product:/overlay/IconShapeRoundedRect/IconShapeRoundedRectOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.squircle": {
+   "package": "com.android.theme.icon.squircle",
+   "paths": [
+    "product:/overlay/IconShapeSquircle/IconShapeSquircleOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.taperedrect": {
+   "package": "com.android.theme.icon.taperedrect",
+   "paths": [
+    "product:/overlay/IconShapeTaperedRect/IconShapeTaperedRectOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.teardrop": {
+   "package": "com.android.theme.icon.teardrop",
+   "paths": [
+    "product:/overlay/IconShapeTeardrop/IconShapeTeardropOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon.vessel": {
+   "package": "com.android.theme.icon.vessel",
+   "paths": [
+    "product:/overlay/IconShapeVessel/IconShapeVesselOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.circular.android": {
+   "package": "com.android.theme.icon_pack.circular.android",
+   "paths": [
+    "product:/overlay/IconPackCircularAndroid/IconPackCircularAndroidOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "framework (android)",
+     "if_missing": "bootloop",
+     "basis": "framework-res.apk is package 'android' - resources of system_server"
+    }
+   ],
+   "boot_guards": [
+    {
+     "method": "com.android.server.pm.InitAppsHelper.scanSystemDirs",
+     "message": "Failed to load frameworks package; check log for warnings",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.circular.launcher": {
+   "package": "com.android.theme.icon_pack.circular.launcher",
+   "paths": [
+    "product:/overlay/IconPackCircularLauncher/IconPackCircularLauncherOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.circular.settings": {
+   "package": "com.android.theme.icon_pack.circular.settings",
+   "paths": [
+    "product:/overlay/IconPackCircularSettings/IconPackCircularSettingsOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.circular.systemui": {
+   "package": "com.android.theme.icon_pack.circular.systemui",
+   "paths": [
+    "product:/overlay/IconPackCircularSystemUI/IconPackCircularSystemUIOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.circular.themepicker": {
+   "package": "com.android.theme.icon_pack.circular.themepicker",
+   "paths": [
+    "product:/overlay/IconPackCircularThemePicker/IconPackCircularThemePickerOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.filled.android": {
+   "package": "com.android.theme.icon_pack.filled.android",
+   "paths": [
+    "product:/overlay/IconPackFilledAndroid/IconPackFilledAndroidOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "framework (android)",
+     "if_missing": "bootloop",
+     "basis": "framework-res.apk is package 'android' - resources of system_server"
+    }
+   ],
+   "boot_guards": [
+    {
+     "method": "com.android.server.pm.InitAppsHelper.scanSystemDirs",
+     "message": "Failed to load frameworks package; check log for warnings",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.filled.launcher": {
+   "package": "com.android.theme.icon_pack.filled.launcher",
+   "paths": [
+    "product:/overlay/IconPackFilledLauncher/IconPackFilledLauncherOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.filled.settings": {
+   "package": "com.android.theme.icon_pack.filled.settings",
+   "paths": [
+    "product:/overlay/IconPackFilledSettings/IconPackFilledSettingsOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.filled.systemui": {
+   "package": "com.android.theme.icon_pack.filled.systemui",
+   "paths": [
+    "product:/overlay/IconPackFilledSystemUI/IconPackFilledSystemUIOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.filled.themepicker": {
+   "package": "com.android.theme.icon_pack.filled.themepicker",
+   "paths": [
+    "product:/overlay/IconPackFilledThemePicker/IconPackFilledThemePickerOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.rounded.android": {
+   "package": "com.android.theme.icon_pack.rounded.android",
+   "paths": [
+    "product:/overlay/IconPackRoundedAndroid/IconPackRoundedAndroidOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "framework (android)",
+     "if_missing": "bootloop",
+     "basis": "framework-res.apk is package 'android' - resources of system_server"
+    }
+   ],
+   "boot_guards": [
+    {
+     "method": "com.android.server.pm.InitAppsHelper.scanSystemDirs",
+     "message": "Failed to load frameworks package; check log for warnings",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.rounded.launcher": {
+   "package": "com.android.theme.icon_pack.rounded.launcher",
+   "paths": [
+    "product:/overlay/IconPackRoundedLauncher/IconPackRoundedLauncherOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.rounded.settings": {
+   "package": "com.android.theme.icon_pack.rounded.settings",
+   "paths": [
+    "product:/overlay/IconPackRoundedSettings/IconPackRoundedSettingsOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.rounded.systemui": {
+   "package": "com.android.theme.icon_pack.rounded.systemui",
+   "paths": [
+    "product:/overlay/IconPackRoundedSystemUI/IconPackRoundedSystemUIOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.theme.icon_pack.rounded.themepicker": {
+   "package": "com.android.theme.icon_pack.rounded.themepicker",
+   "paths": [
+    "product:/overlay/IconPackRoundedThemePicker/IconPackRoundedThemePickerOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.traceur": {
+   "package": "com.android.traceur",
+   "paths": [
+    "system:/system/app/Traceur/Traceur.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.uwb.resources": {
+   "package": "com.android.uwb.resources",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.uwb/priv-app/ServiceUwbResources@TPBB.220414.016/ServiceUwbResources.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.vending": {
+   "package": "com.android.vending",
+   "paths": [
+    "system:/system/product/priv-app/Phonesky/Phonesky.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "package_verifier",
+     "if_missing": "degraded",
+     "basis": "getRequiredButNotReallyRequiredVerifierLPr() returns null"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.vpndialogs": {
+   "package": "com.android.vpndialogs",
+   "paths": [
+    "system:/system/priv-app/VpnDialogs/VpnDialogs.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.wallpaper.livepicker": {
+   "package": "com.android.wallpaper.livepicker",
+   "paths": [
+    "system:/system/priv-app/LiveWallpapersPicker/LiveWallpapersPicker.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.wallpaperbackup": {
+   "package": "com.android.wallpaperbackup",
+   "paths": [
+    "system:/system/app/WallpaperBackup/WallpaperBackup.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.system"
+   ],
+   "shares_uid_with": [
+    "android",
+    "com.android.dynsystem",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.localtransport",
+    "com.android.location.fused",
+    "com.android.providers.settings",
+    "com.android.server.telecom",
+    "com.android.settings"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.android.wallpapercropper": {
+   "package": "com.android.wallpapercropper",
+   "paths": [
+    "system:/system/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.wallpaperpicker": {
+   "package": "com.android.wallpaperpicker",
+   "paths": [
+    "system:/system/product/app/WallpaperPicker/WallpaperPicker.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.webview": {
+   "package": "com.android.webview",
+   "paths": [
+    "product:/app/webview/webview.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.android.wifi.resources.overlay": {
+   "package": "com.android.wifi.resources.overlay",
+   "paths": [
+    "vendor:/overlay/WifiResOverlay/WifiResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.ghisler.android.TotalCommander": {
+   "package": "com.ghisler.android.TotalCommander",
+   "paths": [
+    "system:/system/app/tcmd/tcmd.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.adservices.api": {
+   "package": "com.google.android.adservices.api",
+   "paths": [
+    "apex:/com.google.android.adservices/priv-app/AdServicesApkGoogle@TPBB.220414.016/AdServicesApkGoogle.apk",
+    "system:/system/system_ext/apex/com.google.android.adservices/priv-app/AdServicesApkGoogle@TPBB.220414.016/AdServicesApkGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.apps.wellbeing": {
+   "package": "com.google.android.apps.wellbeing",
+   "paths": [
+    "system:/system/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.bluetooth.services": {
+   "package": "com.google.android.bluetooth.services",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.bluetooth/app/BluetoothGoogle@TPBB.220414.016/BluetoothGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.bluetooth"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.captiveportallogin": {
+   "package": "com.google.android.captiveportallogin",
+   "paths": [
+    "system:/system/app/CaptivePortalLoginGoogle/CaptivePortalLoginGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.cellbroadcastreceiver": {
+   "package": "com.google.android.cellbroadcastreceiver",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.cellbroadcast/priv-app/GoogleCellBroadcastApp@TPBB.220414.016/GoogleCellBroadcastApp.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.cellbroadcastservice": {
+   "package": "com.google.android.cellbroadcastservice",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.cellbroadcast/priv-app/GoogleCellBroadcastServiceModule@TPBB.220414.016/GoogleCellBroadcastServiceModule.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.networkstack"
+   ],
+   "shares_uid_with": [
+    "com.google.android.networkstack",
+    "com.google.android.networkstack.permissionconfig",
+    "com.google.android.networkstack.tethering"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.configupdater": {
+   "package": "com.google.android.configupdater",
+   "paths": [
+    "system:/system/product/priv-app/ConfigUpdater/ConfigUpdater.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.connectivity.resources": {
+   "package": "com.google.android.connectivity.resources",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.tethering.next/priv-app/ServiceConnectivityResourcesGoogle@TPBB.220414.016/ServiceConnectivityResourcesGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.documentsui": {
+   "package": "com.google.android.documentsui",
+   "paths": [
+    "system:/system/priv-app/DocumentsUIGoogle/DocumentsUIGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.ext.services": {
+   "package": "com.google.android.ext.services",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.extservices/priv-app/GoogleExtServices@TPBB.220414.016/GoogleExtServices.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "services_extension (ExtServices)",
+     "if_missing": "bootloop",
+     "basis": "PackageManagerService.getRequiredServicesExtensionPackageLPr()"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.ext.shared": {
+   "package": "com.google.android.ext.shared",
+   "paths": [
+    "system:/system/app/GoogleExtShared/GoogleExtShared.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "shared_library android.ext.shared",
+     "if_missing": "bootloop",
+     "basis": "PackageManagerService.getRequiredSharedLibraryLPr(): 'Missing required shared library'"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.feedback": {
+   "package": "com.google.android.feedback",
+   "paths": [
+    "system:/system/system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.gms": {
+   "package": "com.google.android.gms",
+   "paths": [
+    "system:/system/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [
+    "com.google.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.google.android.gsf"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.gms.location.history": {
+   "package": "com.google.android.gms.location.history",
+   "paths": [
+    "system:/system/product/app/LocationHistoryPrebuilt/LocationHistoryPrebuilt.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.gms.policy_sidecar_aps": {
+   "package": "com.google.android.gms.policy_sidecar_aps",
+   "paths": [
+    "system:/system/product/priv-app/PrebuiltGmsCore/m/independent/AndroidPlatformServices.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.googlequicksearchbox": {
+   "package": "com.google.android.googlequicksearchbox",
+   "paths": [
+    "system:/system/product/priv-app/Velvet/Velvet.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.gsf": {
+   "package": "com.google.android.gsf",
+   "paths": [
+    "system:/system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "com.google.uid.shared"
+   ],
+   "shares_uid_with": [
+    "com.google.android.gms"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.hotspot2.osulogin": {
+   "package": "com.google.android.hotspot2.osulogin",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.wifi/app/OsuLoginGoogle@TPBB.220414.016/OsuLoginGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.nearby.halfsheet": {
+   "package": "com.google.android.nearby.halfsheet",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.tethering.next/app/HalfSheetUXGoogle@TPBB.220414.016/HalfSheetUXGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.networkstack": {
+   "package": "com.google.android.networkstack",
+   "paths": [
+    "system:/system/priv-app/NetworkStackNextGoogle/NetworkStackNextGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.networkstack"
+   ],
+   "shares_uid_with": [
+    "com.google.android.cellbroadcastservice",
+    "com.google.android.networkstack.permissionconfig",
+    "com.google.android.networkstack.tethering"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.networkstack.overlay": {
+   "package": "com.google.android.networkstack.overlay",
+   "paths": [
+    "vendor:/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.networkstack.permissionconfig": {
+   "package": "com.google.android.networkstack.permissionconfig",
+   "paths": [
+    "system:/system/priv-app/NetworkPermissionConfigGoogle/NetworkPermissionConfigGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.networkstack"
+   ],
+   "shares_uid_with": [
+    "com.google.android.cellbroadcastservice",
+    "com.google.android.networkstack",
+    "com.google.android.networkstack.tethering"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.networkstack.tethering": {
+   "package": "com.google.android.networkstack.tethering",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.tethering.next/priv-app/TetheringNextGoogle@TPBB.220414.016/TetheringNextGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": true,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "android.uid.networkstack"
+   ],
+   "shares_uid_with": [
+    "com.google.android.cellbroadcastservice",
+    "com.google.android.networkstack",
+    "com.google.android.networkstack.permissionconfig"
+   ],
+   "notes": "משתף uid עם חבילות אחרות — מחיקה עלולה לשבור אותן."
+  },
+  "com.google.android.networkstack.tethering.overlay": {
+   "package": "com.google.android.networkstack.tethering.overlay",
+   "paths": [
+    "vendor:/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.ondevicepersonalization.services": {
+   "package": "com.google.android.ondevicepersonalization.services",
+   "paths": [
+    "apex:/com.google.android.ondevicepersonalization/app/OnDevicePersonalizationGoogle@TPBB.220414.016/OnDevicePersonalizationGoogle.apk",
+    "system:/system/system_ext/apex/com.google.android.ondevicepersonalization/app/OnDevicePersonalizationGoogle@TPBB.220414.016/OnDevicePersonalizationGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.onetimeinitializer": {
+   "package": "com.google.android.onetimeinitializer",
+   "paths": [
+    "system:/system/product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.overlay.googleconfig": {
+   "package": "com.google.android.overlay.googleconfig",
+   "paths": [
+    "system:/system/product/overlay/GoogleConfigOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.overlay.googlewebview": {
+   "package": "com.google.android.overlay.googlewebview",
+   "paths": [
+    "system:/system/product/overlay/GoogleWebViewOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.packageinstaller": {
+   "package": "com.google.android.packageinstaller",
+   "paths": [
+    "system:/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "installer",
+     "if_missing": "bootloop",
+     "basis": "PackageManagerService.getRequiredInstallerLPr(): 'There must be exactly one installer'"
+    },
+    {
+     "role": "uninstaller",
+     "if_missing": "bootloop",
+     "basis": "PackageManagerService.getRequiredUninstallerLPr(): 'There must be exactly one uninstaller'"
+    }
+   ],
+   "boot_guards": [
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredInstallerLPr",
+     "message": "The installer must be a privileged app",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: לגרום ל-getRequiredInstallerLPr להחזיר null במקום לזרוק. למחוק services.odex/vdex/art. מאבדים התקנת APK מהמכשיר; adb install עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getRequiredUninstallerLPr",
+     "message": "There must be exactly one uninstaller; found ",
+     "distance_from_boot": 2,
+     "neutralize": "ב-services.jar: getRequiredUninstallerLPr יחזיר null. מאבדים מסך הסרה; pm uninstall עובד.",
+     "confidence": "high"
+    },
+    {
+     "method": "com.android.server.pm.PackageManagerService.getInstantAppInstallerLPr",
+     "message": "There must be at most one ephemeral installer; found ",
+     "distance_from_boot": 3,
+     "neutralize": "לא נמצא מרשם נטרול אוטומטי — דורש בדיקה ידנית של הקוד.",
+     "confidence": "unknown"
+    }
+   ],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.partnersetup": {
+   "package": "com.google.android.partnersetup",
+   "paths": [
+    "system:/system/product/priv-app/PartnerSetupPrebuilt/PartnerSetupPrebuilt.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.permissioncontroller": {
+   "package": "com.google.android.permissioncontroller",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.permission/priv-app/GooglePermissionController@TPBB.220414.016/GooglePermissionController.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "bootloop",
+   "verdict": "לא למחוק ללא נטרול",
+   "roles_filled": [
+    {
+     "role": "permission_controller",
+     "if_missing": "bootloop",
+     "basis": "PackageManagerService.getRequiredPermissionControllerLPr(): 'There must be exactly one permission controller'"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.printservice.recommendation": {
+   "package": "com.google.android.printservice.recommendation",
+   "paths": [
+    "system:/system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.projection.gearhead": {
+   "package": "com.google.android.projection.gearhead",
+   "paths": [
+    "system:/system/product/priv-app/AndroidAutoStubPrebuilt/AndroidAutoStubPrebuilt.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "com.google.android.projection.gearhead"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.providers.media.module": {
+   "package": "com.google.android.providers.media.module",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.mediaprovider/priv-app/MediaProviderGoogle@TPBB.220414.016/MediaProviderGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.safetycenter.resources": {
+   "package": "com.google.android.safetycenter.resources",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.permission/priv-app/GoogleSafetyCenterResources@TPBB.220414.016/GoogleSafetyCenterResources.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.sdksandbox": {
+   "package": "com.google.android.sdksandbox",
+   "paths": [
+    "apex:/com.google.android.adservices/app/SdkSandboxGoogle@TPBB.220414.016/SdkSandboxGoogle.apk",
+    "system:/system/system_ext/apex/com.google.android.adservices/app/SdkSandboxGoogle@TPBB.220414.016/SdkSandboxGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.setupwizard": {
+   "package": "com.google.android.setupwizard",
+   "paths": [
+    "system:/system/product/priv-app/SetupWizardPrebuilt/SetupWizardPrebuilt.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "degraded",
+   "verdict": "מחיקה אפשרית — תאבד פונקציה",
+   "roles_filled": [
+    {
+     "role": "home / launcher",
+     "if_missing": "degraded",
+     "basis": "ActivityTaskManager.startHomeActivity(): no HOME -> black screen after boot animation"
+    },
+    {
+     "role": "setup_wizard",
+     "if_missing": "degraded",
+     "basis": "getSetupWizardPackageNameImpl() returns null; device may stay 'not provisioned'"
+    }
+   ],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.syncadapters.calendar": {
+   "package": "com.google.android.syncadapters.calendar",
+   "paths": [
+    "system:/system/product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [
+    "com.google.android.calendar.uid.shared"
+   ],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.tag": {
+   "package": "com.google.android.tag",
+   "paths": [
+    "system:/system/priv-app/TagGoogle/TagGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.trichromelibrary": {
+   "package": "com.google.android.trichromelibrary",
+   "paths": [
+    "system:/system/product/app/TrichromeLibrary-Stub/TrichromeLibrary-Stub.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.tts": {
+   "package": "com.google.android.tts",
+   "paths": [
+    "system:/system/product/app/GoogleTTS/GoogleTTS.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.webview": {
+   "package": "com.google.android.webview",
+   "paths": [
+    "system:/system/product/app/WebViewGoogle-Stub/WebViewGoogle-Stub.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.wifi.dialog": {
+   "package": "com.google.android.wifi.dialog",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.wifi/app/WifiDialogGoogle@TPBB.220414.016/WifiDialogGoogle.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.google.android.wifi.resources": {
+   "package": "com.google.android.wifi.resources",
+   "paths": [
+    "system:/system/system_ext/apex/com.google.android.wifi/priv-app/ServiceWifiResourcesGoogle@TPBB.220414.016/ServiceWifiResourcesGoogle.apk"
+   ],
+   "priv_app": true,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.mediatek.SettingsProviderResOverlay": {
+   "package": "com.mediatek.SettingsProviderResOverlay",
+   "paths": [
+    "vendor:/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.mediatek.frameworkresoverlay": {
+   "package": "com.mediatek.frameworkresoverlay",
+   "paths": [
+    "vendor:/overlay/FrameworkResOverlay/FrameworkResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  },
+  "com.mediatek.systemuiresoverlay": {
+   "package": "com.mediatek.systemuiresoverlay",
+   "paths": [
+    "vendor:/overlay/SystemUIResOverlay/SystemUIResOverlay.apk"
+   ],
+   "priv_app": false,
+   "persistent": false,
+   "risk": "safe",
+   "verdict": "כנראה בטוח למחיקה",
+   "roles_filled": [],
+   "boot_guards": [],
+   "sharedUserId": [],
+   "shares_uid_with": [],
+   "notes": null
+  }
+ }
+}

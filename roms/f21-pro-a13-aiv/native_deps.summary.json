@@ -1,0 +1,177 @@
+{
+ "root": "fs",
+ "total_libs": 7198,
+ "by_kind": {
+  "library": 6922,
+  "executable": 276
+ },
+ "machines": {
+  "EM_ARM": 3296,
+  "EM_AARCH64": 3891,
+  "EM_BPF": 10,
+  "EM_MIPS": 1
+ },
+ "top_depended_on": [
+  {
+   "lib": "libc.so",
+   "needed_by_count": 1542
+  },
+  {
+   "lib": "libdl.so",
+   "needed_by_count": 1511
+  },
+  {
+   "lib": "libm.so",
+   "needed_by_count": 1509
+  },
+  {
+   "lib": "libc++.so",
+   "needed_by_count": 1449
+  },
+  {
+   "lib": "liblog.so",
+   "needed_by_count": 1126
+  },
+  {
+   "lib": "libutils.so",
+   "needed_by_count": 869
+  },
+  {
+   "lib": "libcutils.so",
+   "needed_by_count": 813
+  },
+  {
+   "lib": "libhidlbase.so",
+   "needed_by_count": 466
+  },
+  {
+   "lib": "libbase.so",
+   "needed_by_count": 361
+  },
+  {
+   "lib": "libbinder.so",
+   "needed_by_count": 215
+  },
+  {
+   "lib": "libhidltransport.so",
+   "needed_by_count": 208
+  },
+  {
+   "lib": "libhwbinder.so",
+   "needed_by_count": 184
+  },
+  {
+   "lib": "libbinder_ndk.so",
+   "needed_by_count": 143
+  },
+  {
+   "lib": "libhardware.so",
+   "needed_by_count": 116
+  },
+  {
+   "lib": "libcrypto.so",
+   "needed_by_count": 95
+  },
+  {
+   "lib": "libstagefright_foundation.so",
+   "needed_by_count": 89
+  },
+  {
+   "lib": "libmtkcam_ulog.so",
+   "needed_by_count": 77
+  },
+  {
+   "lib": "libmtkcam_stdutils.so",
+   "needed_by_count": 77
+  },
+  {
+   "lib": "libui.so",
+   "needed_by_count": 60
+  },
+  {
+   "lib": "libz.so",
+   "needed_by_count": 53
+  },
+  {
+   "lib": "libmtkcam_modulehelper.so",
+   "needed_by_count": 49
+  },
+  {
+   "lib": "libmtkcam_metadata.so",
+   "needed_by_count": 47
+  },
+  {
+   "lib": "libcodec2.so",
+   "needed_by_count": 44
+  },
+  {
+   "lib": "libcodec2_vndk.so",
+   "needed_by_count": 44
+  },
+  {
+   "lib": "android.hardware.graphics.common@1.0.so",
+   "needed_by_count": 42
+  },
+  {
+   "lib": "libnativewindow.so",
+   "needed_by_count": 41
+  },
+  {
+   "lib": "libgui.so",
+   "needed_by_count": 37
+  },
+  {
+   "lib": "libaudioutils.so",
+   "needed_by_count": 37
+  },
+  {
+   "lib": "libmtkcam_imgbuf.so",
+   "needed_by_count": 34
+  },
+  {
+   "lib": "libselinux.so",
+   "needed_by_count": 33
+  },
+  {
+   "lib": "libsfplugin_ccodec_utils.so",
+   "needed_by_count": 33
+  },
+  {
+   "lib": "libcodec2_soft_common.so",
+   "needed_by_count": 30
+  },
+  {
+   "lib": "libsync.so",
+   "needed_by_count": 28
+  },
+  {
+   "lib": "libmedia_helper.so",
+   "needed_by_count": 27
+  },
+  {
+   "lib": "libcameracustom.so",
+   "needed_by_count": 27
+  },
+  {
+   "lib": "android.hardware.graphics.common@1.2.so",
+   "needed_by_count": 26
+  },
+  {
+   "lib": "libion.so",
+   "needed_by_count": 26
+  },
+  {
+   "lib": "libmtkcam_hwutils.so",
+   "needed_by_count": 25
+  },
+  {
+   "lib": "libfmq.so",
+   "needed_by_count": 24
+  },
+  {
+   "lib": "libnativehelper.so",
+   "needed_by_count": 24
+  }
+ ],
+ "missing_dependencies": {}
+}

@@ -68,8 +68,11 @@ def name_of(m):
 def main():
     out_path, inputs = sys.argv[1], sys.argv[2:]
     dx = Analysis()
+    loaded = []
     for p in inputs:
-        load(dx, p)
+        if os.path.exists(p):
+            load(dx, p)
+            loaded.append(p)
     dx.create_xref()
 
     # 1. candidate guards: methods that throw and carry a "required" message
