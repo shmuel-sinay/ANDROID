@@ -393,6 +393,24 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
         page(os.path.join(out, "ui", "index.html"), "סריקת עומק: ממשק", model,
              '<a href="../index.html">בית</a> / ממשק', body, 1)
 
+    # ---- existing overlays (real override templates) ----
+    ov = load_json(rom, "overlays.summary.json")
+    if ov:
+        os.makedirs(os.path.join(out, "overlays"), exist_ok=True)
+        rows = ""
+        for o in ov["overlays"]:
+            sample = "<br>".join(f'<code dir=ltr>{e(k)}</code>={e(str(v.get("value")))}'
+                                 for k, v in o.get("sample", {}).items())
+            rows += (f'<tr><td><code dir=ltr>{e(o["name"])}</code></td>'
+                     f'<td><code>{e(o["target"])}</code></td><td>{o["override_count"]}</td>'
+                     f'<td style="font-size:12px">{sample}</td></tr>')
+        body = f"""<h2>Overlays קיימים ברום ({ov['overlay_count']})</h2>
+<p class="lead">הרום עצמו כבר משתמש ב-{ov['overlay_count']} overlays כדי לדרוס ערכים — דוגמאות עבודה אמיתיות
+של השיטה. אפשר להעתיק את המבנה שלהן. מדריך: <a href="../deps/overlays.html">כאן</a>.</p>
+<table><tr><th>Overlay</th><th>יעד</th><th>דריסות</th><th>דוגמה</th></tr>{rows}</table>"""
+        page(os.path.join(out, "overlays", "index.html"), "Overlays קיימים", model,
+             '<a href="../index.html">בית</a> / overlays', body, 1)
+
     # ---- removal recipes ----
     rec = load_json(rom, "removal_recipes.json")
     if rec:

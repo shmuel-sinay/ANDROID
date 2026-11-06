@@ -1,0 +1,561 @@
+{
+ "overlay_count": 32,
+ "overlays": [
+  {
+   "name": "CaptivePortalLoginFrameworkOverlay.apk",
+   "target": "android",
+   "override_count": 1,
+   "sample": {
+    "config_defaultCaptivePortalLoginPackageName": {
+     "type": "string",
+     "value": "com.google.android.captiveportallogin"
+    }
+   }
+  },
+  {
+   "name": "DisplayCutoutEmulationCornerOverlay.apk",
+   "target": "android",
+   "override_count": 6,
+   "sample": {
+    "config_fillMainBuiltInDisplayCutout": {
+     "type": "bool",
+     "value": "true"
+    },
+    "status_bar_height_landscape": {
+     "type": "dimen",
+     "value": "28.000000dp"
+    },
+    "status_bar_height_portrait": {
+     "type": "dimen",
+     "value": "48.000000dp"
+    },
+    "config_mainBuiltInDisplayCutout": {
+     "type": "string",
+     "value": "M 0,0 L -48, 0 C -48,48 -48,48 0,48 Z @dp @right"
+    }
+   }
+  },
+  {
+   "name": "DisplayCutoutEmulationDoubleOverlay.apk",
+   "target": "android",
+   "override_count": 6,
+   "sample": {
+    "config_fillMainBuiltInDisplayCutout": {
+     "type": "bool",
+     "value": "true"
+    },
+    "status_bar_height_landscape": {
+     "type": "dimen",
+     "value": "28.000000dp"
+    },
+    "status_bar_height_portrait": {
+     "type": "dimen",
+     "value": "48.000000dp"
+    },
+    "config_mainBuiltInDisplayCutout": {
+     "type": "string",
+     "value": "M 0,0 L -72, 0 L -69.9940446283, 20.0595537175 C -69.1582133885, 28.4178661152 -65.2, 32.0 -56.8, 32.0 L 56.8, 32.0 C 65.2, 32.0 69.1582133885, 28.4178661152 69.9940446283, 20.0595537175 L 72, 0 Z @bottom M 0,0 L -72, 0 L -69.9940446283, -20.0595537175 C -69.1582133885, -28.4178661152 -65.2, -32.0 -56.8, -32.0 L 56.8, -32.0 C 65.2, -32.0 69.1582133885, -28.4178661152 69.9940446283, -20.0595537175 L 72, 0 Z @dp"
+    }
+   }
+  },
+  {
+   "name": "DisplayCutoutEmulationHoleOverlay.apk",
+   "target": "android",
+   "override_count": 6,
+   "sample": {
+    "config_fillMainBuiltInDisplayCutout": {
+     "type": "bool",
+     "value": "true"
+    },
+    "status_bar_height_landscape": {
+     "type": "dimen",
+     "value": "28.000000dp"
+    },
+    "status_bar_height_portrait": {
+     "type": "dimen",
+     "value": "136.000000px"
+    },
+    "config_mainBuiltInDisplayCutout": {
+     "type": "string",
+     "value": "M 128,83 A 44,44 0 0 1 84,127 44,44 0 0 1 40,83 44,44 0 0 1 84,39 44,44 0 0 1 128,83 Z @left"
+    }
+   }
+  },
+  {
+   "name": "DisplayCutoutEmulationTallOverlay.apk",
+   "target": "android",
+   "override_count": 6,
+   "sample": {
+    "config_fillMainBuiltInDisplayCutout": {
+     "type": "bool",
+     "value": "true"
+    },
+    "status_bar_height_landscape": {
+     "type": "dimen",
+     "value": "28.000000dp"
+    },
+    "status_bar_height_portrait": {
+     "type": "dimen",
+     "value": "48.000000dp"
+    },
+    "config_mainBuiltInDisplayCutout": {
+     "type": "string",
+     "value": "M 0,0 L -48, 0 L -44.3940446283, 36.0595537175 C -43.5582133885, 44.4178661152 -39.6, 48.0 -31.2, 48.0 L 31.2, 48.0 C 39.6, 48.0 43.5582133885, 44.4178661152 44.3940446283, 36.0595537175 L 48, 0 Z @dp"
+    }
+   }
+  },
+  {
+   "name": "DisplayCutoutEmulationWaterfallOverlay.apk",
+   "target": "android",
+   "override_count": 9,
+   "sample": {
+    "status_bar_height_landscape": {
+     "type": "dimen",
+     "value": "48.000000dp"
+    },
+    "status_bar_height_portrait": {
+     "type": "dimen",
+     "value": "28.000000dp"
+    },
+    "waterfall_display_bottom_edge_size": {
+     "type": "dimen",
+     "value": "0.000000dp"
+    },
+    "waterfall_display_left_edge_size": {
+     "type": "dimen",
+     "value": "20.000000dp"
+    }
+   }
+  },
+  {
+   "name": "FontNotoSerifSourceOverlay.apk",
+   "target": "android",
+   "override_count": 5,
+   "sample": {
+    "config_bodyFontFamily": {
+     "type": "string",
+     "value": "source-sans-pro"
+    },
+    "config_bodyFontFamilyMedium": {
+     "type": "string",
+     "value": "source-sans-pro-semi-bold"
+    },
+    "config_headlineFontFamily": {
+     "type": "string",
+     "value": "serif"
+    },
+    "config_headlineFontFamilyMedium": {
+     "type": "string",
+     "value": "serif-bold"
+    }
+   }
+  },
+  {
+   "name": "GmsConfigOverlayASI.apk",
+   "target": "android",
+   "override_count": 13,
+   "sample": {
+    "config_adaptive_sleep_available": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_defaultAppPredictionService": {
+     "type": "string",
+     "value": "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService"
+    },
+    "config_defaultAttentionService": {
+     "type": "string",
+     "value": "com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService"
+    },
+    "config_defaultAugmentedAutofillService": {
+     "type": "string",
+     "value": "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService"
+    }
+   }
+  },
+  {
+   "name": "GmsConfigOverlayCommon.apk",
+   "target": "android",
+   "override_count": 32,
+   "sample": {
+    "config_enableAutoPowerModes": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enableFusedLocationOverlay": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enableGeocoderOverlay": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enableGeofenceOverlay": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "GmsConfigOverlayGSA.apk",
+   "target": "android",
+   "override_count": 2,
+   "sample": {
+    "config_allowDisablingAssistDisclosure": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_defaultAssistant": {
+     "type": "string",
+     "value": "com.google.android.googlequicksearchbox"
+    }
+   }
+  },
+  {
+   "name": "GmsConfigOverlayGeotz.apk",
+   "target": "android",
+   "override_count": 5,
+   "sample": {
+    "config_enableGeolocationTimeZoneDetection": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enablePrimaryLocationTimeZoneProvider": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enableSecondaryLocationTimeZoneProvider": {
+     "type": "bool",
+     "value": "false"
+    },
+    "config_primaryLocationTimeZoneProviderPackageName": {
+     "type": "string",
+     "value": "com.google.android.gms"
+    }
+   }
+  },
+  {
+   "name": "GoogleDocumentsUIOverlay.apk",
+   "target": "com.google.android.documentsui",
+   "override_count": 1,
+   "sample": {
+    "is_launcher_enabled": {
+     "type": "bool",
+     "value": "false"
+    }
+   }
+  },
+  {
+   "name": "GoogleExtServicesConfigOverlay.apk",
+   "target": "android",
+   "override_count": 2,
+   "sample": {
+    "config_defaultAssistantAccessComponent": {
+     "type": "string",
+     "value": "com.google.android.ext.services/android.ext.services.notification.Assistant"
+    },
+    "config_servicesExtensionPackage": {
+     "type": "string",
+     "value": "com.google.android.ext.services"
+    }
+   }
+  },
+  {
+   "name": "GooglePermissionControllerFrameworkOverlay.apk",
+   "target": "android",
+   "override_count": 1,
+   "sample": {
+    "config_incidentReportApproverPackage": {
+     "type": "string",
+     "value": "com.google.android.permissioncontroller"
+    }
+   }
+  },
+  {
+   "name": "GooglePermissionControllerOverlay.apk",
+   "target": "com.google.android.permissioncontroller",
+   "override_count": 1,
+   "sample": {
+    "help_app_permissions": {
+     "type": "string",
+     "value": "https://support.google.com/googleplay/answer/6270602"
+    }
+   }
+  },
+  {
+   "name": "ModuleMetadataGoogleOverlay.apk",
+   "target": "android",
+   "override_count": 1,
+   "sample": {
+    "config_defaultModuleMetadataProvider": {
+     "type": "string",
+     "value": "com.google.android.modulemetadata"
+    }
+   }
+  },
+  {
+   "name": "NavigationBarMode3ButtonOverlay.apk",
+   "target": "android",
+   "override_count": 2,
+   "sample": {
+    "navigation_bar_gesture_height": {
+     "type": "dimen",
+     "value": "0x010501cb"
+    },
+    "navigation_bar_mode_title": {
+     "type": "string",
+     "value": "3 Button Navigation Bar"
+    }
+   }
+  },
+  {
+   "name": "NavigationBarModeGesturalOverlay.apk",
+   "target": "android",
+   "override_count": 14,
+   "sample": {
+    "config_allowSeamlessRotationDespiteNavBarMoving": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_attachNavBarToAppDuringTransition": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_imeDrawsImeNavBar": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_navBarAlwaysShowOnSideEdgeGesture": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "NavigationBarModeGesturalOverlayExtraWideBack.apk",
+   "target": "android",
+   "override_count": 14,
+   "sample": {
+    "config_allowSeamlessRotationDespiteNavBarMoving": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_attachNavBarToAppDuringTransition": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_imeDrawsImeNavBar": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_navBarAlwaysShowOnSideEdgeGesture": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "NavigationBarModeGesturalOverlayNarrowBack.apk",
+   "target": "android",
+   "override_count": 14,
+   "sample": {
+    "config_allowSeamlessRotationDespiteNavBarMoving": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_attachNavBarToAppDuringTransition": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_imeDrawsImeNavBar": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_navBarAlwaysShowOnSideEdgeGesture": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "NavigationBarModeGesturalOverlayWideBack.apk",
+   "target": "android",
+   "override_count": 14,
+   "sample": {
+    "config_allowSeamlessRotationDespiteNavBarMoving": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_attachNavBarToAppDuringTransition": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_imeDrawsImeNavBar": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_navBarAlwaysShowOnSideEdgeGesture": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "WifiSystemResMainlineOverlay.apk",
+   "target": "com.google.android.wifi.resources",
+   "override_count": 1,
+   "sample": {
+    "config_showConfirmationDialogForThirdPartyAppsEnablingWifi": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "WifiSystemResOverlay.apk",
+   "target": "com.android.wifi.resources",
+   "override_count": 1,
+   "sample": {
+    "config_showConfirmationDialogForThirdPartyAppsEnablingWifi": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "framework-res__auto_generated_rro_product.apk",
+   "target": "android",
+   "override_count": 26,
+   "sample": {
+    "config_allow_ussd_over_ims": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_device_volte_available": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_device_vt_available": {
+     "type": "bool",
+     "value": "false"
+    },
+    "config_device_wfc_ims_available": {
+     "type": "bool",
+     "value": "false"
+    }
+   }
+  },
+  {
+   "name": "CellbroadcastUIResOverlay.apk",
+   "target": "com.android.cellbroadcastreceiver.module",
+   "override_count": 0,
+   "sample": {}
+  },
+  {
+   "name": "FrameworkResOverlay.apk",
+   "target": "android",
+   "override_count": 7,
+   "sample": {
+    "config_dozeAfterScreenOff": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_powerDecoupleAutoSuspendModeFromDisplay": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_powerDecoupleInteractiveModeFromDisplay": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_showNavigationBar": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "FrameworkResOverlayExt.apk",
+   "target": "android",
+   "override_count": 3,
+   "sample": {
+    "config_automatic_brightness_available": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_enableWifiDisplay": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_suspendWhenScreenOffDueToProximity": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "MtkSettingsResOverlay.apk",
+   "target": "com.android.settings",
+   "override_count": 0,
+   "sample": {}
+  },
+  {
+   "name": "SettingsProviderResOverlay.apk",
+   "target": "com.android.providers.settings",
+   "override_count": 0,
+   "sample": {}
+  },
+  {
+   "name": "SystemUIResOverlay.apk",
+   "target": "com.android.systemui",
+   "override_count": 0,
+   "sample": {}
+  },
+  {
+   "name": "WifiResMainlineOverlay.apk",
+   "target": "com.google.android.wifi.resources",
+   "override_count": 15,
+   "sample": {
+    "config_wifi5ghzSupport": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifiSaeH2eSupported": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifi_background_scan_support": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifi_connected_mac_randomization_supported": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  },
+  {
+   "name": "WifiResOverlay.apk",
+   "target": "com.android.wifi.resources",
+   "override_count": 15,
+   "sample": {
+    "config_wifi5ghzSupport": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifiSaeH2eSupported": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifi_background_scan_support": {
+     "type": "bool",
+     "value": "true"
+    },
+    "config_wifi_connected_mac_randomization_supported": {
+     "type": "bool",
+     "value": "true"
+    }
+   }
+  }
+ ]
+}
