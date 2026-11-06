@@ -1,0 +1,203 @@
+[
+  {
+    "file": "boot.img",
+    "kind": "footer",
+    "original_image_size": 22859776,
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "dc7b139097ba9770267be2d9b1412cc8eb71310e",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 3,
+    "flags_decoded": [
+      "HASHTREE_DISABLED",
+      "VERIFICATION_DISABLED"
+    ],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "hash",
+        "partition": "boot",
+        "image_size": 22355968,
+        "hash_algorithm": "sha256",
+        "salt": "624e48933e4d6b3c72608d29afa50d4b29abcf2df760faf1b8834eec8b53a63a",
+        "digest": "9fb0dca2878d13dfad2384e5ba5c08542bad6cc07b15134d2a328e08311e9485",
+        "flags": 0
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.boot.fingerprint",
+        "value": "QIN/full_AGN_1244RO_MT6769S_MX6432/AGN_1244RO_MT6769S_MX6432:12/SP1A.210812.016/1690279780:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.boot.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.boot.security_patch",
+        "value": "2019-06-06"
+      }
+    ]
+  },
+  {
+    "file": "dtbo.img",
+    "kind": "none"
+  },
+  {
+    "file": "vbmeta.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "NONE",
+    "signed": false,
+    "public_key_sha1": null,
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 2,
+    "flags_decoded": [
+      "VERIFICATION_DISABLED"
+    ],
+    "release_string": "avbtool 1.0.0",
+    "descriptors": []
+  },
+  {
+    "file": "vbmeta_system.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "be94be43d2641f0ea2abc9a7bc37e08483c94cd9",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.product.fingerprint",
+        "value": "QIN/full_AGN_1244RO_MT6769S_MX6432/AGN_1244RO_MT6769S_MX6432:12/SP1A.210812.016/1690270202:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.product.security_patch",
+        "value": "2022-11-01"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.fingerprint",
+        "value": "QIN/full_AGN_1244RO_MT6769S_MX6432/AGN_1244RO_MT6769S_MX6432:12/SP1A.210812.016/1690270202:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.system.security_patch",
+        "value": "2022-11-01"
+      },
+      {
+        "type": "hashtree",
+        "partition": "product",
+        "dm_verity_version": 1,
+        "image_size": 193437696,
+        "tree_offset": 193437696,
+        "tree_size": 1527808,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 194965504,
+        "fec_size": 1548288,
+        "hash_algorithm": "sha256",
+        "salt": "58002fb34b616de91eedf8ce4ac3b271177902dbf3f928ebba4c758ef6057734",
+        "root_digest": "193e3606f58f24a712324df81e16b34ade72851155e9a36a8493d664e700da50",
+        "flags": 0
+      },
+      {
+        "type": "hashtree",
+        "partition": "system",
+        "dm_verity_version": 1,
+        "image_size": 1640488960,
+        "tree_offset": 1640488960,
+        "tree_size": 12922880,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 1653411840,
+        "fec_size": 13074432,
+        "hash_algorithm": "sha256",
+        "salt": "d254de208da7b26824bf4040892952ba8e96b7e9bd83e33023e728b6bab777b5",
+        "root_digest": "9d49e396244569e5ea24dd7d7a049d6f4251f7f1278e7b918b101c8918a96f87",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "vbmeta_vendor.img",
+    "kind": "vbmeta",
+    "libavb_version": "1.0",
+    "algorithm": "SHA256_RSA2048",
+    "signed": true,
+    "public_key_sha1": "c18eafc3d4f3d695bd50e49eba57f3782d363ed3",
+    "rollback_index": 0,
+    "rollback_index_location": 0,
+    "flags": 0,
+    "flags_decoded": [],
+    "release_string": "avbtool 1.2.0",
+    "descriptors": [
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.fingerprint",
+        "value": "QIN/full_AGN_1244RO_MT6769S_MX6432/AGN_1244RO_MT6769S_MX6432:12/SP1A.210812.016/1690270202:user/release-keys"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.os_version",
+        "value": "12"
+      },
+      {
+        "type": "property",
+        "key": "com.android.build.vendor.security_patch",
+        "value": "2022-11-01"
+      },
+      {
+        "type": "hashtree",
+        "partition": "vendor",
+        "dm_verity_version": 1,
+        "image_size": 449585152,
+        "tree_offset": 449585152,
+        "tree_size": 3547136,
+        "data_block_size": 4096,
+        "hash_block_size": 4096,
+        "fec_num_roots": 2,
+        "fec_offset": 453132288,
+        "fec_size": 3588096,
+        "hash_algorithm": "sha256",
+        "salt": "58002fb34b616de91eedf8ce4ac3b271177902dbf3f928ebba4c758ef6057734",
+        "root_digest": "b1d75b3848e4da26136d7d543970ecc190e0689ff3c6613424fa4082b3f801bf",
+        "flags": 0
+      }
+    ]
+  },
+  {
+    "file": "super/system_a.img",
+    "kind": "none"
+  },
+  {
+    "file": "super/vendor_a.img",
+    "kind": "none"
+  },
+  {
+    "file": "super/product_a.img",
+    "kind": "none"
+  }
+]

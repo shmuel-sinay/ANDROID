@@ -1,0 +1,101 @@
+{
+  "metadata_version": "10.0",
+  "metadata_max_size": 65536,
+  "metadata_slot_count": 3,
+  "logical_block_size": 4096,
+  "block_devices": [
+    {
+      "name": "super",
+      "first_logical_sector": 2048,
+      "size": 8589934592
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "flags": 0,
+      "maximum_size": 0
+    },
+    {
+      "name": "main_a",
+      "flags": 0,
+      "maximum_size": 8589934592
+    },
+    {
+      "name": "main_b",
+      "flags": 0,
+      "maximum_size": 8589934592
+    }
+  ],
+  "partitions": [
+    {
+      "name": "product_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 752308224,
+      "extents": [
+        {
+          "sectors": 1469352,
+          "type": "linear",
+          "target_sector": 2048,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "product_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "system_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 1704296448,
+      "extents": [
+        {
+          "sectors": 3328704,
+          "type": "linear",
+          "target_sector": 1472512,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "system_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    },
+    {
+      "name": "vendor_a",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_a",
+      "size": 456876032,
+      "extents": [
+        {
+          "sectors": 892336,
+          "type": "linear",
+          "target_sector": 4802560,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "name": "vendor_b",
+      "attributes": 1,
+      "readonly": true,
+      "group": "main_b",
+      "size": 0,
+      "extents": []
+    }
+  ]
+}

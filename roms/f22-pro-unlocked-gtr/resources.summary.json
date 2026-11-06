@@ -1,0 +1,1315 @@
+{
+ "apk_count": 187,
+ "total_knobs": 9971,
+ "apps": [
+  {
+   "package": "com.google.android.googlequicksearchbox",
+   "path": "fs/product/priv-app/Velvet/Velvet.apk",
+   "knobs": 1198,
+   "drawables": 4475,
+   "arrays": 114
+  },
+  {
+   "package": "android",
+   "path": "fs/system/system/framework/framework-res.apk",
+   "knobs": 940,
+   "drawables": 2345,
+   "arrays": 188
+  },
+  {
+   "package": "com.google.android.gms",
+   "path": "fs/product/priv-app/GmsCore/GmsCore.apk",
+   "knobs": 736,
+   "drawables": 1982,
+   "arrays": 49
+  },
+  {
+   "package": "com.android.settings",
+   "path": "fs/system/system/system_ext/priv-app/MtkSettings/MtkSettings.apk",
+   "knobs": 665,
+   "drawables": 1417,
+   "arrays": 298
+  },
+  {
+   "package": "com.android.systemui",
+   "path": "fs/system/system/system_ext/priv-app/MtkSystemUI/MtkSystemUI.apk",
+   "knobs": 465,
+   "drawables": 2322,
+   "arrays": 125
+  },
+  {
+   "package": "com.google.android.marvin.talkback",
+   "path": "fs/product/app/talkback/talkback.apk",
+   "knobs": 446,
+   "drawables": 572,
+   "arrays": 72
+  },
+  {
+   "package": "com.android.traceur",
+   "path": "fs/system/system/priv-app/Traceur/Traceur.apk",
+   "knobs": 211,
+   "drawables": 919,
+   "arrays": 83
+  },
+  {
+   "package": "com.android.server.telecom",
+   "path": "fs/system/system/priv-app/MtkTelecom/MtkTelecom.apk",
+   "knobs": 199,
+   "drawables": 889,
+   "arrays": 77
+  },
+  {
+   "package": "com.google.android.tts",
+   "path": "fs/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk",
+   "knobs": 197,
+   "drawables": 211,
+   "arrays": 10
+  },
+  {
+   "package": "com.android.permissioncontroller",
+   "path": "fs/system/system/apex/com.android.permission/priv-app/PermissionController/PermissionController.apk",
+   "knobs": 196,
+   "drawables": 752,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.permissioncontroller",
+   "path": "fs/system/system/priv-app/MtkPermissionController/MtkPermissionController.apk",
+   "knobs": 196,
+   "drawables": 752,
+   "arrays": 11
+  },
+  {
+   "package": "com.nbbsw.mmi_test",
+   "path": "fs/system/system/priv-app/MMITest/MMITest.apk",
+   "knobs": 194,
+   "drawables": 1000,
+   "arrays": 93
+  },
+  {
+   "package": "com.android.phone",
+   "path": "fs/system/system/priv-app/MtkTeleService/MtkTeleService.apk",
+   "knobs": 193,
+   "drawables": 179,
+   "arrays": 61
+  },
+  {
+   "package": "com.android.cellbroadcastreceiver.module",
+   "path": "fs/system/system/apex/com.android.cellbroadcast/priv-app/CellBroadcastApp/CellBroadcastApp.apk",
+   "knobs": 186,
+   "drawables": 158,
+   "arrays": 20
+  },
+  {
+   "package": "com.android.storagemanager",
+   "path": "fs/system/system/system_ext/priv-app/StorageManager/StorageManager.apk",
+   "knobs": 183,
+   "drawables": 873,
+   "arrays": 79
+  },
+  {
+   "package": "com.android.webview",
+   "path": "fs/product/app/webview/webview.apk",
+   "knobs": 181,
+   "drawables": 664,
+   "arrays": 5
+  },
+  {
+   "package": "com.android.emergency",
+   "path": "fs/system/system/system_ext/priv-app/MtkEmergencyInfo/MtkEmergencyInfo.apk",
+   "knobs": 181,
+   "drawables": 883,
+   "arrays": 82
+  },
+  {
+   "package": "com.android.contacts",
+   "path": "fs/system/system/system_ext/priv-app/MtkContacts/MtkContacts.apk",
+   "knobs": 164,
+   "drawables": 254,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.managedprovisioning",
+   "path": "fs/system/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk",
+   "knobs": 153,
+   "drawables": 264,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.documentsui",
+   "path": "fs/system/system/priv-app/DocumentsUI/DocumentsUI.apk",
+   "knobs": 140,
+   "drawables": 230,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.engineermode",
+   "path": "fs/system/system/priv-app/EngineerMode/EngineerMode.apk",
+   "knobs": 128,
+   "drawables": 28,
+   "arrays": 155
+  },
+  {
+   "package": "com.duoqin.shortcuts",
+   "path": "fs/system/system/priv-app/Shortcuts/Shortcuts.apk",
+   "knobs": 128,
+   "drawables": 246,
+   "arrays": 6
+  },
+  {
+   "package": "com.google.android.projection.gearhead",
+   "path": "fs/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk",
+   "knobs": 126,
+   "drawables": 147,
+   "arrays": 3
+  },
+  {
+   "package": "com.android.imsserviceentitlement",
+   "path": "fs/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
+   "knobs": 122,
+   "drawables": 198,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.stk",
+   "path": "fs/system/system/priv-app/Stk1/Stk1.apk",
+   "knobs": 113,
+   "drawables": 148,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.dialer",
+   "path": "fs/system/system/system_ext/priv-app/MtkDialer/MtkDialer.apk",
+   "knobs": 108,
+   "drawables": 440,
+   "arrays": 19
+  },
+  {
+   "package": "com.marsqin.chat",
+   "path": "fs/system/system/app/MarsQin/MarsQin.apk",
+   "knobs": 107,
+   "drawables": 655,
+   "arrays": 5
+  },
+  {
+   "package": "com.android.keychain",
+   "path": "fs/system/system/app/KeyChain/KeyChain.apk",
+   "knobs": 100,
+   "drawables": 143,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.wifi.resources",
+   "path": "fs/system/system/apex/com.android.wifi/priv-app/ServiceWifiResources/ServiceWifiResources.apk",
+   "knobs": 95,
+   "drawables": 2,
+   "arrays": 9
+  },
+  {
+   "package": "com.duoqin.promarket",
+   "path": "fs/system/system/priv-app/Market/Market.apk",
+   "knobs": 95,
+   "drawables": 620,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.post",
+   "path": "fs/system/system/app/QinPost/QinPost.apk",
+   "knobs": 93,
+   "drawables": 222,
+   "arrays": 3
+  },
+  {
+   "package": "com.android.inputmethod.latin",
+   "path": "fs/product/app/LatinIME/LatinIME.apk",
+   "knobs": 85,
+   "drawables": 270,
+   "arrays": 36
+  },
+  {
+   "package": "com.android.providers.settings",
+   "path": "fs/system/system/priv-app/MtkSettingsProvider/MtkSettingsProvider.apk",
+   "knobs": 82,
+   "drawables": 1,
+   "arrays": 4
+  },
+  {
+   "package": "com.android.launcher3",
+   "path": "fs/system/system/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
+   "knobs": 75,
+   "drawables": 1574,
+   "arrays": 4
+  },
+  {
+   "package": "com.android.gallery3d",
+   "path": "fs/system/system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk",
+   "knobs": 68,
+   "drawables": 333,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.deskclock",
+   "path": "fs/system/system/priv-app/MtkDeskClock/MtkDeskClock.apk",
+   "knobs": 65,
+   "drawables": 213,
+   "arrays": 17
+  },
+  {
+   "package": "com.android.mms",
+   "path": "fs/system/system/priv-app/MtkMms/MtkMms.apk",
+   "knobs": 61,
+   "drawables": 287,
+   "arrays": 45
+  },
+  {
+   "package": "com.mediatek.lbs.em2.ui",
+   "path": "fs/system/system/app/LocationEM2/LocationEM2.apk",
+   "knobs": 58,
+   "drawables": 18,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.gsf",
+   "path": "fs/system/system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+   "knobs": 58,
+   "drawables": 296,
+   "arrays": 6
+  },
+  {
+   "package": "com.android.packageinstaller",
+   "path": "fs/system/system/priv-app/PackageInstaller/PackageInstaller.apk",
+   "knobs": 49,
+   "drawables": 161,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.markup",
+   "path": "fs/product/app/MarkupGoogle/MarkupGoogle.apk",
+   "knobs": 45,
+   "drawables": 142,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.browser",
+   "path": "fs/system/system/system_ext/app/MtkBrowser/MtkBrowser.apk",
+   "knobs": 44,
+   "drawables": 124,
+   "arrays": 116
+  },
+  {
+   "package": "com.duoqin.feedback",
+   "path": "fs/system/system/app/QinFeedback/QinFeedback.apk",
+   "knobs": 40,
+   "drawables": 122,
+   "arrays": 0
+  },
+  {
+   "package": "com.debug.loggerui",
+   "path": "fs/system/system/app/DebugLoggerUI/DebugLoggerUI.apk",
+   "knobs": 39,
+   "drawables": 40,
+   "arrays": 12
+  },
+  {
+   "package": "com.duoqin.syncassistant",
+   "path": "fs/system/system/app/SyncAssistant/SyncAssistant.apk",
+   "knobs": 38,
+   "drawables": 298,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.calendar",
+   "path": "fs/system/system/system_ext/app/MtkCalendar/MtkCalendar.apk",
+   "knobs": 34,
+   "drawables": 151,
+   "arrays": 35
+  },
+  {
+   "package": "com.duoqin.translator",
+   "path": "fs/system/system/app/Translator/Translator.apk",
+   "knobs": 33,
+   "drawables": 186,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.nfc",
+   "path": "fs/system/system/app/NfcNci/NfcNci.apk",
+   "knobs": 32,
+   "drawables": 107,
+   "arrays": 2
+  },
+  {
+   "package": "com.mediatek.camera",
+   "path": "fs/system/system/system_ext/app/Camera/Camera.apk",
+   "knobs": 32,
+   "drawables": 404,
+   "arrays": 22
+  },
+  {
+   "package": "com.android.settings.intelligence",
+   "path": "fs/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+   "knobs": 28,
+   "drawables": 108,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.app.guard",
+   "path": "fs/system/system/priv-app/QinGuard/QinGuard.apk",
+   "knobs": 28,
+   "drawables": 280,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.manager",
+   "path": "fs/system/system/priv-app/QinManager/QinManager.apk",
+   "knobs": 28,
+   "drawables": 138,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.qweather",
+   "path": "fs/system/system/app/Weather/Weather.apk",
+   "knobs": 25,
+   "drawables": 147,
+   "arrays": 6
+  },
+  {
+   "package": "com.android.statementservice",
+   "path": "fs/system/system/priv-app/StatementService/StatementService.apk",
+   "knobs": 23,
+   "drawables": 101,
+   "arrays": 0
+  },
+  {
+   "package": "android.auto_generated_rro_product__",
+   "path": "fs/product/overlay/framework-res__auto_generated_rro_product.apk",
+   "knobs": 22,
+   "drawables": 0,
+   "arrays": 10
+  },
+  {
+   "package": "com.android.providers.media.module",
+   "path": "fs/system/system/apex/com.android.mediaprovider/priv-app/MediaProvider/MediaProvider.apk",
+   "knobs": 22,
+   "drawables": 107,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.guardapp",
+   "path": "fs/system/system/app/QinPay/QinPay.apk",
+   "knobs": 22,
+   "drawables": 162,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek",
+   "path": "fs/system/system/app/mediatek-res/mediatek-res.apk",
+   "knobs": 22,
+   "drawables": 364,
+   "arrays": 13
+  },
+  {
+   "package": "com.android.soundpicker",
+   "path": "fs/system/system/priv-app/SoundPicker/SoundPicker.apk",
+   "knobs": 21,
+   "drawables": 103,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.bluetooth",
+   "path": "fs/system/system/app/MtkBluetooth/MtkBluetooth.apk",
+   "knobs": 20,
+   "drawables": 15,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.cellbroadcastreceiver",
+   "path": "fs/system/system/priv-app/CellBroadcastLegacyApp/CellBroadcastLegacyApp.apk",
+   "knobs": 20,
+   "drawables": 101,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.media",
+   "path": "fs/system/system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk",
+   "knobs": 20,
+   "drawables": 101,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.mtp",
+   "path": "fs/system/system/priv-app/MtpService/MtpService.apk",
+   "knobs": 20,
+   "drawables": 102,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.security.service",
+   "path": "fs/system/system/priv-app/NetworkDataControllerService/NetworkDataControllerService.apk",
+   "knobs": 20,
+   "drawables": 100,
+   "arrays": 2
+  },
+  {
+   "package": "com.mediatek.autobootcontroller",
+   "path": "fs/system/system/system_ext/priv-app/AutoBootController/AutoBootController.apk",
+   "knobs": 20,
+   "drawables": 102,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.security",
+   "path": "fs/system/system/system_ext/priv-app/NetworkDataController/NetworkDataController.apk",
+   "knobs": 20,
+   "drawables": 99,
+   "arrays": 4
+  },
+  {
+   "package": "com.duoqin.duoqinaccount",
+   "path": "fs/system/system/app/DuoqinAccount/DuoqinAccount.apk",
+   "knobs": 19,
+   "drawables": 115,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.inputmethod",
+   "path": "fs/system/system/priv-app/VoiceInput/VoiceInput.apk",
+   "knobs": 19,
+   "drawables": 102,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.ai",
+   "path": "fs/system/system/app/XiaoAi/XiaoAi.apk",
+   "knobs": 18,
+   "drawables": 76,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.printspooler",
+   "path": "fs/system/system/app/PrintSpooler/PrintSpooler.apk",
+   "knobs": 17,
+   "drawables": 26,
+   "arrays": 5
+  },
+  {
+   "package": "com.android.simappdialog",
+   "path": "fs/system/system/app/SimAppDialog/SimAppDialog.apk",
+   "knobs": 16,
+   "drawables": 48,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.networkstack",
+   "path": "fs/system/system/priv-app/NetworkStack/NetworkStack.apk",
+   "knobs": 15,
+   "drawables": 1,
+   "arrays": 7
+  },
+  {
+   "package": "com.mediatek.ygps",
+   "path": "fs/system/system/priv-app/YGPS/YGPS.apk",
+   "knobs": 15,
+   "drawables": 23,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.wifi.mainline.resources.overlay",
+   "path": "fs/vendor/overlay/WifiResMainlineOverlay/WifiResMainlineOverlay.apk",
+   "knobs": 15,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.wifi.resources.overlay",
+   "path": "fs/vendor/overlay/WifiResOverlay/WifiResOverlay.apk",
+   "knobs": 15,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.syncadapters.calendar",
+   "path": "fs/product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk",
+   "knobs": 14,
+   "drawables": 84,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.gm.exchange",
+   "path": "fs/product/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk",
+   "knobs": 13,
+   "drawables": 32,
+   "arrays": 1
+  },
+  {
+   "package": "com.google.android.syncadapters.contacts",
+   "path": "fs/product/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk",
+   "knobs": 10,
+   "drawables": 35,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.certinstaller",
+   "path": "fs/system/system/app/CertInstaller/CertInstaller.apk",
+   "knobs": 10,
+   "drawables": 1,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.soundrecorder",
+   "path": "fs/system/system/priv-app/DqSoundRecorder/DqSoundRecorder.apk",
+   "knobs": 10,
+   "drawables": 79,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.frameworkresoverlay",
+   "path": "fs/vendor/overlay/FrameworkResOverlay/FrameworkResOverlay.apk",
+   "knobs": 10,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.egg",
+   "path": "fs/system/system/app/EasterEgg/EasterEgg.apk",
+   "knobs": 9,
+   "drawables": 77,
+   "arrays": 7
+  },
+  {
+   "package": "com.android.networkstack.tethering",
+   "path": "fs/system/system/apex/com.android.tethering/priv-app/Tethering/Tethering.apk",
+   "knobs": 8,
+   "drawables": 3,
+   "arrays": 9
+  },
+  {
+   "package": "com.android.hotspot2.osulogin",
+   "path": "fs/system/system/apex/com.android.wifi/app/OsuLogin/OsuLogin.apk",
+   "knobs": 8,
+   "drawables": 12,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.captiveportallogin",
+   "path": "fs/system/system/app/CaptivePortalLogin/CaptivePortalLogin.apk",
+   "knobs": 8,
+   "drawables": 16,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.shell",
+   "path": "fs/system/system/priv-app/Shell/Shell.apk",
+   "knobs": 8,
+   "drawables": 13,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.smartratswitch.service",
+   "path": "fs/system/system/priv-app/SmartRatSwitch/SmartRatSwitch.apk",
+   "knobs": 8,
+   "drawables": 12,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.navbar.gestural",
+   "path": "fs/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+   "knobs": 7,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.navbar.gestural_extra_wide_back",
+   "path": "fs/product/overlay/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk",
+   "knobs": 7,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.navbar.gestural_narrow_back",
+   "path": "fs/product/overlay/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk",
+   "knobs": 7,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.navbar.gestural_wide_back",
+   "path": "fs/product/overlay/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk",
+   "knobs": 7,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.sprd.sprdcalculator",
+   "path": "fs/system/system/app/DqCalculator/DqCalculator.apk",
+   "knobs": 7,
+   "drawables": 44,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.music",
+   "path": "fs/system/system/app/DqMusic/DqMusic.apk",
+   "knobs": 7,
+   "drawables": 224,
+   "arrays": 1
+  },
+  {
+   "package": "com.duoqin.remote",
+   "path": "fs/system/system/app/Remote/Remote.apk",
+   "knobs": 7,
+   "drawables": 236,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.wallpaperpicker",
+   "path": "fs/system/system/system_ext/priv-app/MtkWallpaperPicker/MtkWallpaperPicker.apk",
+   "knobs": 7,
+   "drawables": 36,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.quicksearchbox",
+   "path": "fs/product/priv-app/MtkQuickSearchBox/MtkQuickSearchBox.apk",
+   "knobs": 6,
+   "drawables": 103,
+   "arrays": 3
+  },
+  {
+   "package": "com.android.cellbroadcastservice",
+   "path": "fs/system/system/apex/com.android.cellbroadcast/priv-app/CellBroadcastServiceModule/CellBroadcastServiceModule.apk",
+   "knobs": 6,
+   "drawables": 0,
+   "arrays": 4
+  },
+  {
+   "package": "com.android.connectivity.resources",
+   "path": "fs/system/system/apex/com.android.tethering/priv-app/ServiceConnectivityResources/ServiceConnectivityResources.apk",
+   "knobs": 6,
+   "drawables": 2,
+   "arrays": 6
+  },
+  {
+   "package": "com.android.internal.display.cutout.emulation.corner",
+   "path": "fs/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+   "knobs": 5,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.display.cutout.emulation.double",
+   "path": "fs/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+   "knobs": 5,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.display.cutout.emulation.hole",
+   "path": "fs/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+   "knobs": 5,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.display.cutout.emulation.tall",
+   "path": "fs/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+   "knobs": 5,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "android.ext.services",
+   "path": "fs/system/system/apex/com.android.extservices/priv-app/ExtServices/ExtServices.apk",
+   "knobs": 5,
+   "drawables": 15,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.internal.display.cutout.emulation.waterfall",
+   "path": "fs/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+   "knobs": 4,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.theme.font.notoserifsource",
+   "path": "fs/product/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk",
+   "knobs": 4,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.printservice.recommendation",
+   "path": "fs/system/system/app/PrintRecommendationService/PrintRecommendationService.apk",
+   "knobs": 4,
+   "drawables": 12,
+   "arrays": 4
+  },
+  {
+   "package": "com.mediatek.ims",
+   "path": "fs/system/system/priv-app/ImsService/ImsService.apk",
+   "knobs": 4,
+   "drawables": 12,
+   "arrays": 0
+  },
+  {
+   "package": "com.baidu.map.location",
+   "path": "fs/system/system/app/Baidu_Location/Baidu_Location.apk",
+   "knobs": 3,
+   "drawables": 9,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.mdmconfig",
+   "path": "fs/system/system/app/MDMConfig/MDMConfig.apk",
+   "knobs": 3,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.FrameworkResOverlayExt",
+   "path": "fs/vendor/overlay/FrameworkResOverlayExt/FrameworkResOverlayExt.apk",
+   "knobs": 3,
+   "drawables": 0,
+   "arrays": 2
+  },
+  {
+   "package": "com.duoqin.inputmethod.pinyin",
+   "path": "fs/system/system/app/DuoqinIme/DuoqinIme.apk",
+   "knobs": 2,
+   "drawables": 62,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.pinyin",
+   "path": "fs/system/system/app/DuoqinIme_new/DuoqinIme_new.apk",
+   "knobs": 2,
+   "drawables": 81,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.backupconfirm",
+   "path": "fs/system/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+   "knobs": 2,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.bips",
+   "path": "fs/system/system/priv-app/BuiltInPrintService/BuiltInPrintService.apk",
+   "knobs": 2,
+   "drawables": 6,
+   "arrays": 0
+  },
+  {
+   "package": "com.nbbird.hardwareinfo",
+   "path": "fs/system/system/priv-app/HardwareInfoAgenew/HardwareInfoAgenew.apk",
+   "knobs": 2,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.remoteservice",
+   "path": "fs/system/system/priv-app/RemoteService/RemoteService.apk",
+   "knobs": 2,
+   "drawables": 17,
+   "arrays": 0
+  },
+  {
+   "package": "com.wapi.wapicertmanager",
+   "path": "fs/system/system/priv-app/WapiCertManager/WapiCertManager.apk",
+   "knobs": 2,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.mdmlsample",
+   "path": "fs/system/system/app/MDMLSample/MDMLSample.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.callrecorder",
+   "path": "fs/system/system/priv-app/CallRecorderService/CallRecorderService.apk",
+   "knobs": 1,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.calendar",
+   "path": "fs/system/system/priv-app/MtkCalendarProvider/MtkCalendarProvider.apk",
+   "knobs": 1,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.contacts",
+   "path": "fs/system/system/priv-app/MtkContactsProvider/MtkContactsProvider.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.duoqin.systemupdate",
+   "path": "fs/system/system/priv-app/QinSystemUpdate/QinSystemUpdate.apk",
+   "knobs": 1,
+   "drawables": 49,
+   "arrays": 4
+  },
+  {
+   "package": "com.android.wallpapercropper",
+   "path": "fs/system/system/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk",
+   "knobs": 1,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.networkstack.overlay",
+   "path": "fs/vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.networkstack.inprocess.overlay",
+   "path": "fs/vendor/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.networkstack.overlay",
+   "path": "fs/vendor/app/NetworkStackResOverlay/NetworkStackResOverlay.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": "android.auto_generated_rro_vendor__",
+   "path": "fs/vendor/overlay/framework-res__auto_generated_rro_vendor.apk",
+   "knobs": 1,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.modulemetadata",
+   "path": "fs/product/app/ModuleMetadata/ModuleMetadata.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.navbar.threebutton",
+   "path": "fs/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.internal.systemui.onehanded.gestural",
+   "path": "fs/product/overlay/OneHandedModeGestural/OneHandedModeGesturalOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/product/priv-app/OneTimeInitializer/OneTimeInitializer.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.vending",
+   "path": "fs/product/priv-app/Phonesky/Phonesky.apk",
+   "knobs": 0,
+   "drawables": 1117,
+   "arrays": 1
+  },
+  {
+   "package": "com.android.dreams.basic",
+   "path": "fs/system/system/app/BasicDreams/BasicDreams.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.batterywarning",
+   "path": "fs/system/system/app/BatteryWarning/BatteryWarning.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.bluetoothmidiservice",
+   "path": "fs/system/system/app/BluetoothMidiService/BluetoothMidiService.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.bookmarkprovider",
+   "path": "fs/system/system/app/BookmarkProvider/BookmarkProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.cameraextensions",
+   "path": "fs/system/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.carrierdefaultapp",
+   "path": "fs/system/system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.companiondevicemanager",
+   "path": "fs/system/system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/app/CtsShimPrebuilt/CtsShimPrebuilt.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "android.ext.shared",
+   "path": "fs/system/system/app/ExtShared/ExtShared.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.htmlviewer",
+   "path": "fs/system/system/app/HTMLViewer/HTMLViewer.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.pacprocessor",
+   "path": "fs/system/system/app/PacProcessor/PacProcessor.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.se",
+   "path": "fs/system/system/app/SecureElement/SecureElement.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/app/WallpaperBackup/WallpaperBackup.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.baidu.appsearch",
+   "path": "fs/system/system/preloadapp/BaiduHelper/BaiduHelper.apk",
+   "knobs": 0,
+   "drawables": 1667,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.providers.blockednumber",
+   "path": "fs/system/system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.calllogbackup",
+   "path": "fs/system/system/priv-app/CallLogBackup/CallLogBackup.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/CtsShimPrivPrebuilt/CtsShimPrivPrebuilt.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.downloads",
+   "path": "fs/system/system/priv-app/DownloadProvider/DownloadProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.downloads.ui",
+   "path": "fs/system/system/priv-app/DownloadProviderUi/DownloadProviderUi.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.dynsystem",
+   "path": "fs/system/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.externalstorage",
+   "path": "fs/system/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.location.fused",
+   "path": "fs/system/system/priv-app/FusedLocation/FusedLocation.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.inputdevices",
+   "path": "fs/system/system/priv-app/InputDevices/InputDevices.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.location.lppe.main",
+   "path": "fs/system/system/priv-app/LPPeService/LPPeService.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/LocalTransport/LocalTransport.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.capctrl.service",
+   "path": "fs/system/system/priv-app/MtkCapCtrl/MtkCapCtrl.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/MtkGbaService/MtkGbaService.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.mms.service",
+   "path": "fs/system/system/priv-app/MtkMmsService/MtkMmsService.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.telephony",
+   "path": "fs/system/system/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.telephony",
+   "path": "fs/system/system/priv-app/MtkTelephonyProvider/MtkTelephonyProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.musicfx",
+   "path": "fs/system/system/priv-app/MusicFX/MusicFX.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/NetworkPermissionConfig/NetworkPermissionConfig.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/ONS/ONS.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.proxyhandler",
+   "path": "fs/system/system/priv-app/ProxyHandler/ProxyHandler.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.providers.userdictionary",
+   "path": "fs/system/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.vpndialogs",
+   "path": "fs/system/system/priv-app/VpnDialogs/VpnDialogs.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.writeimei",
+   "path": "fs/system/system/priv-app/WriteIMEIApp/WriteIMEIApp.apk",
+   "knobs": 0,
+   "drawables": 2,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.galleryfeature.drm",
+   "path": "fs/system/system/system_ext/app/MtkGallery2/galleryfeature/Gallery2Drm/Gallery2Drm.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.gallerygif",
+   "path": "fs/system/system/system_ext/app/MtkGallery2/galleryfeature/Gallery2Gif/Gallery2Gif.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.galleryfeature.picturequality",
+   "path": "fs/system/system/system_ext/app/MtkGallery2/galleryfeature/Gallery2Pq/Gallery2Pq.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.galleryfeature.pq",
+   "path": "fs/system/system/system_ext/app/MtkGallery2/galleryfeature/Gallery2PqTool/Gallery2PqTool.apk",
+   "knobs": 0,
+   "drawables": 1,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.galleryroots",
+   "path": "fs/system/system/system_ext/app/MtkGallery2/galleryfeature/Gallery2Root/Gallery2Root.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.android.carrierconfig",
+   "path": "fs/system/system/system_ext/priv-app/MtkCarrierConfig/MtkCarrierConfig.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.mediatek.simprocessor",
+   "path": "fs/system/system/system_ext/priv-app/MtkSimProcessor/MtkSimProcessor.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.agenew.peakli.phoneinfo",
+   "path": "fs/system/system/system_ext/priv-app/PhoneInfo/PhoneInfo.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/system/system/system_ext/priv-app/Provision/Provision.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/vendor/app/AgenewSensorHub/AgenewSensorHub.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": "com.google.android.networkstack.tethering.overlay",
+   "path": "fs/vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.networkstack.tethering.inprocess.overlay",
+   "path": "fs/vendor/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 2
+  },
+  {
+   "package": "com.android.networkstack.tethering.overlay",
+   "path": "fs/vendor/app/TetheringResOverlay/TetheringResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 2
+  },
+  {
+   "package": "com.mediatek.cellbroadcastuiresoverlay",
+   "path": "fs/vendor/overlay/CellbroadcastUIResOverlay/CellbroadcastUIResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 1
+  },
+  {
+   "package": null,
+   "path": "fs/vendor/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/vendor/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  },
+  {
+   "package": null,
+   "path": "fs/vendor/overlay/SystemUIResOverlay/SystemUIResOverlay.apk",
+   "knobs": 0,
+   "drawables": 0,
+   "arrays": 0
+  }
+ ]
+}

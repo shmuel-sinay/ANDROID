@@ -1,0 +1,193 @@
+{
+ "root": "fs",
+ "hashed": true,
+ "totals": {
+  "files": 6059,
+  "bytes": 2814497068,
+  "symlinks": 627
+ },
+ "by_depth": {
+  "listed": {
+   "count": 2034,
+   "bytes": 242456633
+  },
+  "parsed": {
+   "count": 4572,
+   "bytes": 2477509728
+  },
+  "partial": {
+   "count": 80,
+   "bytes": 94530707
+  }
+ },
+ "categories": {
+  "native_lib": {
+   "how": "native_deps.py: SONAME, DT_NEEDED deps, export/import counts",
+   "depth": "parsed",
+   "count": 3362,
+   "bytes": 1053672828
+  },
+  "symlink": {
+   "how": "symbolic link",
+   "depth": "listed",
+   "count": 627,
+   "bytes": 0
+  },
+  "cert_key": {
+   "how": "trust anchor / signing key — indexed",
+   "depth": "listed",
+   "count": 382,
+   "bytes": 1787963
+  },
+  "native_exec": {
+   "how": "native_deps.py: ELF executable (HAL service / daemon), DT_NEEDED deps",
+   "depth": "parsed",
+   "count": 333,
+   "bytes": 85732764
+  },
+  "aot": {
+   "how": "pre-compiled AOT image (mirrors its jar/apk dex)",
+   "depth": "listed",
+   "count": 279,
+   "bytes": 98220628
+  },
+  "xml_other": {
+   "how": "xml_config.py: root tag + declared content",
+   "depth": "parsed",
+   "count": 247,
+   "bytes": 2855291
+  },
+  "font": {
+   "how": "font asset",
+   "depth": "listed",
+   "count": 242,
+   "bytes": 75974669
+  },
+  "init_rc": {
+   "how": "init_rc.py: services, actions, triggers",
+   "depth": "parsed",
+   "count": 205,
+   "bytes": 422638
+  },
+  "apk": {
+   "how": "apk_inventory.py: manifest, perms, priv-app, intents",
+   "depth": "parsed",
+   "count": 187,
+   "bytes": 1328576117
+  },
+  "input_map": {
+   "how": "input key-layout — static data",
+   "depth": "listed",
+   "count": 174,
+   "bytes": 340990
+  },
+  "binary_data": {
+   "how": "binary/config blob",
+   "depth": "listed",
+   "count": 92,
+   "bytes": 47040415
+  },
+  "jar": {
+   "how": "boot_guards.py: dex scanned for boot guards (framework/services)",
+   "depth": "partial",
+   "count": 80,
+   "bytes": 94530707
+  },
+  "privapp_xml": {
+   "how": "apk_inventory.py: privapp-permissions allowlists",
+   "depth": "parsed",
+   "count": 78,
+   "bytes": 178793
+  },
+  "text": {
+   "how": "text/config — indexed",
+   "depth": "listed",
+   "count": 74,
+   "bytes": 259725
+  },
+  "selinux": {
+   "how": "selinux.py: contexts / CIL policy parsed",
+   "depth": "parsed",
+   "count": 65,
+   "bytes": 5926968
+  },
+  "audio": {
+   "how": "sound/animation asset",
+   "depth": "listed",
+   "count": 58,
+   "bytes": 3047589
+  },
+  "script": {
+   "how": "misc_files.py: shell command wrapper",
+   "depth": "parsed",
+   "count": 42,
+   "bytes": 64432
+  },
+  "system_config": {
+   "how": "passwd/group/fs_config/tz — static system config",
+   "depth": "listed",
+   "count": 35,
+   "bytes": 1655376
+  },
+  "protobuf": {
+   "how": "protobuf blob — indexed",
+   "depth": "listed",
+   "count": 33,
+   "bytes": 4020
+  },
+  "apex_manifest": {
+   "how": "misc_files.py: APEX name + version",
+   "depth": "parsed",
+   "count": 23,
+   "bytes": 2398
+  },
+  "vendor_blob": {
+   "how": "TEE app / firmware / AEE debug blob — indexed",
+   "depth": "listed",
+   "count": 18,
+   "bytes": 2585154
+  },
+  "prop": {
+   "how": "build.prop parsed (key props surfaced)",
+   "depth": "parsed",
+   "count": 13,
+   "bytes": 35942
+  },
+  "asset_blob": {
+   "how": "compressed/model/binary asset — indexed",
+   "depth": "listed",
+   "count": 12,
+   "bytes": 2991041
+  },
+  "sysconfig_xml": {
+   "how": "xml_config.py: VINTF HALs, features, libraries",
+   "depth": "parsed",
+   "count": 10,
+   "bytes": 35984
+  },
+  "art_profile": {
+   "how": "ART dexlayout profile — build artifact",
+   "depth": "listed",
+   "count": 5,
+   "bytes": 574754
+  },
+  "kernel_modules": {
+   "how": "misc_files.py: modules.dep graph / load order",
+   "depth": "parsed",
+   "count": 4,
+   "bytes": 1133
+  },
+  "fstab": {
+   "how": "BOOT_CHAIN.md: mount + avb flags",
+   "depth": "parsed",
+   "count": 3,
+   "bytes": 4440
+  },
+  "image": {
+   "how": "image asset",
+   "depth": "listed",
+   "count": 3,
+   "bytes": 7974309
+  }
+ }
+}

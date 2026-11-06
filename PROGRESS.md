@@ -1,5 +1,9 @@
 # התקדמות
 
+## Qin F22 Pro — unlocked GTR — רום שמיני
+- כיסוי 100%, 187 אפליקציות, 62 בדיקות אתחול
+
+
 ## Qin F21 Pro — LineageOS 18.1 — רום שביעי
 - רום קאסטום מלא: 496 אפליקציות (כפול מ-stock), 68 בדיקות אתחול, 13 מחיקות מפילות
 - coverage.py: סיווג userland של לינוקס (terminfo/vim/bash/ssh) שמגיע עם Lineage
