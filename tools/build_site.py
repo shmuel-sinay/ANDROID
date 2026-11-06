@@ -217,6 +217,8 @@ border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;margin-botto
 <p class="muted">מי מפעיל את מי, ומה קריטי לאתחול.</p></a>
 <a class="card" href="native/index.html"><h3><span class="ic">🧩</span>ספריות native</h3>
 <p class="muted">גרף התלויות של קוד C/C++ המהודר (‎.so).</p></a>
+<a class="card" href="ui/index.html"><h3><span class="ic">📲</span>סריקת עומק: ממשק</h3>
+<p class="muted">כל שורת הגדרות וכל אייקון סטטוס — ואיך להסיר.</p></a>
 <a class="card" href="knobs/index.html"><h3><span class="ic">🎛️</span>מתגי תצורה (עומק)</h3>
 <p class="muted">כל מתג בכל אפליקציה — להוספה והסרה של תכונות.</p></a>
 <a class="card" href="coverage/index.html"><h3><span class="ic">✓</span>כיסוי הניתוח</h3>
@@ -368,6 +370,28 @@ q.addEventListener('input',function(){{var v=q.value.toLowerCase();rows.forEach(
 r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</script>"""
         page(os.path.join(out, "knobs", "index.html"), "מתגי תצורה", model,
              '<a href="../index.html">בית</a> / מתגים', body, 1)
+
+    # ---- deep UI (settings rows + status bar slots) ----
+    ui = load_json(rom, "ui_deep.summary.json")
+    if ui:
+        os.makedirs(os.path.join(out, "ui"), exist_ok=True)
+        slots = "".join(f'<span class="chip">{e(s)}</span> ' for s in ui.get("status_bar_slots", []))
+        knobs = "".join(f'<tr><td><code dir=ltr>{e(k)}</code></td><td dir=ltr>{e(str(v))}</td></tr>'
+                        for k, v in ui.get("status_bar_knobs", {}).items())
+        screens = "".join(f'<tr><td><code dir=ltr>{e(f)}</code></td><td>{c}</td></tr>'
+                          for f, c in ui.get("top_screens", []))
+        body = f"""<h2>סריקת עומק: ממשק המשתמש</h2>
+<p class="lead">מיפוי מדויק לצורך הסרה: {ui['settings_row_count']} שורות הגדרות ב-{ui['settings_screens']} מסכים,
+ו-{len(ui.get('status_bar_slots',[]))} אייקוני שורת סטטוס. מדריך הסרה: <a href="../deps/ui_removal.html">כאן</a>.</p>
+<h3>אייקוני שורת הסטטוס (לפי סדר)</h3>
+<p>{slots}</p>
+<p class="muted">להסתרת אייקון: <code dir=ltr>settings put secure icon_blacklist "nfc,vpn"</code> (שמות ה-slots מופרדים בפסיק).</p>
+<h3>מתגי שורת הסטטוס ב-SystemUI</h3>
+<table><tr><th>מתג</th><th>ערך</th></tr>{knobs}</table>
+<h3>מסכי ההגדרות עם הכי הרבה שורות</h3>
+<table><tr><th>מסך (res/xml)</th><th>שורות</th></tr>{screens}</table>"""
+        page(os.path.join(out, "ui", "index.html"), "סריקת עומק: ממשק", model,
+             '<a href="../index.html">בית</a> / ממשק', body, 1)
 
     # ---- removal recipes ----
     rec = load_json(rom, "removal_recipes.json")

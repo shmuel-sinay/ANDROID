@@ -15,3 +15,5 @@ roms/**/native_deps.json
 roms/**/xml_config.json
 roms/**/resources.json
 roms/**/ui_knobs.json
+roms/**/ui_deep.json
+roms/**/statusbar_slots.json

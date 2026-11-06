@@ -1,0 +1,154 @@
+{
+ "settings_row_count": 1586,
+ "settings_screens": 254,
+ "status_bar_slots": [
+  "no_calling",
+  "call_strength",
+  "alarm_clock",
+  "rotate",
+  "headset",
+  "data_saver",
+  "ime",
+  "sync_failing",
+  "sync_active",
+  "nfc",
+  "tty",
+  "speakerphone",
+  "cdma_eri",
+  "data_connection",
+  "phone_evdo_signal",
+  "phone_signal",
+  "secure",
+  "managed_profile",
+  "cast",
+  "screen_record",
+  "vpn",
+  "bluetooth",
+  "camera",
+  "microphone",
+  "location",
+  "mute",
+  "volume",
+  "zen",
+  "ethernet",
+  "wifi",
+  "hotspot",
+  "mobile",
+  "airplane",
+  "battery",
+  "sensors_off"
+ ],
+ "status_bar_knobs": {
+  "config_materialPreferenceIconSpaceReserved": "true",
+  "config_severe_battery_dialog": "false",
+  "config_showBatteryEstimateQSBH": "true",
+  "config_showLowMediaVolumeIcon": "true",
+  "config_showNotificationForUnknownBatteryState": "false",
+  "config_statusBarShowNumber": "false",
+  "config_vibrateOnIconAnimation": "false",
+  "settingslib_config_icon_space_reserved": "false",
+  "config_unblockHwSensorIconEnableTint": "true"
+ },
+ "top_screens": [
+  [
+   "development_settings.xml",
+   133
+  ],
+  [
+   "mobile_network_settings.xml",
+   38
+  ],
+  [
+   "app_info_settings.xml",
+   33
+  ],
+  [
+   "enterprise_privacy_settings.xml",
+   25
+  ],
+  [
+   "wifi_network_details_fragment2.xml",
+   25
+  ],
+  [
+   "display_settings.xml",
+   24
+  ],
+  [
+   "sound_settings.xml",
+   24
+  ],
+  [
+   "my_device_info.xml",
+   22
+  ],
+  [
+   "apn_editor.xml",
+   20
+  ],
+  [
+   "configure_notification_settings.xml",
+   20
+  ],
+  [
+   "financed_privacy_settings.xml",
+   18
+  ],
+  [
+   "language_and_input.xml",
+   18
+  ],
+  [
+   "security_advanced_settings.xml",
+   18
+  ],
+  [
+   "security_lockscreen_settings.xml",
+   18
+  ],
+  [
+   "special_access.xml",
+   18
+  ],
+  [
+   "privacy_dashboard_settings.xml",
+   17
+  ],
+  [
+   "app_notification_settings.xml",
+   16
+  ],
+  [
+   "channel_notification_settings.xml",
+   16
+  ],
+  [
+   "accessibility_settings.xml",
+   15
+  ],
+  [
+   "storage_dashboard_fragment.xml",
+   15
+  ],
+  [
+   "top_level_settings.xml",
+   15
+  ],
+  [
+   "all_tether_prefs.xml",
+   14
+  ],
+  [
+   "captioning_appearance.xml",
+   14
+  ],
+  [
+   "hdmi_box_settings.xml",
+   14
+  ],
+  [
+   "network_and_internet.xml",
+   13
+  ]
+ ]
+}
