@@ -1,0 +1,155 @@
+{
+ "apex_count": 30,
+ "apexes": [
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v31.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v31",
+   "files": 274
+  },
+  {
+   "apex": "system:/system/system_ext/apex/com.android.vndk.v30.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.v30",
+   "files": 580
+  },
+  {
+   "apex": "system:/system/apex/com.android.apex.cts.shim.apex",
+   "extracted_to": "fs/apex_extracted/com.android.apex.cts.shim",
+   "files": 4
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.ondevicepersonalization.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.ondevicepersonalization",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.cellbroadcast.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.cellbroadcast",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.android.i18n.apex",
+   "extracted_to": "fs/apex_extracted/com.android.i18n",
+   "files": 17
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.extservices.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.extservices",
+   "files": 3
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.media.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.media",
+   "files": 40
+  },
+  {
+   "apex": "system:/system/apex/com.android.vndk.current.apex",
+   "extracted_to": "fs/apex_extracted/com.android.vndk.current",
+   "files": 332
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.art.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.art",
+   "files": 96
+  },
+  {
+   "apex": "system:/system/apex/com.android.btservices.apex",
+   "extracted_to": "fs/apex_extracted/com.android.btservices",
+   "files": 43
+  },
+  {
+   "apex": "system:/system/apex/com.android.runtime.apex",
+   "extracted_to": "fs/apex_extracted/com.android.runtime",
+   "files": 33
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.appsearch.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.appsearch",
+   "files": 9
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.tethering.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.tethering",
+   "files": 36
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.conscrypt.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.conscrypt",
+   "files": 16
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.media.swcodec.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.media.swcodec",
+   "files": 96
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.scheduling.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.scheduling",
+   "files": 6
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.sdkext.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.sdkext",
+   "files": 9
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.uwb.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.uwb",
+   "files": 11
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.ipsec.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.ipsec",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.mediaprovider.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.mediaprovider",
+   "files": 8
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.resolv.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.resolv",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.adservices.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.adservices",
+   "files": 14
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.tzdata4.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.tzdata4",
+   "files": 6
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.adbd.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.adbd",
+   "files": 21
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.os.statsd.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.os.statsd",
+   "files": 14
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.wifi.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.wifi",
+   "files": 12
+  },
+  {
+   "apex": "system:/system/apex/com.google.mainline.primary.libs.apex",
+   "extracted_to": "fs/apex_extracted/com.google.mainline.primary.libs",
+   "files": 5
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.neuralnetworks.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.neuralnetworks",
+   "files": 3
+  },
+  {
+   "apex": "system:/system/apex/com.google.android.permission.apex",
+   "extracted_to": "fs/apex_extracted/com.google.android.permission",
+   "files": 10
+  }
+ ]
+}
