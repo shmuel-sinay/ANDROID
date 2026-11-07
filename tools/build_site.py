@@ -369,7 +369,7 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
         top = "".join(f'<tr><td><code dir=ltr>{e(t["lib"])}</code></td><td>{t["needed_by_count"]}</td></tr>'
                       for t in nat["top_depended_on"][:25])
         miss = nat.get("missing_dependencies", {})
-        miss_html = ("<p class='ok'>✓ כל התלויות קיימות ברום — אין ספרייה שמפנה ל-.so חסר.</p>"
+        miss_html = ("<p class='ok'>כל התלויות קיימות ברום: אין ספרייה שמפנה ל-.so חסר.</p>"
                      if not miss else "<table><tr><th>חסר</th><th>כמה צריכים</th></tr>" +
                      "".join(f"<tr><td><code dir=ltr>{e(k)}</code></td><td>{v}</td></tr>" for k, v in list(miss.items())[:30]) + "</table>")
         arch = nat["machines"]
@@ -504,7 +504,7 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
     manifest = {
         "device": {"model": model, "android_version": ver, "security_patch": patch,
                    "apk_count": len(apks), "boot_guard_count": len(onboot),
-                   "bootloop_role_count": len(bl)},
+                   "bootloop_role_count": len(bl), "init_service_count": len(init["services"])},
         "routes": FRAGMENTS,
     }
     json.dump(manifest, open(os.path.join(out, "_fragments.json"), "w"),
