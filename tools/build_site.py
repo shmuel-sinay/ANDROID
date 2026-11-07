@@ -449,7 +449,7 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
     rec = load_json(rom, "removal_recipes.json")
     if rec:
         os.makedirs(os.path.join(out, "remove"), exist_ok=True)
-        risk_he = {"bootloop": ("לולאת אתחול", "b"), "critical": ("קריטי — לא למחוק", "b"),
+        risk_he = {"bootloop": ("לולאת אתחול", "b"), "critical": ("קריטי, לא למחוק", "b"),
                    "degraded": ("יאבד פונקציה", "d"), "safe": ("כנראה בטוח", "o")}
         order = {"bootloop": 0, "critical": 1, "degraded": 2, "safe": 3}
         rows = ""
@@ -457,22 +457,18 @@ r.style.display=r.textContent.toLowerCase().indexOf(v)<0?'none':'';}});}});</scr
             lab, cls = risk_he[r["risk"]]
             g = ""
             for x in r["boot_guards"][:3]:
-                g += f'<div style="font-size:12px" class="muted"><code dir=ltr>{e(x["method"].split(".")[-1])}</code> — {e(x["neutralize"][:90])}</div>'
+                g += f'<div style="font-size:12px" class="muted"><code dir=ltr>{e(x["method"].split(".")[-1])}</code>: {e(x["neutralize"][:90])}</div>'
             roles = " ".join(f'<span class="chip">{e(x["role"])}</span>' for x in r["roles_filled"])
             rows += (f'<tr><td><code>{e(pkg)}</code>{"<br><span class=chip>persistent</span>" if r["persistent"] else ""}</td>'
                      f'<td><span class="pill {cls}">{lab}</span></td>'
-                     f'<td>{roles}</td><td>{g or "<span class=muted>—</span>"}</td>'
+                     f'<td>{roles}</td><td>{g or "<span class=muted>אין</span>"}</td>'
                      f'<td class=muted>{e(", ".join(r["shares_uid_with"][:3]))}</td></tr>')
         br = rec["summary"]["by_risk"]
         body = f"""<h2>מרשמי הסרה</h2>
 <p class="lead">לכל חבילה: האם אפשר למחוק, מה יקרוס, ואיך לנטרל כל בדיקה כדי שהמחיקה לא תפיל את האתחול.
 זה הקובץ שאפשר להעלות ל-AI ולשאול "איך אני מוחק את X בבטחה".</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
-<div class="card" style="text-align:center"><div style="font-size:30px;font-weight:800" class="bad">{len(br["bootloop"])+len(br["critical"])}</div><div class="muted">אסור למחוק</div></div>
-<div class="card" style="text-align:center"><div style="font-size:30px;font-weight:800" class="warn">{len(br["degraded"])}</div><div class="muted">יאבד פונקציה</div></div>
-<div class="card" style="text-align:center"><div style="font-size:30px;font-weight:800" class="ok">{len(br["safe"])}</div><div class="muted">כנראה בטוח</div></div>
-</div>
-<p class="muted">להורדה לשימוש ב-AI: <code>removal_recipes.json</code> + <code>AI_EXPORT.md</code> (מדריך קריאה) בריפו.</p>
+<p class="statline">{len(br["bootloop"])+len(br["critical"])} אסור למחוק · {len(br["degraded"])} יאבד פונקציה · {len(br["safe"])} כנראה בטוח</p>
+<p class="muted">להורדה לשימוש ב-AI: <code>removal_recipes.json</code> ו-<code>AI_EXPORT.md</code> (מדריך קריאה) בריפו.</p>
 <input id="q" placeholder="חיפוש חבילה...">
 <table id="t"><tr><th>חבילה</th><th>סיכון</th><th>תפקידים</th><th>נטרול הבדיקות</th><th>משתף uid עם</th></tr>{rows}</table>
 <script>var q=document.getElementById('q'),rows=[].slice.call(document.querySelectorAll('#t tr')).slice(1);
