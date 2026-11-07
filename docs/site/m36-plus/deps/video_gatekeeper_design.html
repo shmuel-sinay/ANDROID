@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>תכנון: מפענח וידיאו יחיד עם בדיקת אישור לפני ניגון (M36 Plus)</title>
+<meta name="author" content="שמואל סיני">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d13;--bg2:#10131c;--card:#161a26;--card2:#1b2030;--br:#272d3e;
+--fg:#edeff5;--mut:#9aa3b8;--ac:#7ca8ff;--ac2:#a98bff;--ok:#4ade80;--warn:#fbbf24;
+--bad:#fb7185;--chip:#20273a;--shadow:0 10px 30px rgba(0,0,0,.35);
+--grad:linear-gradient(135deg,#7c3aed22,#2563eb22)}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f4f6fb;--bg2:#fff;
+--card:#fff;--card2:#f7f9fc;--br:#e5e9f0;--fg:#161a26;--mut:#5c6578;--ac:#2563eb;
+--ac2:#7c3aed;--chip:#eef2f9;--shadow:0 8px 24px rgba(30,41,80,.08);
+--grad:linear-gradient(135deg,#7c3aed14,#2563eb14)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);
+font-family:"Heebo",system-ui,"Segoe UI",Arial,sans-serif;line-height:1.65;
+-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none;transition:color .15s}
+a:hover{color:var(--ac2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--br)}
+header.top .bar{display:flex;gap:16px;align-items:center;justify-content:space-between;
+max-width:1080px;margin:0 auto;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px}
+.brand .logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--ac),var(--ac2));
+display:grid;place-items:center;color:#fff;font-size:17px;box-shadow:var(--shadow)}
+.brand .sub{font-weight:500;color:var(--mut);font-size:13px}
+.top-links{display:flex;gap:18px;font-size:14px;font-weight:500}
+nav.crumbs{font-size:13px;color:var(--mut);margin:22px 0 4px}
+nav.crumbs a{color:var(--mut)}
+h2{font-size:22px;font-weight:800;margin:34px 0 4px;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;
+background:linear-gradient(90deg,var(--ac),var(--ac2));margin-top:8px}
+h3{margin:0 0 8px;font-weight:700}h4{margin:18px 0 6px;font-weight:700}
+p{margin:10px 0}
+.lead{color:var(--mut);font-size:15.5px;max-width:70ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:18px 0}
+.card{background:var(--card);border:1px solid var(--br);border-radius:16px;padding:20px;
+transition:transform .18s,border-color .18s,box-shadow .18s}
+a.card:hover{transform:translateY(-3px);border-color:var(--ac);box-shadow:var(--shadow)}
+.card h3{display:flex;align-items:center;gap:9px}
+.ic{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;
+place-items:center;font-size:16px;flex:none}
+.muted{color:var(--mut)}
+.chip{display:inline-block;background:var(--chip);border:1px solid var(--br);
+border-radius:999px;padding:2px 11px;font-size:12px;margin:2px 2px;font-weight:500}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;font-size:14px;
+background:var(--card);border:1px solid var(--br);border-radius:14px;overflow:hidden}
+th,td{padding:10px 13px;text-align:right;vertical-align:top;border-bottom:1px solid var(--br)}
+th{background:var(--card2);font-weight:700;position:sticky;top:61px}
+tr:last-child td{border-bottom:none}
+tbody tr:hover,table tr:hover{background:color-mix(in srgb,var(--ac) 6%,transparent)}
+code,pre{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+direction:ltr;unicode-bidi:plaintext}
+code{background:var(--chip);padding:2px 6px;border-radius:6px;font-size:12.5px}
+pre{background:#0d1017;border:1px solid var(--br);border-radius:12px;padding:16px;
+overflow:auto;text-align:left;font-size:13px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{border-right:3px solid var(--ac);margin:14px 0;padding:4px 14px;
+background:var(--card2);border-radius:0 10px 10px 0}
+input#q{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--br);
+background:var(--card);color:var(--fg);font-size:15px;margin:12px 0;font-family:inherit}
+input#q:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 20%,transparent)}
+.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--br);padding:9px 0}
+.row:last-child{border-bottom:none}
+.pill{font-size:11.5px;padding:2px 10px;border-radius:999px;font-weight:600;white-space:nowrap}
+.pill.b{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.pill.d{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.pill.o{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+footer{border-top:1px solid var(--br);margin-top:56px;background:var(--bg2)}
+footer .wrap{padding:28px 20px;display:flex;justify-content:space-between;
+align-items:center;gap:16px;flex-wrap:wrap}
+footer .by{font-size:14px}footer .by b{color:var(--fg)}
+footer .meta{font-size:12.5px;color:var(--mut)}
+.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--ac2),var(--ac));
+display:inline-grid;place-items:center;color:#fff;font-weight:800;margin-left:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="brand" href="../index.html">
+<span class="logo">◆</span><span>אטלס אנדרואיד<br><span class="sub">mssi_64_cn</span></span></a>
+<nav class="top-links">
+<a href="../index.html">בית</a>
+<a href="https://github.com/shmuel-sinay/ANDROID">קוד המקור</a>
+</nav>
+</div></header>
+<div class="wrap">
+<nav class="crumbs"><a href="../index.html">בית</a> / <a href="index.html">תלויות</a> / תכנון: מפענח וידיאו יחיד עם בדיקת אישור לפני ניגון (M36 Plus)</nav>
+<article><h2>תכנון: מפענח וידיאו יחיד עם בדיקת אישור לפני ניגון (M36 Plus)</h2>
+<blockquote class="muted">ממשיך את <code>block_video_system_level.md</code>. שם נחסמו שתי השכבות (קודקים מערכתיים).</blockquote>
+<blockquote class="muted">כאן: במקום לחסום הכל, משאירים דרך אחת לוידיאו לעבור, ושמים עליה שומר (gatekeeper)</blockquote>
+<blockquote class="muted">שבודק אם הקובץ מאושר, לפני שהוא בכלל מגיע למפענח.</blockquote>
+<h3>שתי בעיות נפרדות, שתי תשובות</h3>
+<h4>בעיה א: אפליקציות עם מפענח וידיאו עצמאי, שעוקפות את המערכת לגמרי</h4>
+<p>סרקתי את כל 202 האפליקציות ברום (לא רק מה שהן *מצהירות*, אלא בדקתי בפועל את חתימות</p>
+<p>הפונקציות בתוך כל ספריית <code>.so</code> שהן נושאות, עם <code>nm -D</code>). נמצאו <b>שתי אפליקציות אמיתיות</b></p>
+<p>עם מפענח עצמאי:</p>
+<table><tr><th>אפליקציה</th><th>ספרייה</th><th>ההוכחה</th></tr>
+<tr><td><code>preinstall/vlc.apk</code></td><td><code>lib/arm64-v8a/libvlc.so</code></td><td>מכיל <code>removeH264or5EmulationBytes</code> (פענוח H.264 ישיר) ותמיכת Matroska/MKV מלאה</td></tr>
+<tr><td><code>preinstall/AmazonMusic.apk</code></td><td><code>lib/*/libav.so</code> (בכל הארכיטקטורות)</td><td>מכיל <code>avcodec_decode_audio4</code>, ספריית libavcodec אמיתית</td></tr>
+</table>
+<p><b>המשמעות:</b> גם אם המפענחים המערכתיים ייחסמו לגמרי, **VLC ו-AmazonMusic ימשיכו לנגן</p>
+<p>וידיאו<b>, כי הם לא שואלים את המערכת בכלל. הפתרון היחיד האמין: </b>להסיר את שתי</p>
+<p>האפליקציות האלה מהרום**, לא לנסות &quot;לתקן&quot; אותן (תיקון ברמת הקוד שלהן דורש לפרק ולשנות</p>
+<p>ספריית C++ שלמה, לא ריאלי). כלי הסריקה: <code>tools/bundled_decoders.py</code> באטלס, כדי להריץ</p>
+<p>מחדש על כל רום עתידי ולתפוס אפליקציה חדשה שתתווסף.</p>
+<h4>בעיה ב: איך משאירים מפענח אחד &quot;חי&quot; עם בדיקת אישור</h4>
+<p>לכל האפליקציות הרגילות (לא VLC/Amazon) אין ברירה: הן <b>חייבות</b> לעבור דרך ה-API</p>
+<p>הציבורי של אנדרואיד, <code>MediaExtractor</code>/<code>MediaCodec</code>. פירקתי את המחלקות האלה **ישירות</p>
+<p>מתוך <code>framework.jar</code> של M36** (לא הנחה כללית על אנדרואיד) כדי למצוא את נקודת המעבר</p>
+<p>האמיתית, היחידה, שכל הקריאות עוברות דרכה.</p>
+<h3>נקודת ההתערבות (מאומתת מהקוד של M36 עצמו)</h3>
+<p><code>MediaExtractor</code> חושף 7 גרסאות עמוסות (overloads) של <code>setDataSource(...)</code>, אחת</p>
+<p>לכל סוג מקור (String, Uri, FileDescriptor, MediaDataSource...). פירקתי את הפשוטה שבהן:</p>
+<pre><code>// android.media.MediaExtractor.setDataSource(String path), מתוך framework.jar של M36
+public final void setDataSource(String path) {
+    nativeSetDataSource(MediaHTTPService.createHttpServiceBinderIfNecessary(path), path, 0, 0);
+}</code></pre>
+<p>כל 7 הגרסאות מגיעות בסוף לאחת מכמה מתודות <code>native*</code> (<code>nativeSetDataSource</code>,</p>
+<p>וכדומה). <b>זו בדיוק נקודת התפר</b>: שורת קוד אחת, בתוך <code>updatable-media</code>/<code>framework.jar</code>,</p>
+<p>שאפשר להוסיף לה בדיקה <b>לפני</b> הקריאה ל-native.</p>
+<h4>התוספת המוצעת</h4>
+<pre><code>public final void setDataSource(String path) {
+    if (!VideoGate.isApproved(path)) {               // הקוד החדש
+        throw new java.io.IOException(&quot;not approved&quot;); // המשתמש רואה שגיאה, לא קורס
+    }
+    nativeSetDataSource(MediaHTTPService.createHttpServiceBinderIfNecessary(path), path, 0, 0);
+}</code></pre>
+<p>אותה שורה, בהתאמה, בכל אחת מ-6 הגרסאות הנוספות וב-<code>MediaCodec.configure</code>/</p>
+<p><code>native_configure</code> (למקרה שאפליקציה מריצה decode ישיר בלי <code>MediaExtractor</code>).</p>
+<h4><code>VideoGate.isApproved(path)</code>, איך בפועל לבדוק &quot;חתימה&quot;</h4>
+<p>שתי דרכים, מהפשוטה למחמירה:</p>
+<p>1. <b>רשימת טביעות אצבע (מומלץ להתחלה).</b> מחשבים <code>SHA-256</code> לכל קובץ וידיאו מאושר</p>
+<p>   מראש, ושומרים רשימה בקובץ שמוטבע ברום (<code>/system/etc/approved_videos.json</code>,</p>
+<p>   רק root יכול לכתוב לו). <code>isApproved()</code> מחשב <code>SHA-256</code> לקובץ שמנסים לפתוח ובודק</p>
+<p>   התאמה ברשימה. פשוט, אמין, אי אפשר לזייף בלי לשנות את הקובץ עצמו (ואז ה-hash</p>
+<p>   משתנה וייכשל).</p>
+<p>2. <b>חתימה קריפטוגרפית אמיתית (RSA/Ed25519).</b> כל קובץ וידיאו מאושר מגיע עם קובץ</p>
+<p>   חתימה נלווה (<code>video.mp4.sig</code>), והמערכת מאמתת אותה מול מפתח ציבורי שמוטבע ברום.</p>
+<p>   חזק יותר (אפשר להוסיף וידיאו חדש בלי לשנות את הרום, כל עוד הוא חתום), אבל דורש</p>
+<p>   תשתית חתימה (מפתח פרטי אצלך, תהליך חתימה לכל קובץ).</p>
+<p><b>המלצה:</b> להתחיל באפשרות 1 (hash). עוברים לאפשרות 2 רק אם צריך להוסיף סרטונים</p>
+<p>חדשים בלי לצרוב רום מחדש בכל פעם.</p>
+<h3>מה עוד לקחת בחשבון (כנות על המגבלות)</h3>
+<ul>
+<li><b>הקובץ עצמו צריך להיקרא פיזית כדי לחשב hash</b>, כלומר יש עלות ביצועים קטנה בכל</li>
+</ul>
+<p>  פתיחת וידיאו (סריקת הקובץ פעם אחת). לא בעיה לקבצים מקומיים רגילים.</p>
+<ul>
+<li><b>סטרימינג (URL)</b>: הגרסה <code>setDataSource(Context, Uri, Map)</code> יכולה להצביע על כתובת</li>
+</ul>
+<p>  אינטרנט. אי אפשר לחשב hash מראש לתוכן שמשתנה. הפתרון הפשוט: לחסום לגמרי מקורות</p>
+<p>  שהם <code>http(s)://</code>, ולאשר רק קבצים מקומיים/תוכן שמגיע דרך ספק תוכן מאושר.</p>
+<ul>
+<li><b><code>MediaCodec</code> ישיר</b>: אפליקציה יכולה לעקוף את <code>MediaExtractor</code> ולהשתמש ב-</li>
+</ul>
+<p>  <code>MediaCodec</code> עם <code>ByteBuffer</code>-ים ידניים (למשל סטרימינג מותאם אישית). לכן צריך את</p>
+<p>  הבדיקה גם ב-<code>MediaCodec.configure</code>, לא רק ב-<code>MediaExtractor</code>, כפי שצוין למעלה.</p>
+<ul>
+<li><b>זה תיקון ב-Java bytecode</b> (כמו שעשינו ל-PackageManagerService): אחרי השינוי</li>
+</ul>
+<p>  ב-<code>framework.jar</code>, צריך למחוק את ה-<code>boot.oat</code>/<code>vdex</code> המתאימים (ART מקמפל את</p>
+<p>  הפריימוורק מראש בעלייה הראשונה; בלי זה הקוד הישן ימשיך לרוץ).</p>
+<h3>רמת ביטחון</h3>
+<p>נקודת ההתערבות (<code>setDataSource</code>, <code>native_configure</code>) ושמות המתודות: <b>ודאיות</b>,</p>
+<p>פורקו ישירות מ-M36. היתכנות הגישה (hash-list / חתימה): <b>גבוהה</b>, עיקרון סטנדרטי.</p>
+<p>לא נבנה ולא נבדק קוד בפועל. זה מסמך תכנון, לא תיקון מוכן.</p></article>
+</div>
+<footer><div class="wrap">
+<div class="by"><span class="avatar">ש</span>תיעוד ומחקר · <b>שמואל סיני</b></div>
+<div class="meta">נוצר אוטומטית מניתוח הרום · תיעוד תיאורטי, לא נבדק על מכשיר · GTR · Qin F21 Pro</div>
+</div></footer>
+</body></html>

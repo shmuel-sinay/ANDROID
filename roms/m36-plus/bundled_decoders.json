@@ -1,0 +1,40 @@
+{
+ "apk_count": 202,
+ "flagged": [
+  {
+   "apk": "system/system/preinstall/AmazonMusic.apk",
+   "libs": [
+    {
+     "lib": "lib/arm64-v8a/libav.so",
+     "matched_name": false,
+     "matched_symbol": "avcodec_decode_audio4"
+    },
+    {
+     "lib": "lib/armeabi-v7a/libav.so",
+     "matched_name": false,
+     "matched_symbol": "avcodec_decode_audio4"
+    },
+    {
+     "lib": "lib/x86/libav.so",
+     "matched_name": false,
+     "matched_symbol": "avcodec_decode_audio4"
+    },
+    {
+     "lib": "lib/x86_64/libav.so",
+     "matched_name": false,
+     "matched_symbol": "avcodec_decode_audio4"
+    }
+   ]
+  },
+  {
+   "apk": "system/system/preinstall/vlc.apk",
+   "libs": [
+    {
+     "lib": "lib/arm64-v8a/libvlc.so",
+     "matched_name": false,
+     "matched_symbol": "avcodec_decode_audio4"
+    }
+   ]
+  }
+ ]
+}
