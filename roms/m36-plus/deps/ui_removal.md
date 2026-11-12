@@ -47,3 +47,32 @@ wifi, hotspot, mobile, airplane, battery, sensors_off`
   כי הוא ב-userdata. שינוי שדורס קובצי מערכת — נמחק ב-"Format and Download".
 - רמת ביטחון: רשימת ה-slots וה-keys **ודאית** (נשלפה מהקבצים). איזה controller בדיוק שולט בכל
   שורה — חלק דורש קריאת הקוד של MtkSettings. לא נבדק על מכשיר.
+
+## בדיקה אמיתית על מכשיר (M36 Plus): `icon_blacklist` ל-wifi/mobile/cast
+
+נסיון בפועל: `adb shell settings put secure icon_blacklist wifi,mobile,cast` — נשמר נכון
+(`settings get` החזיר את הערך), אבל הסמלים **לא נעלמו** אחרי `adb shell am crash com.android.systemui`
+(הפעלה מחדש מבוקרת של התהליך, לא reboot מלא).
+
+פירקתי (androguard, DEX ישירות מ-`MtkSystemUI.apk` של M36 Plus) את כל שרשרת הקוד בפועל כדי
+לשלול/לאשר כל חוליה:
+
+| חוליה | ממצא | סטטוס |
+|---|---|---|
+| שמות ה-slots `wifi`/`mobile`/`cast` | אומתו מול `framework-res.apk` עצמו (`status_bar_wifi`, `status_bar_mobile`, `status_bar_cast`) — תואמים ל-100% | ✅ תקין |
+| `TunerServiceImpl.addTunable` | רושם ContentObserver ל-`icon_blacklist`, **וגם קורא את הערך הנוכחי באופן סינכרוני** בזמן הרישום | ✅ תקין |
+| `StatusBarIconControllerImpl`/`StatusBarSignalPolicy` constructors | שניהם קוראים ל-`addTunable` — כל עלייה מחדש של SystemUI אמורה לקרוא את הערך העדכני | ✅ תקין |
+| `addSystemIcon`/`addHolder` (cast, type כללי) | מעביר כרטיס `blocked` נכון ל-`onCreateStatusBarIconView`, בונה View עם מצב מוסתר | ✅ תקין |
+| `setWifiIndicators`/`setMobileDataIndicators` (wifi/mobile) | מחשבים `state.visible = !mHideWifi/mHideMobile` נכון | ✅ תקין |
+| `StatusBarWifiView`/`StatusBarMobileView` — `initViewState`/`updateState` | שניהם קוראים ל-`setVisibility(GONE)` על הקונטיינר כש-`!visible` | ✅ תקין |
+| layout של `StatusBarMobileView` | ה-`mMobileGroup` הוא הילד **היחיד**, רוחב `wrap_content` — הסתרתו קורסת לרוחב 0, אין "שארית" ויזואלית | ✅ תקין |
+| שכבת OEM (`ISystemUIStatusBarExt`/`OpSystemUICustomizationFactoryBase`) | נבדק: טוען פלאגין `OP01/02/07/08/09/12/18/20SystemUI.apk` **רק אם קיים ברום** — נבדק ברום המלא, **אין אף קובץ כזה** → fallback ל-`DefaultSystemUIStatusBarExt` שהוא no-op מלא בכל המתודות | ✅ לא רלוונטי, שלילה מאומתת |
+| `updateCast()` (cast ספציפית) | מציג אייקון cast רק כשיש מכשיר cast פעיל (`CastDevice.state` ∈ {CONNECTING, CONNECTED}) — אם שום דבר לא מוקרן כרגע, אין אייקון cast מוצג כלל ע"י המסלול הזה | ℹ️ הערה — אם "סמל ה-cast" שהמשתמש מתכוון אליו מוצג כל הזמן, הוא כנראה **לא** האייקון הזה |
+
+**מסקנה:** בדקתי כל חוליה בשרשרת בקוד בפועל של M36 Plus — **אין שום באג בקוד ואין שכבת OEM
+שמתערבת.** הערך נשמר נכון, וה-SystemUI אמור לקרוא אותו מחדש בכל עלייה. הגורם הנותר היחיד שלא
+אומת: אולי `am crash` (הפעלה-מחדש "רכה" של התהליך) לא מספיק, וצריך **reboot מלא** למכשיר כדי
+שהכל ייקרא נכון מהדיסק. זה הניסוי הבא שצריך לבצע בפועל על המכשיר — לא עוד ניחוש קוד.
+
+רמת ביטחון על הממצאים בטבלה: **ודאית** — כל שורה נשלפה ונפורקה ישירות מה-DEX והמשאבים של
+M36 Plus, לא מהנחה כללית על AOSP.
