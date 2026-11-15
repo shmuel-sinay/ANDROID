@@ -56,7 +56,40 @@
 4. **אם ה-launcher החדש צריך לקרוא/לכתוב הגדרות מערכת** (כמו טפט, grid, מצב
    כהה): `WRITE_SECURE_SETTINGS` כבר ברשימה למעלה, מכסה את רוב המקרים.
 
+## תיקון: לא כל ההרשאות למעלה נכנסות ע"י allowlist בלבד
+בדקתי את זה שוב, ברזולוציה של protectionLevel בפועל (מתוך framework-res.apk
+של M36 Plus עצמו, לא מהנחה כללית על AOSP). התוצאה: **ברום הזה** ל-4 מתוך 8
+ההרשאות שהלאונצ'ר מבקש **אין** דגל `privileged` כלל — הן `signature` טהורה:
+
+| הרשאה | protectionLevel ב-M36 Plus | דורשת allowlist בלבד? |
+|---|---|---|
+| `WRITE_SECURE_SETTINGS` | signature + **privileged** | כן |
+| `START_TASKS_FROM_RECENTS` | signature + **privileged** | כן |
+| `CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS` | signature + **privileged** | כן |
+| `BIND_APPWIDGET` | **signature בלבד** | **לא — חייב חתימה תואמת ל-platform key** |
+| `STATUS_BAR` | **signature בלבד** | **לא** |
+| `STOP_APP_SWITCHES` | **signature בלבד** | **לא** |
+| `ALLOW_SLIPPERY_TOUCHES` | **signature בלבד** | **לא** |
+
+כלומר: עבור 4 ההרשאות האלה, allowlist לא מספיק — צריך שהחתימה (המפתח) של
+הלאונצ'ר תהיה **זהה** למפתח שחותם את חבילת ה-`android` (framework-res.apk).
+
+### אבל — בדיקה מעשית מראה שזה כבר לא המצב היום, וזה בסדר
+בדקתי את טביעת האצבע (SHA256) של שתי החתימות בפועל:
+- `framework-res.apk` (="android"): `C8:A2:E9:...:2A:B8`
+- `MtkLauncher3QuickStep.apk` (הלאונצ'ר הנוכחי): `A4:0D:A8:...:1B:F5:DC`
+
+**הן שונות.** שתיהן נושאות את אותו ה-Subject הגנרי של AOSP ("Android /
+Mountain View..."), אבל זה **לא אותו מפתח**. כלומר **גם הלאונצ'ר המקורי,
+כמו שהוא, לא מקבל בפועל** את ההרשאות שבטבלה שמסומנות "לא" — זה כבר המצב
+הקיים, לא דבר שאתה שובר.
+
+**המשמעות המעשית:** אפשר לחתום את הלאונצ'ר החדש עם כל מפתח (כולל המפתח
+המובנה של MT Manager) — **לא תהיה שום נסיגה** לעומת המצב היום. מה שעבד
+היום (ללא widgets, ללא API של הסתרת status bar) ימשיך לעבוד בדיוק אותו
+דבר. ה-4 הרשאות האחרות (עם privileged) ימשיכו להתקבל כרגיל כל עוד שם
+החבילה רשום ב-allowlist הנכון.
+
 ## רמת ביטחון
-מי מתחרה על HOME ואילו הרשאות privileged נדרשות: **ודאי**, נשלף ישירות מהרום.
-ההמלצה הכללית (priv-app + allowlist): **גבוהה**, זהה לדפוס שכבר ראינו בכל שאר
-האטלס (overlays, deps אחרים). לא נבדק בפועל על מכשיר.
+מי מתחרה על HOME, אילו הרשאות וב-protectionLevel מדויק: **ודאי**, נשלף
+ונמדד ישירות מה-ROM (כולל טביעות החתימה בפועל). לא נבדק בפועל על מכשיר.
